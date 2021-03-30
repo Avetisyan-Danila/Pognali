@@ -1,12 +1,250 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
   </head>
-  <body>
+  <body class="page-body">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+    <header class="header">
+      <a class="header__logo"><img src="img/logo_mobile.png" width="115" height="15" alt="Погнали?"></a>
+      <nav class="header-nav">
+        <button class="header-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <div class="header-nav__wrapper">
+          <ul class="header-nav__list site-list">
+            <li class="site-list__item">
+              <a href="">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a href="">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a href="">Попутчики</a>
+            </li>
+          </ul>
+          <a class="header-nav__login" href="login.html">Авторизация</a>
+          <div class="header-contacts">
+            <a class="header-contacts__phone" href="tel:+88005558628">8 800 555-86-28</a>
+            <a class="header-contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <ul class="header-socials">
+              <li class="header-socials__item">
+                <a href="" aria-label="Фейсбук"></a>
+              </li>
+              <li class="header-socials__item">
+                <a href="" aria-label="Вконтакте"></a>
+              </li>
+              <li class="header-socials__item">
+                <a href="" aria-label="Инстаграм"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="visually-hidden">Погнали - сервис для поиска попутчиков</h1>
+      <section class="promo">
+        <div class="promo__wrapper">
+          <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
+          <ul class="promo__navigation user-navigation">
+            <li class="user-navigation__item" aria-label="Телефон"></li>
+            <li class="user-navigation__item" aria-label="Почта"></li>
+            <li class="user-navigation__item">Авторизация</li>
+          </ul>
+          <blockquote class="promo-review">
+            <p class="promo-review__text">«Лучшее приложение, что я видел в жизни!»</p>
+            <cite class="promo-review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+          </blockquote>
+          <ol class="promo__list">
+            <li class="promo__item">
+              <p class="promo__text">Выберите направление</p>
+              <span class="promo__num">1</span>
+            </li>
+            <li class="promo__item">
+              <p class="promo__text">Изучите идеи путешественников</p>
+              <span class="promo__num">2</span>
+            </li>
+            <li class="promo__item">
+              <p class="promo__text">Находите тех, кто похож на вас</p>
+              <span class="promo__num">3</span>
+            </li>
+            <li class="promo__item">
+              <p class="promo__text">Путешествуйте вместе!</p>
+              <span class="promo__num">4</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about__wrapper">
+          <h2 class="about__title">О сервисе</h2>
+          <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="about__text"><b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
+        </div>
+      </section>
+
+      <section class="directions">
+        <div class="directions__wrapper">
+          <h2 class="directions__title">Направления</h2>
+          <p class="directions__text">
+            Мы не продаем туры
+            и ничего не рекламируем.
+            Люди сами пишут о странах,
+            куда хотели бы отправиться
+            и чем можно там заняться.
+           </p>
+           <ul class="directions__list">
+            <li class="directions__item directions__item--thailand">
+              <img class="directions__img" width="270" height="110" src="img/directions/thailand-mobile.jpg" alt="Таиланд">
+              <div class="directions-info">
+                <h3 class="directions-info__title">Таиланд</h3>
+                <p class="directions-info__subtitle">Джунгли зовут!</p>
+                <span class="directions-info__views">18321</span>
+              </div>
+            </li>
+            <li class="directions__item directions__item--france">
+              <img class="directions__img" width="270" height="110" src="img/directions/france-mobile.jpg" alt="Франция">
+              <div class="directions-info">
+                <h3 class="directions-info__title">Франция</h3>
+                <p class="directions-info__subtitle">Трэ бьен, манифик!</p>
+                <span class="directions-info__views">12518</span>
+              </div>
+            </li>
+            <li class="directions__item directions__item--czech">
+              <img class="directions__img" width="270" height="110" src="img/directions/czech-mobile.jpg" alt="Чехия">
+              <div class="directions-info">
+                <h3 class="directions-info__title">Чехия</h3>
+                <p class="directions-info__subtitle">Закоулки старой Европы</p>
+                <span class="directions-info__views">5326</span>
+              </div>
+            </li>
+           </ul>
+           <a class="directions__link link" href="form.html">Показать все</a>
+        </div>
+      </section>
+
+      <section class="companions">
+        <div class="companions__wrapper">
+          <h2 class="companions__title">Попутчики</h2>
+          <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="companions__text"><b>Теперь можно легко найти единомышленников!</b></p>
+          <ul class="companions__list">
+            <li class="companions__item">
+              <div class="companions-level">
+                <span class="companions-level__num">99</span>
+                <span>level</span>
+              </div>
+              <img class="companions__img" width="270" height="270" src="img/companions/1.jpg" alt="Таня Фирсова">
+              <h3 class="companions__name">Таня Фирсова</h3>
+              <p class="companions__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <ul class="companions-transport">
+                <li class="companions-transport__item">Авиаперелет</li>
+                <li class="companions-transport__item">Автотранспорт</li>
+                <li class="companions-transport__item">Велосипед</li>
+                <li class="companions-transport__item">Пешком</li>
+              </ul>
+            </li>
+            <li class="companions__item">
+              <div class="companions-level">
+                <span class="companions-level__num">80</span>
+                <span>level</span>
+              </div>
+              <img class="companions__img" width="270" height="270" src="img/companions/2.jpg" alt="Петя Демин">
+              <h3 class="companions__name">Петя Демин</h3>
+              <p class="companions__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+              <ul class="companions-transport">
+                <li class="companions-transport__item">Авиаперелет</li>
+                <li class="companions-transport__item">Автотранспорт</li>
+                <li class="companions-transport__item">Велосипед</li>
+                <li class="companions-transport__item">Пешком</li>
+              </ul>
+            </li>
+          </ul>
+          <a class="companions__link link" href="catalog.html">Показать всех</a>
+        </div>
+      </section>
+
+      <section class="profile">
+        <div class="profile__wrapper">
+          <h2 class="profile__title">Добавьте свой профиль</h2>
+          <ul class="profile__list">
+            <li class="profile__item">
+              <p class="profile__text">
+                <span>Базовое размещение</span>
+                <span>Бесплатно</span>
+              </p>
+            </li>
+            <li class="profile__item">
+              <p class="profile__text">
+                <span>Вывод на первых позициях</span>
+                <span>99 руб./мес</span>
+              </p>
+            </li>
+            <li class="profile__item">
+              <p class="profile__text">
+                <span>Кастомный цвет карточки</span>
+                <span>59 руб./мес</span>
+              </p>
+            </li>
+          </ul>
+          <a class="profile__link" href="rates.html">Показать тарифы для бизнеса</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="interested">
+        <div class="interested__wrapper">
+          <h2 class="interested__title">Заинтересовались?</h2>
+          <p class="interested__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="login.html">авторизуйтесь</a>.</p>
+          <form class="interested-form" action="#" method="POST">
+            <label class="visually-hidden" for="user-mail">Адрес электронной почты</label>
+            <input class="interested-form__email" id="user-mail" type="email" placeholder="E-mail">
+            <button class="interested-form__button" type="submit">Регистрация</button>
+          </form>
+          <p class="interested__text">Остались вопросы? Мы с радостью на них ответим!</p>
+          <ul class="interested-contacts">
+            <li class="interested-contacts__item">
+              <a class="interested-contacts__phone" href="tel:+88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="interested-contacts__item">
+              <a class="interested-contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="address">
+        <div class="address__wrapper">
+          <p class="address__text">ул. Большая Конюшенная, 19/8</p>
+          <a class="address__link link" href="">Проложить маршрут</a>
+        </div>
+      </section>
+      <section class="map">
+        Тут должна быть карта
+      </section>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <a class="contacts__logo"><img src="img/logo_mobile.svg" width="96" height="14" alt="Погнали?"></a>
+          <ul class="contacts-socials">
+            <li class="contacts-socials__item">
+              <a href="" aria-label="Фейсбук"></a>
+            </li>
+            <li class="contacts-socials__item">
+              <a href="" aria-label="Вконтакте"></a>
+            </li>
+            <li class="contacts-socials__item">
+              <a href="" aria-label="Инстаграм"></a>
+            </li>
+          </ul>
+          <div class="contacts-developed">
+            <p class="contacts-developed__text">Разработано</p>
+            <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/contacts/logo-html-academy.svg" width="27" height="33" alt="HTML Academy"></a>
+          </div>
+        </div>
+      </section>
+    </footer>
 
   </body>
 </html>
