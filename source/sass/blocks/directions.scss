@@ -1,0 +1,36 @@
+.directions {
+  background-color: $special-blue;
+}
+
+.directions__wrapper {
+  background-color: $basic-blue-light;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.directions__text {
+  font-weight: 300;
+  color: $special-grey;
+}
+
+.directions-info__title {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.directions-info__subtitle {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $special-grey;
+  opacity: 0.3;
+}
+
+.directions-info__views {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $basic-blue;
+  opacity: 0.3;
+}

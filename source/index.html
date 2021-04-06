@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
@@ -26,8 +27,8 @@
         </ul>
         <a class="header-nav__login" href="login.html">Авторизация</a>
         <div class="header-contacts">
-          <a class="header-contacts__phone" href="tel:+88005558628">8 800 555-86-28</a>
-          <a class="header-contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628">8 800 555-86-28</a>
+          <a class="header-contacts__info header-contacts__info--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           <ul class="header-socials">
             <li class="header-socials__item">
               <a href="" aria-label="Фейсбук"></a>
@@ -81,17 +82,17 @@
 
     <section class="info">
       <div class="info__wrapper">
-        <h2 class="info__title">О сервисе</h2>
-        <p class="info__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими
+        <h2 class="info__title title">О сервисе</h2>
+        <p class="info__text text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими
           идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="info__text"><b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
+        <p class="info__text text"><b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
       </div>
     </section>
 
     <section class="directions">
       <div class="directions__wrapper">
-        <h2 class="directions__title">Направления</h2>
-        <p class="directions__text">
+        <h2 class="directions__title title">Направления</h2>
+        <p class="directions__text text">
           Мы не продаем туры
           и ничего не рекламируем.
           Люди сами пишут о странах,
@@ -130,19 +131,19 @@
 
     <section class="companions">
       <div class="companions__wrapper">
-        <h2 class="companions__title">Попутчики</h2>
-        <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и
+        <h2 class="companions__title title">Попутчики</h2>
+        <p class="companions__text text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и
           коктейль, а другому маршрут для хайкинга.</p>
-        <p class="companions__text"><b>Теперь можно легко найти единомышленников!</b></p>
+        <p class="companions__text text"><b>Теперь можно легко найти единомышленников!</b></p>
         <ul class="companions__list">
           <li class="companions__item">
             <div class="companions-level">
               <span class="companions-level__num">99</span>
-              <span>level</span>
+              <span class="companions-level__text">level</span>
             </div>
-            <img class="companions__img" width="270" height="270" src="img/companions/1.jpg" alt="Таня Фирсова">
-            <h3 class="companions__name">Таня Фирсова</h3>
-            <p class="companions__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <img class="companions__img" width="270" height="270" src="img/companions/1.png" alt="Таня Фирсова">
+            <h3 class="companions__name companions__name--offline">Таня Фирсова</h3>
+            <p class="companions__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <ul class="companions-transport">
               <li class="companions-transport__item">Авиаперелет</li>
               <li class="companions-transport__item">Автотранспорт</li>
@@ -155,9 +156,9 @@
               <span class="companions-level__num">80</span>
               <span>level</span>
             </div>
-            <img class="companions__img" width="270" height="270" src="img/companions/2.jpg" alt="Петя Демин">
-            <h3 class="companions__name">Петя Демин</h3>
-            <p class="companions__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+            <img class="companions__img" width="270" height="270" src="img/companions/2.png" alt="Петя Демин">
+            <h3 class="companions__name companions__name--online">Петя Демин</h3>
+            <p class="companions__tags">#бургер #бар #футбол #концерт #крафт</p>
             <ul class="companions-transport">
               <li class="companions-transport__item">Авиаперелет</li>
               <li class="companions-transport__item">Автотранспорт</li>
@@ -172,7 +173,7 @@
 
     <section class="profile">
       <div class="profile__wrapper">
-        <h2 class="profile__title">Добавьте свой профиль</h2>
+        <h2 class="profile__title title">Добавьте свой профиль</h2>
         <ul class="profile__list">
           <li class="profile__item">
             <p class="profile__text">
@@ -201,15 +202,15 @@
   <footer class="footer">
     <section class="interested">
       <div class="interested__wrapper">
-        <h2 class="interested__title">Заинтересовались?</h2>
-        <p class="interested__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a
+        <h2 class="interested__title title">Заинтересовались?</h2>
+        <p class="interested__text text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a
             href="login.html">авторизуйтесь</a>.</p>
         <form class="interested-form" action="#" method="POST">
           <label class="visually-hidden" for="user-mail">Адрес электронной почты</label>
           <input class="interested-form__email" id="user-mail" type="email" placeholder="E-mail">
           <button class="interested-form__button" type="submit">Регистрация</button>
         </form>
-        <p class="interested__text">Остались вопросы? Мы с радостью на них ответим!</p>
+        <p class="interested__text text">Остались вопросы? Мы с радостью на них ответим!</p>
         <ul class="interested-contacts">
           <li class="interested-contacts__item">
             <a class="interested-contacts__phone" href="tel:+88005558628">8 800 555-86-28</a>

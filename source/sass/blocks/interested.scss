@@ -1,0 +1,36 @@
+.interested {
+  background-color: $basic-yellow;
+}
+
+.interested__wrapper {
+  background-color: $special-blue;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.interested__text {
+  font-weight: 300;
+  color: $basic-white;
+}
+
+.interested__text a {
+  color: $basic-yellow;
+}
+
+.interested-contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.interested-contacts__item {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.interested-contacts__item a {
+  text-decoration: none;
+  color: $basic-yellow;
+  text-transform: uppercase;
+}
