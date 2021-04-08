@@ -10,21 +10,6 @@
   color: $basic-white;
 }
 
-.promo-review {
-  background-color: $basic-blue;
-  font-size: 16px;
-  line-height: 22px;
-  color: $basic-white;
-}
-
-.promo-review__text {
-  font-weight: 300;
-}
-
-.promo-review__author {
-  font-weight: 700;
-}
-
 .promo__item {
   &:nth-child(1) {
     background-color: $special-orange;
