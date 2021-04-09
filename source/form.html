@@ -47,7 +47,7 @@
   </header>
 
   <main class="main main-form">
-    <h1 class="main-form__title">Направления</h1>
+    <h1 class="main__title main-form__title">Направления</h1>
     <form action="https://echo.htmlacademy.ru" method="POST">
       <section class="about">
         <h2 class="visually-hidden">Информация о вашем профиле</h2>
@@ -87,7 +87,7 @@
 
       <section class="plans">
         <div class="plans__wrapper">
-          <h2 class="plans__title">Мои планы:</h2>
+          <h2 class="plans__title title">Мои планы:</h2>
           <ul class="plans-list">
             <li class="plans-item">
               <h3 class="plans-item__title">1. Франция, Италия</h3>
@@ -115,7 +115,7 @@
 
       <section class="add">
         <div class="add__wrapper">
-          <h2 class="add__title">Добавить план:</h2>
+          <h2 class="add__title title">Добавить план:</h2>
           <ul class="add-points">
             <li class="add-points__item"></li>
             <li class="add-points__item"></li>
@@ -127,7 +127,7 @@
                 Шаг 1. <br>
                 Даты пребывания
               </h3>
-              <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
+              <p class="step__text text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
                 поездку, и ее предполагаемую длительность.</p>
               <ul class="step-settings">
                 <li class="step-settings__item">
@@ -232,14 +232,14 @@
                   </tr>
                 </table>
               </div>
-              <a class="step-next" href="#step-2">Следующий шаг</a>
+              <a class="step__next" href="#step-2">Следующий шаг</a>
             </li>
             <li class="step" id="step-2">
               <h3 class="step__title">
                 Шаг 2. <br>
                 Маршрут
               </h3>
-              <p class="step__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
+              <p class="step__text text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
                 несколько.</p>
               <ul class="step-country">
                 <li class="step-country__item">
@@ -314,8 +314,8 @@
                   <button class="step-country__add" type="button">Добавить страну</button>
                 </li>
               </ul>
-              <a class="step-next" href="#step-3">Следующий шаг</a>
-              <a class="step-next" href="#step-1">На шаг назад</a>
+              <a class="step__next" href="#step-3">Следующий шаг</a>
+              <a class="step__prev" href="#step-1">На шаг назад</a>
             </li>
             <li class="step" id="step-3">
               <h3 class="step__title">
@@ -338,8 +338,8 @@
                     placeholder="План действий"></textarea>
                 </li>
               </ul>
-              <button type="submit">Отправить</button>
-              <a class="step-next" href="#step-2">На шаг назад</a>
+              <button class="step__button" type="submit">Отправить</button>
+              <a class="step__prev" href="#step-2">На шаг назад</a>
             </li>
           </ul>
         </div>

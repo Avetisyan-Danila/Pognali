@@ -1,0 +1,14 @@
+.quantity {
+  border: 1px solid $special-grey-extra;
+  border-radius: 4px;
+}
+
+.quantity__button {
+  border: none;
+  background-color: transparent;
+}
+
+.quantity__num {
+  border: none;
+  text-align: center;
+}

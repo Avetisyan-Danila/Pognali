@@ -1,0 +1,16 @@
+.step-settings__text {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: $special-blue-light;
+  text-transform: uppercase;
+
+  &:nth-child(1) {
+    letter-spacing: 0.09em;
+  }
+
+  &:nth-child(2) {
+    opacity: 0.3;
+    letter-spacing: 0.07em;
+  }
+}

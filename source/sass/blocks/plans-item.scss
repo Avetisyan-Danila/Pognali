@@ -1,0 +1,32 @@
+.plans-item {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.plans-item__title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $special-blue-light;
+}
+
+.plans-item__companions {
+  color: $special-blue-light;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.plans-item__date {
+  letter-spacing: 0.06em;
+  color: $special-blue-light;
+  text-transform: uppercase;
+}
+
+.plans-item__button {
+  letter-spacing: 0.03em;
+  color: $basic-black;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.3;
+}

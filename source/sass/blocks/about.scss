@@ -1,0 +1,31 @@
+.about__change-photo {
+  background-color: $special-sky;
+  font-size: 20px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $basic-blue;
+  text-decoration: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.about__tags label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $special-blue-light;
+  text-transform: uppercase;
+}
+
+.about__tags textarea {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid $special-grey-extra;
+  border-radius: 10px;
+
+  &::placeholder {
+    color: $special-grey;
+    opacity: 0.6;
+  }
+}
