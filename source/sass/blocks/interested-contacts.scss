@@ -1,0 +1,17 @@
+.interested-contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.interested-contacts__item {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.interested-contacts__item a {
+  text-decoration: none;
+  color: $basic-yellow;
+  text-transform: uppercase;
+}

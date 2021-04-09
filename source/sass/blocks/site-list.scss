@@ -1,0 +1,11 @@
+.site-list__item {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 500;
+}
+
+.site-list__item a {
+  color: $special-blue;
+  text-transform: uppercase;
+  text-decoration: none;
+}

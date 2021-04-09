@@ -1,0 +1,18 @@
+.interested {
+  background-color: $basic-yellow;
+}
+
+.interested__wrapper {
+  background-color: $special-blue;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.interested__text {
+  font-weight: 300;
+  color: $basic-white;
+}
+
+.interested__text a {
+  color: $basic-yellow;
+}

@@ -1,0 +1,14 @@
+.directions {
+  background-color: $special-blue;
+}
+
+.directions__wrapper {
+  background-color: $basic-blue-light;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.directions__text {
+  font-weight: 300;
+  color: $special-grey;
+}

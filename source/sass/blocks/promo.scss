@@ -1,0 +1,49 @@
+.promo {
+  background-image: url("../../img/promo/globe-bg.jpg");
+  background-repeat: no-repeat;
+}
+
+.promo__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  color: $basic-white;
+}
+
+.promo__item {
+  &:nth-child(1) {
+    background-color: $special-orange;
+  }
+
+  &:nth-child(2) {
+    background-color: $special-orange-light;
+  }
+
+  &:nth-child(3) {
+    background-color: $special-yellow-dark;
+  }
+
+  &:nth-child(4) {
+    background-color: $basic-yellow;
+  }
+}
+
+.promo__list {
+  background-color: $special-blue;
+  list-style: none;
+  margin: 0;
+}
+
+.promo__text {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $basic-blue;
+}
+
+.promo__num {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $basic-white;
+}
