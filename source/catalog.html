@@ -116,7 +116,7 @@
     </section>
 
     <section class="pick">
-      <h2 class="pick-title">Подберите идеального попутчика</h2>
+      <h2 class="pick__title">Подберите идеального попутчика</h2>
       <form class="pick-form" action="https://echo.htmlacademy.ru" method="POST">
         <ul class="pick-blocks">
           <li class="pick-block">
@@ -124,15 +124,15 @@
             <ul class="pick-block__list">
               <li class="pick-block__item">
                 <input id="football" name="hobby" value="Футбол" type="checkbox">
-                <label for="football">Футбол</label>
+                <label for="football">Спортзал</label>
               </li>
               <li class="pick-block__item">
                 <input id="fitness" name="hobby" value="Фитнес" type="checkbox">
-                <label for="fitness">Фитнес</label>
+                <label for="fitness">Кальян</label>
               </li>
               <li class="pick-block__item">
                 <input id="sneakers" name="hobby" value="Кроссовки" type="checkbox">
-                <label for="sneakers">Кроссовки</label>
+                <label for="sneakers">Диван</label>
               </li>
             </ul>
           </li>
@@ -158,15 +158,15 @@
             <ul class="pick-block__list">
               <li class="pick-block__item">
                 <input id="seafood" name="food" value="Морепродукты" type="checkbox">
-                <label for="seafood">Морепродукты</label>
+                <label for="seafood">Мясоед</label>
               </li>
               <li class="pick-block__item">
                 <input id="meat" name="food" value="Мясо" type="checkbox">
-                <label for="meat">Мясо</label>
+                <label for="meat">Сидит на ПП</label>
               </li>
               <li class="pick-block__item">
                 <input id="vegetarianism" name="food" value="Вегетарианство" type="checkbox">
-                <label for="vegetarianism">Вегетарианство</label>
+                <label for="vegetarianism">Веган-сыроед</label>
               </li>
             </ul>
           </li>
@@ -211,7 +211,7 @@
             </div>
           </li>
         </ul>
-        <button type="submit">Показать</button>
+        <button class="pick-form__button" type="submit">Показать</button>
       </form>
     </section>
 
@@ -264,7 +264,7 @@
             <div class="catalog-item__indicator catalog-item__indicator--offline">
               <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
             </div>
-            <a href="response.html">Позвать!</a>
+            <a class="catalog-item__link" href="response.html">Позвать!</a>
           </li>
           <li class="catalog-item">
             <div class="catalog-item__top">
@@ -307,7 +307,7 @@
             <div class="catalog-item__indicator catalog-item__indicator--offline">
               <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
             </div>
-            <a href="response.html">Позвать!</a>
+            <a class="catalog-item__link" href="response.html">Позвать!</a>
           </li>
           <li class="catalog-item">
             <div class="catalog-item__top">
@@ -354,7 +354,7 @@
             <div class="catalog-item__indicator catalog-item__indicator--offline">
               <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
             </div>
-            <a href="response.html">Позвать!</a>
+            <a class="catalog-item__link" href="response.html">Позвать!</a>
           </li>
           <li class="catalog-item">
             <div class="catalog-item__top">
@@ -397,10 +397,10 @@
             <div class="catalog-item__indicator catalog-item__indicator--offline">
               <p class="visually-hidden">Этот попутчик сейчас в сети</p>
             </div>
-            <a href="response.html">Позвать!</a>
+            <a class="catalog-item__link" href="response.html">Позвать!</a>
           </li>
         </ul>
-        <a href="new-companions.html">Показать ещё</a>
+        <a class="catalog__more" href="new-companions.html">Показать ещё</a>
         <div class="pagination">
           <ul class="pagination-arrows">
             <li class="pagination-arrow"><button type="button">Показать предыдущую страницу</button></li>
