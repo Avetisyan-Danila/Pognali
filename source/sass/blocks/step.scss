@@ -1,0 +1,45 @@
+.step__title {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $special-blue-light;
+}
+
+.step__text {
+  color: $special-grey;
+}
+
+.step__next {
+  background-color: $basic-yellow;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $special-blue-light;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.step__prev {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $special-blue-light;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.step__button {
+  background-color: $basic-yellow;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $special-blue-light;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+
+  padding: 0;
+}
