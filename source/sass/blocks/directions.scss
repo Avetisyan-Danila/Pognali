@@ -3,12 +3,38 @@
 }
 
 .directions__wrapper {
+  position: relative;
   background-color: $basic-blue-light;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 560px 1fr;
+  }
 }
 
 .directions__text {
   font-weight: 300;
   color: $special-grey;
+}
+
+.directions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @media (min-width: $desktop-width) {
+    order: -1;
+  }
+}
+
+.directions__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.directions__link {
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+  }
 }
