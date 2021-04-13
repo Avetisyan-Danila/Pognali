@@ -19,6 +19,7 @@
   line-height: 16px;
   font-weight: 300;
   color: $special-grey;
+
   @media (min-width: $tablet-width) {
     display: flex;
   }
@@ -26,6 +27,7 @@
 
 .profile__text span {
   display: block;
+
   &:nth-child(1) {
     @media (min-width: $tablet-width) {
       width: 400px;

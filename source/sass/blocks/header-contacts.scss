@@ -2,7 +2,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     grid-column: 2 / 3;
-    grid-row: 1 / 2 ;
+    grid-row: 1 / 2;
   }
 }
 
@@ -18,9 +18,11 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+
     &:nth-child(1) {
       background-color: $special-orange;
     }
+
     &:nth-child(2) {
       background-color: $special-yellow-dark;
     }
