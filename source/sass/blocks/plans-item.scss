@@ -1,7 +1,18 @@
 .plans-item {
+  background-color: $basic-white;
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .plans-item__title {
@@ -9,6 +20,14 @@
   line-height: 16px;
   font-weight: 700;
   color: $special-blue-light;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
 }
 
 .plans-item__companions {

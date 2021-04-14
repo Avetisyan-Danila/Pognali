@@ -91,7 +91,7 @@
           <h2 class="plans__title title">Мои планы:</h2>
           <ul class="plans-list">
             <li class="plans-item">
-              <h3 class="plans-item__title">1. Франция, Италия</h3>
+              <h3 class="plans-item__title">1.Франция, Италия</h3>
               <p class="plans-item__companions">3 попутчика</p>
               <p class="plans-item__date">
                 <time datetime="2021-03-26">26 мар</time>
@@ -101,7 +101,7 @@
               <a class="plans-item__button" href="edit.html">Изменить</a>
             </li>
             <li class="plans-item">
-              <h3 class="plans-item__title">2. Таиланд, Индонезия</h3>
+              <h3 class="plans-item__title">2.Таиланд, Индонезия</h3>
               <p class="plans-item__companions">1 попутчик</p>
               <p class="plans-item__date">
                 <time datetime="2019-07-26">1 июл</time>
@@ -130,8 +130,8 @@
               </h3>
               <p class="step__text text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
                 поездку, и ее предполагаемую длительность.</p>
-              <ul class="step-settings">
-                <li class="step-settings__item">
+              <div class="step-settings">
+                <div class="step-settings__item">
                   <div class="step-settings__top">
                     <p class="step-settings__text">Ищу попутчиков:</p>
                     <p class="step-settings__text">Чел.</p>
@@ -143,8 +143,8 @@
                       name="companions-quantity">
                     <button class="quantity__button quantity__button--plus" type="button">+</button>
                   </div>
-                </li>
-                <li class="step-settings__item">
+                </div>
+                <div class="step-settings__item">
                   <div class="step-settings__top">
                     <p class="step-settings__text">Длительность:</p>
                     <p class="step-settings__text">Дн.</p>
@@ -155,11 +155,11 @@
                     <input class="quantity__num" value="3" id="duration" type="text" name="duration">
                     <button class="quantity__button quantity__button--plus" type="button">+</button>
                   </div>
-                </li>
-              </ul>
-              <div class="step-kids">
-                <input id="kids" type="checkbox" name="kids">
-                <label for="kids">Можно с детьми</label>
+                </div>
+                <div class="step-kids">
+                  <input id="kids" type="checkbox" name="kids">
+                  <label for="kids">Можно с детьми</label>
+                </div>
               </div>
               <div class="step-date">
                 <div class="step-date__top">
