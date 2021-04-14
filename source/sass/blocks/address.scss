@@ -2,6 +2,10 @@
   background-color: $basic-yellow;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .address__text {

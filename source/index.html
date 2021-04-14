@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,9 +28,10 @@
         </ul>
         <a class="header-nav__login" href="login.html">Авторизация</a>
         <div class="header-contacts">
-          <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628">8 800 555-86-28</a>
-          <a class="header-contacts__info header-contacts__info--email"
-            href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628"
+            aria-label="Номер телефона: 8 800 555-86-28"><span>8 800 555-86-28</span></a>
+          <a class="header-contacts__info header-contacts__info--email" href="mailto:mail@htmlacademy.ru"
+            aria-label="Адрес электронной почты: mail@htmlacademy.ru"><span>mail@htmlacademy.ru</span></a>
           <ul class="header-socials">
             <li class="header-socials__item">
               <a href="" aria-label="Фейсбук"></a>
@@ -52,8 +54,8 @@
       <div class="promo__wrapper">
         <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
         <ul class="promo__navigation user-navigation">
-          <li class="user-navigation__item" aria-label="Телефон"></li>
-          <li class="user-navigation__item" aria-label="Почта"></li>
+          <li class="user-navigation__item" aria-label="Телефон">Телефон</li>
+          <li class="user-navigation__item" aria-label="Почта">Почта</li>
           <li class="user-navigation__item">Авторизация</li>
         </ul>
         <blockquote class="promo-review">
@@ -94,14 +96,16 @@
 
     <section class="directions">
       <div class="directions__wrapper">
-        <h2 class="directions__title title">Направления</h2>
-        <p class="directions__text text">
-          Мы не продаем туры
-          и ничего не рекламируем.
-          Люди сами пишут о странах,
-          куда хотели бы отправиться
-          и чем можно там заняться.
-        </p>
+        <div class="directions__top">
+          <h2 class="directions__title title">Направления</h2>
+          <p class="directions__text text">
+            Мы не продаем туры
+            и ничего не рекламируем.
+            Люди сами пишут о странах,
+            куда хотели бы отправиться
+            и чем можно там заняться.
+          </p>
+        </div>
         <ul class="directions__list">
           <li class="directions__item directions__item--thailand">
             <img class="directions__img" width="270" height="110" src="img/directions/thailand.png" alt="Таиланд">
@@ -134,12 +138,14 @@
 
     <section class="companions">
       <div class="companions__wrapper">
-        <h2 class="companions__title title">Попутчики</h2>
-        <p class="companions__text text">
-          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен
-          пляж и коктейль, а другому маршрут для хайкинга.
-        </p>
-        <p class="companions__text text"><b>Теперь можно легко найти единомышленников!</b></p>
+        <div class="companions__top">
+          <h2 class="companions__title title">Попутчики</h2>
+          <p class="companions__text text">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен
+            пляж и коктейль, а другому маршрут для хайкинга.
+          </p>
+          <p class="companions__text text"><b>Теперь можно легко найти единомышленников!</b></p>
+        </div>
         <ul class="companions__list">
           <li class="companions__item">
             <div class="companions-level">
@@ -242,13 +248,13 @@
         <a class="contacts__logo"><img src="img/footer/logo.png" width="96" height="15" alt="Погнали?"></a>
         <ul class="contacts-socials">
           <li class="contacts-socials__item">
-            <a href="" aria-label="Фейсбук"></a>
+            <a class="contacts-socials__link" href="" aria-label="Фейсбук">Фейсбук</a>
           </li>
           <li class="contacts-socials__item">
-            <a href="" aria-label="Вконтакте"></a>
+            <a class="contacts-socials__link" href="" aria-label="Вконтакте">Вконтакте</a>
           </li>
           <li class="contacts-socials__item">
-            <a href="" aria-label="Инстаграм"></a>
+            <a class="contacts-socials__link" href="" aria-label="Инстаграм">Инстаграм</a>
           </li>
         </ul>
         <div class="contacts-developed">

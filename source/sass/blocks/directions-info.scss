@@ -1,7 +1,18 @@
+.directions-info {
+  background-color: $basic-white;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+}
+
 .directions-info__title {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+
+  margin: 0;
 }
 
 .directions-info__subtitle {

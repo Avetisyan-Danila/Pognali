@@ -6,6 +6,11 @@
   background-color: $special-blue;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 630px;
+  }
 }
 
 .companions__text {
@@ -17,6 +22,17 @@
 
   &:nth-of-type(2) {
     font-weight: 700;
+  }
+}
+
+.companions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

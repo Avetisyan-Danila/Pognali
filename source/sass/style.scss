@@ -1,12 +1,15 @@
 @import "fonts.scss";
 @import "colors.scss";
+@import "viewports.scss";
 @import "blocks/page-body.scss";
 @import "blocks/title.scss";
 @import "blocks/text.scss";
 @import "blocks/link.scss";
 @import "blocks/visually-hidden.scss";
+@import "blocks/header.scss";
 @import "blocks/header-nav.scss";
 @import "blocks/header-contacts.scss";
+@import "blocks/header-socials.scss";
 @import "blocks/user-navigation.scss";
 @import "blocks/site-list.scss";
 @import "blocks/promo.scss";
@@ -21,6 +24,7 @@
 @import "blocks/interested-contacts.scss";
 @import "blocks/address.scss";
 @import "blocks/contacts.scss";
+@import "blocks/contacts-socials.scss";
 @import "blocks/contacts-developed.scss";
 @import "blocks/main.scss";
 @import "blocks/about.scss";
