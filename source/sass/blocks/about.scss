@@ -1,3 +1,13 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: $basic-blue-light;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .about__change-photo {
   background-color: $special-sky;
   font-size: 20px;
@@ -7,6 +17,16 @@
   text-decoration: none;
   border-radius: 20px;
   text-transform: uppercase;
+
+  grid-column: 1 / 4;
+}
+
+.about__tags {
+  grid-column: 1 / 4;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 3;
+  }
 }
 
 .about__tags label {
@@ -27,5 +47,19 @@
   &::placeholder {
     color: $special-grey;
     opacity: 0.6;
+  }
+}
+
+.about-transport {
+  grid-column: 1 / 3;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
   }
 }

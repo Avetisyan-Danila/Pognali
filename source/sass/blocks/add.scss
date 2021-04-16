@@ -1,3 +1,16 @@
+.add {
+  background-color: $special-sky;
+}
+
+.add__wrapper {
+  background-color: $special-lavender-blue;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .add__title {
   color: $special-blue-light;
 }

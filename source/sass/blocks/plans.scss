@@ -1,3 +1,13 @@
+.plans {
+  background-color: $basic-blue-light;
+}
+
+.plans__wrapper {
+  background-color: $special-sky;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
 .plans__title {
   color: $special-blue-light;
 }
