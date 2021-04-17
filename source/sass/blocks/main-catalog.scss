@@ -1,0 +1,21 @@
+.main-catalog {
+  background-color: $special-steel;
+}
+
+.main-catalog__top {
+  background-color: $special-sapphire;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.main-catalog__link {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $basic-white;
+  text-transform: uppercase;
+  text-decoration: none;
+}

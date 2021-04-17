@@ -1,0 +1,13 @@
+.pagination {
+  background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
+}
