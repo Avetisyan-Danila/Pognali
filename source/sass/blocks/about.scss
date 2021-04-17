@@ -49,17 +49,3 @@
     opacity: 0.6;
   }
 }
-
-.about-transport {
-  grid-column: 1 / 3;
-
-  @media (min-width: $tablet-width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
-  }
-}

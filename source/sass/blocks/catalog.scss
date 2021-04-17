@@ -1,3 +1,9 @@
+.catalog {
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / 2;
+  }
+}
+
 .catalog__more {
   font-size: 17px;
   line-height: 30px;
@@ -5,4 +11,8 @@
   color: $special-blue-light;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
 }

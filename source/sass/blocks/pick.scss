@@ -1,3 +1,13 @@
+.pick {
+  background-color: $basic-yellow;
+  border-radius: 20px;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    align-self: start;
+  }
+}
+
 .pick__title {
   font-size: 22px;
   line-height: 22px;
