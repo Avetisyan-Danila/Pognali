@@ -6,9 +6,67 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
-  color: $basic-white;
+
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.user-navigation__item {
+  &:nth-child(1) {
+    & a {
+      background-color: $special-orange;
+      background-image: url(../../img/icons/call.svg);
+      background-size: 18px 18px;
+    }
+  }
+
+  &:nth-child(2) {
+    & a {
+      background-color: $special-yellow-dark;
+      background-image: url(../../img/icons/mail-nav.svg);
+      background-size: 18px 16px;
+    }
+  }
+
+  &:nth-child(3) {
+    & a {
+      width: 190px;
+      height: auto;
+      padding: 10px 0;
+      border-radius: 25px;
+      color: $basic-blue;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: $basic-yellow;
+
+      @media (min-width: $tablet-width) {
+        width: 188px;
+        padding-top: 16px;
+        padding-bottom: 14px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.user-navigation__item  a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-decoration: none;
 }

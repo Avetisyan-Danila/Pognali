@@ -5,4 +5,9 @@
   color: $special-orange;
 
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
