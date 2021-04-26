@@ -7,7 +7,7 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
-  padding: 0px 25px;
+  padding: 0 25px;
   padding-top: 72px;
   padding-bottom: 29px;
 
@@ -15,12 +15,13 @@
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 
-    padding: 0px 76px;
+    padding: 0 76px;
     padding-top: 76px;
     padding-bottom: 60px;
   }
+
   @media (min-width: $desktop-width) {
-    padding: 0px 133px;
+    padding: 0 133px;
     padding-top: 109px;
     padding-bottom: 104px;
   }

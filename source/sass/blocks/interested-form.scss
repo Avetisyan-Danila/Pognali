@@ -61,7 +61,7 @@
   width: 60px;
   height: 100%;
   background-color: $basic-yellow;
-  background-image: url(../../img/icons/arrow-button.svg);
+  background-image: url("../../img/icons/arrow-button.svg");
   background-repeat: no-repeat;
   background-position: center center;
   border: none;
@@ -69,7 +69,7 @@
 
   @media (min-width: $tablet-width) {
     width: 80px;
-    border-radius: 0px;
+    border-radius: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -92,6 +92,7 @@
 
 .interested-form__button span {
   display: none;
+
   @media (min-width: $desktop-width) {
     display: block;
   }

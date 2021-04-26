@@ -7,7 +7,7 @@
   background-color: $basic-blue-light;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding: 0px 25px;
+  padding: 0 25px;
   padding-top: 70px;
   padding-bottom: 34px;
 
@@ -24,7 +24,7 @@
       right: 40px;
       width: 288px;
       height: 574px;
-      background-image: url(../../img/directions/flags-bg.png);
+      background-image: url("../../img/directions/flags-bg.png");
 
       @media (min-width: $desktop-width) {
         top: 88px;
@@ -33,7 +33,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 406px;
       left: calc(50% - 345px);
@@ -164,60 +164,59 @@
 
       width: 70px;
       height: 47px;
-
     }
   }
 
   &--thailand {
     &::before {
-      background-image: url(../../img/directions/thailand.png);
+      background-image: url("../../img/directions/thailand.png");
 
       @media (min-width: $tablet-width) {
-        background-image: url(../../img/directions/thailand-small.png);
+        background-image: url("../../img/directions/thailand-small.png");
       }
     }
 
     &::after {
-      background-image: url(../../img/directions/flags/thailand.png);
+      background-image: url("../../img/directions/flags/thailand.png");
 
       @media (min-width: $tablet-width) {
-        background-image: url(../../img/directions/flags/thailand-big.png);
+        background-image: url("../../img/directions/flags/thailand-big.png");
       }
     }
   }
 
   &--france {
     &::before {
-      background-image: url(../../img/directions/france.png);
+      background-image: url("../../img/directions/france.png");
 
       @media (min-width: $tablet-width) {
-        background-image: url(../../img/directions/france-small.png);
+        background-image: url("../../img/directions/france-small.png");
       }
     }
 
     &::after {
-      background-image: url(../../img/directions/flags/france.png);
+      background-image: url("../../img/directions/flags/france.png");
 
       @media (min-width: $tablet-width) {
-        background-image: url(../../img/directions/flags/france-big.png);
+        background-image: url("../../img/directions/flags/france-big.png");
       }
     }
   }
 
   &--czech {
     &::before {
-      background-image: url(../../img/directions/czech.png);
+      background-image: url("../../img/directions/czech.png");
 
       @media (min-width: $tablet-width) {
-        background-image: url(../../img/directions/czech-small.png);
+        background-image: url("../../img/directions/czech-small.png");
       }
     }
 
     &::after {
-      background-image: url(../../img/directions/flags/czech.png);
+      background-image: url("../../img/directions/flags/czech.png");
 
       @media (min-width: $tablet-width) {
-        background-image: url(../../img/directions/flags/czech-big.png);
+        background-image: url("../../img/directions/flags/czech-big.png");
       }
     }
   }

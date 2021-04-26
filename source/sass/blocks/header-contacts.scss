@@ -7,7 +7,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    padding: 0px;
+    padding: 0;
   }
 }
 
@@ -38,7 +38,7 @@
 
     display: flex;
     order: 2;
-    
+
     width: 188px;
     margin-bottom: 0;
   }
@@ -85,7 +85,7 @@
 
   &:nth-of-type(2) {
     &::before {
-      background-image: url(../../img/icons/telephone.svg);
+      background-image: url("../../img/icons/telephone.svg");
       background-size: 18px 17px;
 
       @media (min-width: $tablet-width) {
@@ -93,7 +93,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        background-image: url(../../img/icons/call.svg);
+        background-image: url("../../img/icons/call.svg");
         background-size: 18px 18px;
         background-color: $special-orange;
       }
@@ -102,7 +102,7 @@
 
   &:nth-of-type(3) {
     &::before {
-      background-image: url(../../img/icons/mail.svg);
+      background-image: url("../../img/icons/mail.svg");
       background-size: 18px 13px;
 
       @media (min-width: $tablet-width) {
@@ -110,7 +110,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        background-image: url(../../img/icons/mail-nav.svg);
+        background-image: url("../../img/icons/mail-nav.svg");
         background-size: 16px 14px;
         background-color: $special-yellow-dark;
       }

@@ -11,19 +11,19 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
-    padding: 40px 0px;
+    padding: 40px 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: min-content 1fr;
-    padding: 20px 0px;
+    padding: 20px 0;
   }
 }
 
 .header__logo {
   width: 96px;
   height: 15px;
-  background-image: url(../../img/logo.png);
+  background-image: url("../../img/logo.png");
   background-repeat: no-repeat;
   background-position: right center;
   padding-left: 25px;
@@ -31,7 +31,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 40px;
 
-    background-image: url(../../img/logo-big.png);
+    background-image: url("../../img/logo-big.png");
     background-size: 166px;
     width: 166px;
     height: 42px;

@@ -5,24 +5,23 @@
 }
 
 .transport-list__item {
-
   &--disabled {
     opacity: 0.15;
   }
 
   &:nth-child(1) {
-    background-image: url(../../img/icons/plane.svg);
+    background-image: url("../../img/icons/plane.svg");
   }
 
   &:nth-child(2) {
-    background-image: url(../../img/icons/bus.svg);
+    background-image: url("../../img/icons/bus.svg");
   }
 
   &:nth-child(3) {
-    background-image: url(../../img/icons/bicycle.svg);
+    background-image: url("../../img/icons/bicycle.svg");
   }
 
   &:nth-child(4) {
-    background-image: url(../../img/icons/run.svg);
+    background-image: url("../../img/icons/run.svg");
   }
 }

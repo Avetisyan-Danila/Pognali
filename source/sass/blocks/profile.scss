@@ -42,7 +42,7 @@
     display: block;
     width: 100px;
     height: 100px;
-    background-image: url(../../img/profile/rates.png);
+    background-image: url("../../img/profile/rates.png");
     background-size: 100% 100%;
 
     @media (min-width: $tablet-width) {
@@ -80,7 +80,7 @@
       right: -111px;
       width: 198px;
       height: 198px;
-      background-image: url(../../img/profile/rates.png);
+      background-image: url("../../img/profile/rates.png");
     }
   }
 }
@@ -196,7 +196,7 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: min-content 1fr min-content;
 
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -316,7 +316,7 @@
       height: 68px;
       border-radius: 50%;
       background-color: $special-steel;
-      background-image: url(../../img/icons/businessman.svg);
+      background-image: url("../../img/icons/businessman.svg");
       background-repeat: no-repeat;
       background-position: center center;
     }
@@ -329,7 +329,7 @@
       right: 45px;
       width: 100px;
       height: 100px;
-      background-image: url(../../img/profile/rates.png);
+      background-image: url("../../img/profile/rates.png");
       background-size: 100% 100%;
 
       @media (min-width: $desktop-width) {

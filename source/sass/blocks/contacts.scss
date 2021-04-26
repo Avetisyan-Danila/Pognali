@@ -3,7 +3,7 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
-  padding: 0px 25px;
+  padding: 0 25px;
   padding-top: 37px;
   padding-bottom: 19px;
 
@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 0px 40px;
+    padding: 0 40px;
     padding-top: 46px;
     padding-bottom: 32px;
   }
@@ -30,14 +30,14 @@
   width: 96px;
   height: 15px;
 
-  background-image: url(../../img/footer/logo.png);
+  background-image: url("../../img/footer/logo.png");
 
   @media (min-width: $tablet-width) {
     width: 164px;
     height: 42px;
     margin: 0;
     margin-bottom: 40px;
-    background-image: url(../../img/footer/logo-big.png);
+    background-image: url("../../img/footer/logo-big.png");
     background-size: 100%;
   }
 

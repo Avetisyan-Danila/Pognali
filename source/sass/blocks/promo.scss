@@ -1,5 +1,5 @@
 .promo {
-  background-image: url(../../img/promo/globe-bg.jpg);
+  background-image: url("../../img/promo/globe-bg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 45%;
   position: relative;
@@ -14,7 +14,7 @@
     transform: translateX(50%);
     width: 192px;
     height: 255px;
-    background-image: url(../../img/promo/traveller.png);
+    background-image: url("../../img/promo/traveller.png");
     background-repeat: no-repeat;
     background-size: 100%;
 
@@ -23,16 +23,15 @@
       height: 451px;
       top: 100%;
       right: calc(50% - 270px);
-      transform: translateY( calc(-100% - calc(279px + 139px)) );
+      transform: translateY(calc(-100% - calc(279px + 139px)));
     }
 
     @media (min-width: $desktop-width) {
       width: 431px;
       height: 640px;
-      transform: none;
       top: auto;
       bottom: 0;
-      background-image: url(../../img/promo/traveller-big.png);
+      background-image: url("../../img/promo/traveller-big.png");
       right: 50%;
       transform: translateX(calc(50% + 100px));
     }
@@ -40,7 +39,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 162px;
-    background-image: url(../../img/promo/globe-medium-bg.jpg);
+    background-image: url("../../img/promo/globe-medium-bg.jpg");
     background-color: $special-sapphire;
     background-size: 100%;
     background-position: center bottom 279px;
@@ -49,7 +48,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 110px;
     padding-bottom: 123px;
-    background-image: url(../../img/promo/globe-big-bg.png);
+    background-image: url("../../img/promo/globe-big-bg.png");
     background-position: left top;
     background-color: $special-blue;
   }
@@ -90,13 +89,13 @@
 }
 
 .promo__navigation {
-  padding: 0px 25px;
+  padding: 0 25px;
   display: flex;
   justify-content: center;
   transform: translateY(50%);
 
   @media (min-width: $tablet-width) {
-    padding: 0px;
+    padding: 0;
     position: fixed;
     z-index: 3;
     right: 40px;
@@ -112,8 +111,7 @@
   background-color: $special-blue;
   list-style: none;
   margin: 0;
-  padding: 0;
-  padding: 0px 25px;
+  padding: 0 25px;
   margin-bottom: -260px;
 
   @media (min-width: $tablet-width) {
@@ -121,7 +119,7 @@
     grid-template-columns: repeat(2, 1fr);
 
     margin-bottom: -70px;
-    padding: 0px 40px;
+    padding: 0 40px;
 
     position: relative;
 
@@ -152,7 +150,7 @@
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
 
-    padding: 0px 60px;
+    padding: 0 60px;
     margin: 0;
 
     background-color: transparent;
@@ -166,7 +164,7 @@
       width: calc(100% - 120px);
       height: 100%;
       border-radius: 20px;
-      background: linear-gradient(90deg, rgba(255,141,48,1) 35%, rgba(255,165,48,1) 50%, rgba(255,189,48,1) 75%, rgba(255,215,75,1) 100%);
+      background: linear-gradient(90deg, rgba(255, 141, 48, 1) 35%, rgba(255, 165, 48, 1) 50%, rgba(255, 189, 48, 1) 75%, rgba(255, 215, 75, 1) 100%);
     }
 
     &::after {
@@ -248,7 +246,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    border-radius: 0px;
+    border-radius: 0;
     align-items: flex-start;
     flex-direction: column;
     padding: 30px 33px 21px 33px;
