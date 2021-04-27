@@ -42,7 +42,7 @@
     left: 0;
     width: 64px;
     height: 71px;
-    background-image: url("../../img/companions/rogovaya-back.png");
+    background-image: url("../img/companions/rogovaya-back.png");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
@@ -52,7 +52,7 @@
       width: 143px;
       height: 143px;
 
-      background-image: url("../../img/companions/smolov-back.png");
+      background-image: url("../img/companions/smolov-back.png");
     }
 
     @media (min-width: $desktop-width) {
@@ -92,7 +92,7 @@
     right: 0;
     width: 143px;
     height: 143px;
-    background-image: url("../../img/companions/smolov-back.png");
+    background-image: url("../img/companions/smolov-back.png");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
@@ -101,7 +101,7 @@
       width: 285px;
       height: 285px;
 
-      background-image: url("../../img/companions/rogovaya-back-big.png");
+      background-image: url("../img/companions/rogovaya-back-big.png");
     }
 
     @media (min-width: $desktop-width) {
@@ -174,14 +174,14 @@
     }
   }
 
-  @media (max-width: $mobile-width-only) {
-    & br {
-      display: none;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     max-width: none;
+  }
+}
+
+.companions__text br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
   }
 }
 
@@ -226,20 +226,22 @@
     }
   }
 
+  &:nth-child(odd) {
+    @media (min-width: $tablet-width) {
+      margin-right: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 60px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 285px;
     border-radius: 20px;
 
     padding-bottom: 27px;
     margin: 0;
-
-    &:nth-child(odd) {
-      margin-right: 50px;
-
-      @media (min-width: $desktop-width) {
-        margin-right: 60px;
-      }
-    }
   }
 }
 
@@ -279,16 +281,12 @@
     }
   }
 
-  &--offline {
-    &::before {
-      background-color: $special-red-light;
-    }
+  &--offline::before {
+    background-color: $special-red-light;
   }
 
-  &--online {
-    &::before {
-      background-color: $special-green-light;
-    }
+  &--online::before {
+    background-color: $special-green-light;
   }
 
   @media (min-width: $tablet-width) {

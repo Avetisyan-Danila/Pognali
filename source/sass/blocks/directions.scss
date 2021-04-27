@@ -11,28 +11,25 @@
   padding-top: 70px;
   padding-bottom: 34px;
 
-  @media (min-width: $tablet-width) {
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-
-    padding: 73px 75px 80px 73px;
-
-    &::before {
+  &::before {
+    @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
       top: 80px;
       right: 40px;
       width: 288px;
       height: 574px;
-      background-image: url("../../img/directions/flags-bg.png");
-
-      @media (min-width: $desktop-width) {
-        top: 88px;
-        right: calc(50% - 638px);
-      }
+      background-image: url("../img/directions/flags-bg.png");
     }
 
-    &::after {
+    @media (min-width: $desktop-width) {
+      top: 88px;
+      right: calc(50% - 638px);
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
       top: 406px;
@@ -41,12 +38,19 @@
       height: 141px;
       background-color: $special-steel;
       border-radius: 20px;
-
-      @media (min-width: $desktop-width) {
-        left: calc(50% - 650px);
-        top: 90px;
-      }
     }
+
+    @media (min-width: $desktop-width) {
+      left: calc(50% - 650px);
+      top: 90px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    padding: 73px 75px 80px 73px;
   }
 
   @media (min-width: $desktop-width) {
@@ -167,57 +171,57 @@
     }
   }
 
-  &--thailand {
-    &::before {
-      background-image: url("../../img/directions/thailand.png");
-
-      @media (min-width: $tablet-width) {
-        background-image: url("../../img/directions/thailand-small.png");
-      }
-    }
-
-    &::after {
-      background-image: url("../../img/directions/flags/thailand.png");
-
-      @media (min-width: $tablet-width) {
-        background-image: url("../../img/directions/flags/thailand-big.png");
-      }
+  &:last-child {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
     }
   }
 
-  &--france {
-    &::before {
-      background-image: url("../../img/directions/france.png");
+  &--thailand::before {
+    background-image: url("../img/directions/thailand.png");
 
-      @media (min-width: $tablet-width) {
-        background-image: url("../../img/directions/france-small.png");
-      }
-    }
-
-    &::after {
-      background-image: url("../../img/directions/flags/france.png");
-
-      @media (min-width: $tablet-width) {
-        background-image: url("../../img/directions/flags/france-big.png");
-      }
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/directions/thailand-small.png");
     }
   }
 
-  &--czech {
-    &::before {
-      background-image: url("../../img/directions/czech.png");
+  &--thailand::after {
+    background-image: url("../img/directions/flags/thailand.png");
 
-      @media (min-width: $tablet-width) {
-        background-image: url("../../img/directions/czech-small.png");
-      }
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/directions/flags/thailand-big.png");
     }
+  }
 
-    &::after {
-      background-image: url("../../img/directions/flags/czech.png");
+  &--france::before {
+    background-image: url("../img/directions/france.png");
 
-      @media (min-width: $tablet-width) {
-        background-image: url("../../img/directions/flags/czech-big.png");
-      }
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/directions/france-small.png");
+    }
+  }
+
+  &--france::after {
+    background-image: url("../img/directions/flags/france.png");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/directions/flags/france-big.png");
+    }
+  }
+
+  &--czech::before {
+    background-image: url("../img/directions/czech.png");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/directions/czech-small.png");
+    }
+  }
+
+  &--czech::after {
+    background-image: url("../img/directions/flags/czech.png");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/directions/flags/czech-big.png");
     }
   }
 
@@ -233,10 +237,6 @@
     margin: 0;
     margin-left: auto;
     margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 

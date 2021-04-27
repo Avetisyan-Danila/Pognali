@@ -39,6 +39,19 @@
   margin-top: 55px;
   margin-bottom: 51px;
 
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: $basic-white;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0 97px;
     margin-top: 76px;
@@ -51,26 +64,17 @@
     padding: 0;
     padding-left: 145px;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 40px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 60px;
-      height: 2px;
-      background-color: $basic-white;
-    }
   }
 }
 
 .header-nav__item {
-  @media (min-width: $desktop-width) {
-    margin-right: 34px;
-
-    &:last-child {
+  &:last-child {
+    @media (min-width: $desktop-width) {
       margin-right: 0;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 34px;
   }
 }

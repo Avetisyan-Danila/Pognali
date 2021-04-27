@@ -50,21 +50,23 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 40px;
-
-      & br {
-        display: none;
-      }
     }
 
     @media (min-width: $desktop-width) {
       margin-bottom: 42px;
     }
   }
+}
 
+.interested__text br {
   @media (max-width: $mobile-width-only) {
-    & br {
-      display: none;
-    }
+    display: none;
+  }
+}
+
+.interested__text:nth-of-type(2) br {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 

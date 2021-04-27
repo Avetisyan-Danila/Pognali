@@ -41,36 +41,34 @@
   }
 
   &:nth-child(1) {
-    &::before {
-      background-image: url("../../img/icons/telephone.svg");
-      background-size: 18px 17px;
-
-      @media (min-width: $tablet-width) {
-        background-size: 27px 26px;
-      }
-
-      @media (min-width: $desktop-width) {
-        background-size: 36px 34px;
-      }
-    }
-
     @media (min-width: $desktop-width) {
       margin-right: 110px;
     }
   }
 
-  &:nth-child(2) {
-    &::before {
-      background-image: url("../../img/icons/mail.svg");
-      background-size: 18px 13px;
+  &:nth-child(1)::before {
+    background-image: url("../img/icons/telephone.svg");
+    background-size: 18px 17px;
 
-      @media (min-width: $tablet-width) {
-        background-size: 28px 19px;
-      }
+    @media (min-width: $tablet-width) {
+      background-size: 27px 26px;
+    }
 
-      @media (min-width: $desktop-width) {
-        background-size: 37px 25px;
-      }
+    @media (min-width: $desktop-width) {
+      background-size: 36px 34px;
+    }
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../img/icons/mail.svg");
+    background-size: 18px 13px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 28px 19px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 37px 25px;
     }
   }
 

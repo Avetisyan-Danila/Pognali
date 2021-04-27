@@ -7,7 +7,6 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
-
   padding: 37px 26px 38px 50px;
 
   @media (min-width: $tablet-width) {
@@ -29,20 +28,12 @@
 
   margin-bottom: 31px;
 
-  & span {
-    max-width: 107px;
-
-    @media (min-width: $tablet-width) {
-      max-width: none;
-    }
-  }
-
   &::after {
     content: "";
     display: block;
     width: 100px;
     height: 100px;
-    background-image: url("../../img/profile/rates.png");
+    background-image: url("../img/profile/rates.png");
     background-size: 100% 100%;
 
     @media (min-width: $tablet-width) {
@@ -61,18 +52,21 @@
   }
 }
 
+.profile__title span {
+  max-width: 107px;
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+  }
+}
+
 .profile__list {
   list-style: none;
   margin: 0;
   padding: 0;
 
-  @media (min-width: $desktop-width) {
-    width: 1066px;
-    position: relative;
-    transform: translateX(-60px);
-    margin: 0 auto;
-
-    &::before {
+  &::before {
+    @media (min-width: $desktop-width) {
       content: "";
       position: absolute;
       z-index: 1;
@@ -80,8 +74,15 @@
       right: -111px;
       width: 198px;
       height: 198px;
-      background-image: url("../../img/profile/rates.png");
+      background-image: url("../img/profile/rates.png");
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1066px;
+    position: relative;
+    transform: translateX(-60px);
+    margin: 0 auto;
   }
 }
 
@@ -93,104 +94,44 @@
 
   position: relative;
 
-  &:first-child {
+  &:first-child::before {
     @media (min-width: $tablet-width) {
-      &::before {
-        content: "";
-        position: absolute;
-        top: -40px;
-        right: 0;
-        width: 198px;
-        height: 40px;
-        background-color: $special-steel;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: 0;
+      width: 198px;
+      height: 40px;
+      background-color: $special-steel;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
 
-        @media (min-width: $desktop-width) {
-          width: 446px;
-        }
-      }
+    @media (min-width: $desktop-width) {
+      width: 446px;
+    }
+  }
+
+  &:last-child::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      right: 0;
+      width: 198px;
+      height: 40px;
+      background-color: $special-steel;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 446px;
     }
   }
 
   &:last-child {
     margin-bottom: 0;
-
-    @media (min-width: $tablet-width) {
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: -40px;
-        right: 0;
-        width: 198px;
-        height: 40px;
-        background-color: $special-steel;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-
-        @media (min-width: $desktop-width) {
-          width: 446px;
-        }
-      }
-    }
-
-    .profile__info {
-      &:nth-of-type(1) {
-        @media (min-width: $tablet-width) {
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background-color: $special-white;
-          }
-        }
-      }
-
-      &:nth-of-type(2) {
-        padding-bottom: 15px;
-        margin-bottom: 31px;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background-color: $special-white;
-
-          @media (min-width: $tablet-width) {
-            display: none;
-          }
-        }
-
-        @media (min-width: $tablet-width) {
-          padding-bottom: 0;
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  &:nth-child(1) {
-    & .profile__num {
-      background-color: $special-orange;
-    }
-  }
-
-  &:nth-child(2) {
-    & .profile__num {
-      background-color: $special-yellow-dark;
-    }
-  }
-
-  &:nth-child(3) {
-    & .profile__num {
-      background-color: $basic-yellow;
-    }
   }
 
   @media (min-width: $tablet-width) {
@@ -217,25 +158,25 @@
 
   position: relative;
 
-  &:nth-of-type(1) {
+  &--description {
     padding-top: 8px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background-color: $special-white;
-    }
 
     @media (min-width: $tablet-width) {
       padding-top: 0;
     }
   }
 
-  &:nth-of-type(2) {
+  &--description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $special-white;
+  }
+
+  &--price {
     @media (min-width: $tablet-width) {
       width: 198px;
       background-color: $special-steel;
@@ -244,6 +185,42 @@
 
     @media (min-width: $desktop-width) {
       width: 446px;
+    }
+  }
+
+  &--last:nth-of-type(1)::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: $special-white;
+    }
+  }
+
+  &--last:nth-of-type(2) {
+    padding-bottom: 15px;
+    margin-bottom: 31px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &--last:nth-of-type(2)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $special-white;
+
+    @media (min-width: $tablet-width) {
+      display: none;
     }
   }
 
@@ -271,6 +248,18 @@
   color: $basic-white;
   font-weight: 400;
 
+  &--first {
+    background-color: $special-orange;
+  }
+
+  &--second {
+    background-color: $special-yellow-dark;
+  }
+
+  &--third {
+    background-color: $basic-yellow;
+  }
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
 
@@ -296,6 +285,37 @@
   color: $special-blue-dark;
   text-decoration: none;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: $special-steel;
+    background-image: url("../img/icons/businessman.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 45px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/profile/rates.png");
+    background-size: 100% 100%;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
@@ -305,37 +325,6 @@
     padding-left: 89px;
 
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background-color: $special-steel;
-      background-image: url("../../img/icons/businessman.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 45px;
-      width: 100px;
-      height: 100px;
-      background-image: url("../../img/profile/rates.png");
-      background-size: 100% 100%;
-
-      @media (min-width: $desktop-width) {
-        display: none;
-      }
-    }
   }
 
   @media (min-width: $desktop-width) {
