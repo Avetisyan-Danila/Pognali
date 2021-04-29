@@ -1,4 +1,4 @@
-.companions-wishlist {
+.companions-wishlist__flags {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -10,9 +10,13 @@
   top: 270px;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    transform: translate(-50%, 0%);
+  }
 }
 
-.companions-wishlist__item {
+.companions-wishlist__flag {
   margin-right: 20px;
 
   &:last-child {
