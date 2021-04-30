@@ -1,10 +1,29 @@
-.address__wrapper {
+.address {
   background-color: $basic-yellow;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
+  padding: 0 25px;
+  padding-top: 31px;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    padding: 0 75px;
+    padding-top: 48px;
+    padding-bottom: 84px;
+  }
+}
+
+.address__wrapper {
   @media (min-width: $desktop-width) {
+    width: 1022px;
     display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    transform: translateX(74px);
   }
 }
 
@@ -16,8 +35,69 @@
   text-transform: uppercase;
 
   margin: 0;
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+    border-radius: 50%;
+    background-color: $special-navy;
+    background-image: url("../img/icons/location.svg");
+    background-repeat: no-repeat;
+    background-size: 21px 21px;
+    background-position: center center;
+
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+      margin-right: 26px;
+      background-size: 32px 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
+      margin-right: 31px;
+      background-size: 42px 42px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.address__text span {
+  max-width: 143px;
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+  }
 }
 
 .address__link {
   border: 3px solid $special-blue;
+  padding: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 29px 36px 27px 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 324px;
+    padding: 29px 35px 27px 38px;
+    box-sizing: border-box;
+  }
 }

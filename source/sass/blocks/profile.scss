@@ -4,38 +4,277 @@
 
 .profile__wrapper {
   background-color: $basic-blue-light;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  padding: 37px 26px 38px 50px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    padding: 74px 40px 85px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 107px 133px 187px 130px;
+  }
+}
+
+.profile__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 31px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/profile/rates.png");
+    background-size: 100% 100%;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+
+    margin-bottom: 71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 134px;
+  }
+}
+
+.profile__title span {
+  max-width: 107px;
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+  }
 }
 
 .profile__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: -111px;
+      width: 198px;
+      height: 198px;
+      background-image: url("../img/profile/rates.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1066px;
+    position: relative;
+    transform: translateX(-60px);
+    margin: 0 auto;
+  }
 }
 
-.profile__text {
+.profile__item {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+
+  margin-bottom: 18px;
+
+  position: relative;
+
+  &:first-child::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: 0;
+      width: 198px;
+      height: 40px;
+      background-color: $special-steel;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 446px;
+    }
+  }
+
+  &:last-child::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      right: 0;
+      width: 198px;
+      height: 40px;
+      background-color: $special-steel;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 446px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: min-content 1fr min-content;
+
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: min-content 528px min-content;
+  }
+}
+
+.profile__info {
   font-size: 16px;
   line-height: 16px;
   font-weight: 300;
   color: $special-grey;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
-}
+  margin: 0;
 
-.profile__text span {
-  display: block;
+  display: flex;
+  align-items: center;
 
-  &:nth-child(1) {
+  position: relative;
+
+  &--description {
+    padding-top: 8px;
+
     @media (min-width: $tablet-width) {
-      width: 400px;
+      padding-top: 0;
+    }
+  }
+
+  &--description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $special-white;
+  }
+
+  &--price {
+    @media (min-width: $tablet-width) {
+      width: 198px;
+      background-color: $special-steel;
+      justify-content: center;
     }
 
     @media (min-width: $desktop-width) {
-      width: 528px;
+      width: 446px;
     }
+  }
+
+  &--last:nth-of-type(1)::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: $special-white;
+    }
+  }
+
+  &--last:nth-of-type(2) {
+    padding-bottom: 15px;
+    margin-bottom: 31px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &--last:nth-of-type(2)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $special-white;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.profile__num {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  margin: 0;
+  margin-left: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $basic-white;
+  font-weight: 400;
+
+  &--first {
+    background-color: $special-orange;
+  }
+
+  &--second {
+    background-color: $special-yellow-dark;
+  }
+
+  &--third {
+    background-color: $basic-yellow;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+
+    width: 68px;
+    height: 68px;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    margin-left: 0;
+    margin-right: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 24px;
   }
 }
 
@@ -45,4 +284,53 @@
   font-weight: 700;
   color: $special-blue-dark;
   text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: $special-steel;
+    background-image: url("../img/icons/businessman.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 45px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/profile/rates.png");
+    background-size: 100% 100%;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    display: block;
+    margin-top: 55px;
+    padding-left: 89px;
+
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1177px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 59px;
+  }
 }

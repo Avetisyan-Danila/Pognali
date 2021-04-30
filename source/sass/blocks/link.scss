@@ -6,4 +6,25 @@
   color: $special-blue-light;
   text-decoration: none;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-image: url("../img/icons/arrow-button.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 14px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }

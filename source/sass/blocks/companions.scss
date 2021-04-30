@@ -4,24 +4,184 @@
 
 .companions__wrapper {
   background-color: $special-blue;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  padding: 0 25px;
+  padding-bottom: 31px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 0;
+    width: 113px;
+    height: 142px;
+    border-radius: 20px;
+    background-color: $special-midnight-blue;
+
+    @media (min-width: $tablet-width) {
+      top: 71px;
+      left: 40px;
+
+      width: 212px;
+      height: 212px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 307px;
+    left: 0;
+    width: 64px;
+    height: 71px;
+    background-image: url("../img/companions/rogovaya-back.png");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 426px;
+      left: 40px;
+
+      width: 143px;
+      height: 143px;
+
+      background-image: url("../img/companions/smolov-back.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 134px;
+      left: 50%;
+      transform: translateX(calc(-50% - 100px));
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+    padding: 0 74px;
+    padding-bottom: 87px;
+  }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 630px;
+    grid-template-columns: 428px calc(630px + 193px);
+    justify-content: center;
+    padding: 130px 60px calc(134px - 80px) 129px;
   }
 }
 
+.companions__top {
+  padding-top: 68px;
+  padding-left: 23px;
+  margin-bottom: 54px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 143px;
+    height: 143px;
+    background-image: url("../img/companions/smolov-back.png");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 80px;
+
+      width: 285px;
+      height: 285px;
+
+      background-image: url("../img/companions/rogovaya-back-big.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      top: auto;
+      right: auto;
+      bottom: -54px;
+      left: 61px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -69px;
+      width: 212px;
+      height: 212px;
+      border-radius: 20px;
+      background-color: $special-midnight-blue;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 141px;
+    padding-left: 0;
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 80px;
+    margin-bottom: 0;
+  }
+}
+
+.companions__title {
+  position: relative;
+  z-index: 1;
+}
+
 .companions__text {
+  position: relative;
+  z-index: 1;
+  max-width: 217px;
   color: $basic-white;
 
   &:nth-of-type(1) {
+    margin-top: 19px;
     font-weight: 300;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 55px;
+    }
   }
 
   &:nth-of-type(2) {
+    margin-top: 25px;
     font-weight: 700;
+
+    @media (min-width: $tablet-width) {
+      font-size: 21px;
+      line-height: 24px;
+
+      margin-top: 39px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 42px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+  }
+}
+
+.companions__text br {
+  @media (max-width: $mobile-width-only) {
+    display: none;
   }
 }
 
@@ -32,12 +192,65 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    margin-bottom: 81px;
+
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-left: 193px;
   }
 }
 
 .companions__item {
   background-color: $basic-white;
+  border-radius: 10px;
+
+  width: 270px;
+  margin: 0 auto;
+
+  padding-bottom: 20px;
+  margin-bottom: 9px;
+
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(odd) {
+    @media (min-width: $tablet-width) {
+      margin-right: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 60px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+    border-radius: 20px;
+
+    padding-bottom: 27px;
+    margin: 0;
+  }
+}
+
+.companions__img {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 286px;
+  }
 }
 
 .companions__name {
@@ -45,10 +258,84 @@
   line-height: 21px;
   font-weight: 700;
   color: $special-blue-light;
+
+  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  &--offline::before {
+    background-color: $special-red-light;
+  }
+
+  &--online::before {
+    background-color: $special-green-light;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 22px;
+
+    margin-top: 27px;
+    margin-bottom: 23px;
+  }
 }
 
 .companions__tags {
   font-size: 16px;
   line-height: 18px;
   color: $special-grey;
+  text-align: center;
+  max-width: 188px;
+
+  margin: 0 auto;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+    max-width: 223px;
+
+    margin-bottom: 24px;
+  }
+}
+
+.companions__link {
+  padding: 23px;
+
+  width: 270px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 616px;
+
+    padding: 28px 35px 28px 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    margin: 0;
+
+    position: relative;
+    z-index: 1;
+    transform: translateY(-100%);
+  }
 }

@@ -1,0 +1,25 @@
+.companions-wishlist__flags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    transform: translate(-50%, 0%);
+  }
+}
+
+.companions-wishlist__flag {
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
