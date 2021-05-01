@@ -1,11 +1,130 @@
+.step-date {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.step-date__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid $special-lavender-extra;
+  border-bottom: 1px solid $special-lavender-extra;
+
+  padding: 11px 0;
+  margin-top: 24px;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 58px;
+    margin-bottom: 39px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 33px;
+    margin-bottom: 18px;
+  }
+}
+
 .step-date__month {
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
   color: $special-blue-light;
+
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .step-date__calendar {
   font-size: 14px;
   line-height: 18px;
+
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+}
+
+.step-date__calendar td {
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid $special-lavender-extra;
+  opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    width: 78px;
+    height: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 157px;
+    height: 71px;
+  }
+}
+
+.step-date__letters td {
+  border: none;
+  opacity: 1;
+
+  &:nth-child(6),
+  &:nth-child(7) {
+    color: $special-orange-dark;
+  }
+}
+
+.step-date__letters span {
+  &:nth-child(1) {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &:nth-child(2) {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+}
+
+.step-date__button {
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.3;
+
+  width: 9px;
+  height: 18px;
+
+  &--prev {
+    background-image: url("../img/icons/arrow-back.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icons/arrow-next.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 19px;
+    height: 34px;
+  }
 }

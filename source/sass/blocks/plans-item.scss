@@ -5,13 +5,26 @@
   font-weight: 500;
   border-radius: 10px;
 
+  padding: 24px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    padding: 40px 32px 14px 40px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr min-content min-content min-content;
+    padding: 40px 42px 38px 43px;
   }
 }
 
@@ -20,13 +33,43 @@
   line-height: 16px;
   font-weight: 700;
   color: $special-blue-light;
+  display: flex;
+
+  margin: 0;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 4;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 34px;
+
+    font-size: 24px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    justify-content: start;
+    margin-bottom: 0;
+  }
+}
+
+.plans-item__title span {
+  display: block;
+  margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    margin-right: 36px;
   }
 }
 
@@ -34,12 +77,38 @@
   color: $special-blue-light;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 132px;
+    margin-right: 32px;
+  }
 }
 
 .plans-item__date {
   letter-spacing: 0.06em;
   color: $special-blue-light;
   text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    min-width: 169px;
+    margin-right: 116px;
+  }
 }
 
 .plans-item__button {
@@ -48,4 +117,14 @@
   text-transform: uppercase;
   text-decoration: none;
   opacity: 0.3;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-right: 0;
+  }
 }

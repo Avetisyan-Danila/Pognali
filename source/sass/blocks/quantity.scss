@@ -1,6 +1,16 @@
 .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
   border: 1px solid $special-grey-extra;
   border-radius: 4px;
+
+  @media (min-width: $desktop-width) {
+    height: 70px;
+  }
 }
 
 .quantity__button {

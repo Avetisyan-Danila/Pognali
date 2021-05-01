@@ -4,13 +4,29 @@
 
 .add__wrapper {
   background-color: $special-lavender-blue;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 0 25px;
+  padding-top: 30px;
+  padding-bottom: 43px;
 
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 75px;
+    padding-top: 53px;
+    padding-bottom: 63px;
+  }
 }
 
 .add__title {
   color: $special-blue-light;
+
+  @media (min-width: $desktop-width) {
+    width: 1180px;
+    margin: 0 auto;
+  }
 }

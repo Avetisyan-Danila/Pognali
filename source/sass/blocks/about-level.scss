@@ -1,12 +1,61 @@
+.about-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../img/about/progress.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+
+    width: 95px;
+    height: 95px;
+
+    position: absolute;
+    top: 0;
+    left: -40px;
+    transform: translateY(calc(-150% - 4px));
+  }
+}
+
 .about-level__num {
   font-size: 38px;
   line-height: 38px;
   font-weight: 700;
   color: $basic-blue;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 51px;
+    height: 1px;
+    background-color: $special-grey;
+    margin: 6px 0;
+
+    @media (min-width: $desktop-width) {
+      background-color: $basic-white;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
 }
 
 .about-level__text {
   font-size: 18px;
   line-height: 18px;
   color: $special-grey;
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
 }
