@@ -1,6 +1,12 @@
 .step-kids {
   @media (min-width: $tablet-width) {
     order: 1;
+    margin: 25px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -13,4 +19,12 @@
   font-size: 15px;
   line-height: 15px;
   color: $special-blue-light;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
 }

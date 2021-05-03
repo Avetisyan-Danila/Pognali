@@ -5,6 +5,8 @@
 }
 
 .transport-list__item {
+  background-repeat: no-repeat;
+
   &--disabled {
     opacity: 0.15;
   }

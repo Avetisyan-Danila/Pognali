@@ -4,10 +4,34 @@
 
 .plans__wrapper {
   background-color: $special-sky;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 0 25px;
+  padding-top: 28px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 75px;
+    padding-top: 57px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 54px 58px 64px 124px;
+  }
 }
 
 .plans__title {
   color: $special-blue-light;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1258px;
+    margin: 0 auto;
+    margin-bottom: 49px;
+  }
 }

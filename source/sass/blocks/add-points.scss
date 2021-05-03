@@ -1,0 +1,38 @@
+.add-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  margin-right: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.add-points__item {
+  width: 5px;
+  height: 5px;
+  background-color: $special-blue-light;
+  border-radius: 50%;
+  opacity: 0.3;
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 6px;
+    height: 6px;
+  }
+}
