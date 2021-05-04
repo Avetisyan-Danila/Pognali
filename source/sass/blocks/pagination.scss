@@ -1,10 +1,13 @@
 .pagination {
   background-color: $basic-white;
+  border-radius: 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 25px 35px 25px 28px;
   }
 
   @media (min-width: $desktop-width) {

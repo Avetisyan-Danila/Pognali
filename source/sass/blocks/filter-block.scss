@@ -2,12 +2,27 @@
   display: grid;
   grid-template-columns: 1fr min-content;
 
+  background-color: $special-steel;
+  padding: 20px 29px 17px 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 63px 73px 56px 72px;
+  }
+
   @media (min-width: $desktop-width) {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 60px;
+    padding-bottom: 57px;
+    box-sizing: border-box;
     grid-template-columns: min-content 1fr min-content;
   }
 }
 
 .filter-block__button {
+  display: none;
+
   background-color: $special-lavender;
   font-size: 16px;
   line-height: 20px;
@@ -22,6 +37,8 @@
 }
 
 .filter-block__letters {
+  display: none;
+
   grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {
@@ -34,6 +51,8 @@
 }
 
 .filter-block__country-list {
+  display: none;
+
   grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {

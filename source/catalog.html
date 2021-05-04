@@ -10,36 +10,37 @@
 
 <body class="page-body">
 
-  <header class="header header-catalog">
-    <a class="header__logo"><img src="img/logo.png" width="115" height="15" alt="Погнали?"></a>
-    <nav class="header-nav">
-      <button class="header-nav__toggle" type="button" aria-label="Открыть меню"></button>
+  <header class="header">
+    <a class="header__logo" aria-label="Погнали?"></a>
+    <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
+    <nav class="header-nav header-nav--closed">
       <div class="header-nav__wrapper">
         <ul class="header-nav__list site-list">
-          <li class="site-list__item">
+          <li class="header-nav__item site-list__item">
             <a href="">О сервисе</a>
           </li>
-          <li class="site-list__item">
+          <li class="header-nav__item site-list__item">
             <a href="">Направления</a>
           </li>
-          <li class="site-list__item">
+          <li class="header-nav__item site-list__item">
             <a href="">Попутчики</a>
           </li>
         </ul>
-        <a class="header-nav__login" href="login.html">Авторизация</a>
         <div class="header-contacts">
-          <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628">8 800 555-86-28</a>
-          <a class="header-contacts__info header-contacts__info--email"
-            href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <a class="header-contacts__login" href="login.html">Авторизация</a>
+          <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628"
+            aria-label="Номер телефона: 8 800 555-86-28"><span>8 800 555-86-28</span></a>
+          <a class="header-contacts__info header-contacts__info--email" href="mailto:mail@htmlacademy.ru"
+            aria-label="Адрес электронной почты: mail@htmlacademy.ru"><span>mail@htmlacademy.ru</span></a>
           <ul class="header-socials">
             <li class="header-socials__item">
-              <a href="" aria-label="Фейсбук"></a>
+              <a class="header-socials__link header-socials__link--facebook" href="" aria-label="Фейсбук"></a>
             </li>
             <li class="header-socials__item">
-              <a href="" aria-label="Вконтакте"></a>
+              <a class="header-socials__link header-socials__link--vkontakte" href="" aria-label="Вконтакте"></a>
             </li>
             <li class="header-socials__item">
-              <a href="" aria-label="Инстаграм"></a>
+              <a class="header-socials__link header-socials__link--instagram" href="" aria-label="Инстаграм"></a>
             </li>
           </ul>
         </div>
@@ -49,7 +50,7 @@
 
   <main class="main main-catalog">
     <div class="main-catalog__top">
-      <h1 class="main__title main-catalog__title">Попутчики</h1>
+      <h1 class="main__title main-catalog__title"><span>Попутчики</span></h1>
       <a class="main-catalog__link" href="index.html">На главную</a>
     </div>
     <section class="filter">
@@ -120,314 +121,346 @@
     </section>
 
     <div class="catalog-columns">
-      <section class="pick">
-        <h2 class="pick__title">Подберите идеального попутчика</h2>
-        <form class="pick-form" action="https://echo.htmlacademy.ru" method="POST">
-          <ul class="pick-blocks">
-            <li class="pick-block">
-              <h3 class="pick-block__title">Хобби</h3>
-              <ul class="pick-block__list">
-                <li class="pick-block__item">
-                  <input id="football" name="hobby" value="Футбол" type="checkbox">
-                  <label for="football">Спортзал</label>
-                </li>
-                <li class="pick-block__item">
-                  <input id="fitness" name="hobby" value="Фитнес" type="checkbox">
-                  <label for="fitness">Кальян</label>
-                </li>
-                <li class="pick-block__item">
-                  <input id="sneakers" name="hobby" value="Кроссовки" type="checkbox">
-                  <label for="sneakers">Диван</label>
-                </li>
-              </ul>
-            </li>
-            <li class="pick-block">
-              <h3 class="pick-block__title">Музыка</h3>
-              <ul class="pick-block__list">
-                <li class="pick-block__item">
-                  <input id="hard-rock" name="music" value="Тяжелый рок" type="checkbox">
-                  <label for="hard-rock">Тяжелый рок</label>
-                </li>
-                <li class="pick-block__item">
-                  <input id="russian-rap" name="music" value="Русский рэп" type="checkbox">
-                  <label for="russian-rap">Русский рэп</label>
-                </li>
-                <li class="pick-block__item">
-                  <input id="eurodance" name="music" value="Евроденс" type="checkbox">
-                  <label for="eurodance">Евроденс</label>
-                </li>
-              </ul>
-            </li>
-            <li class="pick-block">
-              <h3 class="pick-block__title">Еда</h3>
-              <ul class="pick-block__list">
-                <li class="pick-block__item">
-                  <input id="seafood" name="food" value="Морепродукты" type="checkbox">
-                  <label for="seafood">Мясоед</label>
-                </li>
-                <li class="pick-block__item">
-                  <input id="meat" name="food" value="Мясо" type="checkbox">
-                  <label for="meat">Сидит на ПП</label>
-                </li>
-                <li class="pick-block__item">
-                  <input id="vegetarianism" name="food" value="Вегетарианство" type="checkbox">
-                  <label for="vegetarianism">Веган-сыроед</label>
-                </li>
-              </ul>
-            </li>
-            <li class="pick-block">
-              <h3 class="pick-block__title">Транспорт</h3>
-              <ul class="pick-block__list transport-list">
-                <li class="pick-block__item transport-list__item">
-                  <label class="visually-hidden" for="air-travel">Авиаперелет</label>
-                  <input id="air-travel" name="transport" value="Авиаперелет" type="checkbox">
-                </li>
-                <li class="pick-block__item transport-list__item">
-                  <label class="visually-hidden" for="road-transport">Автотранспорт</label>
-                  <input id="road-transport" name="transport" value="Автотранспорт" type="checkbox">
-                </li>
-                <li class="pick-block__item transport-list__item">
-                  <label class="visually-hidden" for="bike">Велосипед</label>
-                  <input id="bike" name="transport" value="Велосипед" type="checkbox">
-                </li>
-                <li class="pick-block__item transport-list__item">
-                  <label class="visually-hidden" for="on-foot">Пешком</label>
-                  <input id="on-foot" name="transport" value="Пешком" type="checkbox">
-                </li>
-              </ul>
-            </li>
-            <li class="pick-block">
-              <h3 class="pick-block__title">Левел</h3>
-              <div class="pick-block__controls">
-                <div class="pick-block__level">
-                  <label class="visually-hidden" for="min-level">Минимальный левел</label>
-                  <input type="text" id="min-level" name="min-level" value="30">
-                  <span class="line"></span>
-                  <label class="visually-hidden" for="max-level">Максимальный левел</label>
-                  <input type="text" id="max-level" name="max-level" value="100">
+      <div class="catalog-columns__wrapper">
+        <section class="pick">
+          <form class="pick-form" action="https://echo.htmlacademy.ru" method="POST">
+            <h2 class="pick__title">Подберите <br> идеального <br> попутчика</h2>
+            <ul class="pick-blocks">
+              <li class="pick-block">
+                <div class="pick-block__top">
+                  <h3 class="pick-block__title">Хобби<span>:</span></h3>
+                  <button class="pick-block__button"></button>
                 </div>
-                <div class="pick-block__range">
-                  <div class="scale">
-                    <div class="bar" style="width: 100%; margin-left: 0%"></div>
+                <ul class="pick-block__list">
+                  <li class="pick-block__item">
+                    <input id="football" name="hobby" value="Футбол" type="checkbox">
+                    <label for="football">Спортзал</label>
+                  </li>
+                  <li class="pick-block__item">
+                    <input id="fitness" name="hobby" value="Фитнес" type="checkbox">
+                    <label for="fitness">Кальян</label>
+                  </li>
+                  <li class="pick-block__item">
+                    <input id="sneakers" name="hobby" value="Кроссовки" type="checkbox">
+                    <label for="sneakers">Диван</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="pick-block pick-block--opened">
+                <div class="pick-block__top">
+                  <h3 class="pick-block__title">Музыка<span>:</span></h3>
+                  <button class="pick-block__button"></button>
+                </div>
+                <ul class="pick-block__list">
+                  <li class="pick-block__item">
+                    <input id="hard-rock" name="music" value="Тяжелый рок" type="checkbox">
+                    <label for="hard-rock">Тяжелый рок</label>
+                  </li>
+                  <li class="pick-block__item">
+                    <input id="russian-rap" name="music" value="Русский рэп" type="checkbox">
+                    <label for="russian-rap">Русский рэп</label>
+                  </li>
+                  <li class="pick-block__item">
+                    <input id="eurodance" name="music" value="Евроденс" type="checkbox">
+                    <label for="eurodance">Евроденс</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="pick-block">
+                <div class="pick-block__top">
+                  <h3 class="pick-block__title">Еда<span>:</span></h3>
+                  <button class="pick-block__button"></button>
+                </div>
+                <ul class="pick-block__list">
+                  <li class="pick-block__item">
+                    <input id="seafood" name="food" value="Морепродукты" type="checkbox">
+                    <label for="seafood">Мясоед</label>
+                  </li>
+                  <li class="pick-block__item">
+                    <input id="meat" name="food" value="Мясо" type="checkbox">
+                    <label for="meat">Сидит на ПП</label>
+                  </li>
+                  <li class="pick-block__item">
+                    <input id="vegetarianism" name="food" value="Вегетарианство" type="checkbox">
+                    <label for="vegetarianism">Веган-сыроед</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="pick-block pick-block--opened">
+                <div class="pick-block__top">
+                  <h3 class="pick-block__title">Транспорт<span>:</span></h3>
+                  <button class="pick-block__button"></button>
+                </div>
+                <ul class="pick-block__list pick-block__list--transport transport-list">
+                  <li class="pick-block__item transport-list__item">
+                    <label class="visually-hidden" for="air-travel">Авиаперелет</label>
+                    <input id="air-travel" name="transport" value="Авиаперелет" type="checkbox">
+                  </li>
+                  <li class="pick-block__item transport-list__item">
+                    <label class="visually-hidden" for="road-transport">Автотранспорт</label>
+                    <input id="road-transport" name="transport" value="Автотранспорт" type="checkbox">
+                  </li>
+                  <li class="pick-block__item transport-list__item">
+                    <label class="visually-hidden" for="bike">Велосипед</label>
+                    <input id="bike" name="transport" value="Велосипед" type="checkbox">
+                  </li>
+                  <li class="pick-block__item transport-list__item">
+                    <label class="visually-hidden" for="on-foot">Пешком</label>
+                    <input id="on-foot" name="transport" value="Пешком" type="checkbox">
+                  </li>
+                </ul>
+              </li>
+              <li class="pick-block pick-block--opened">
+                <div class="pick-block__top">
+                  <h3 class="pick-block__title">Левел<span>:</span></h3>
+                  <button class="pick-block__button"></button>
+                </div>
+                <div class="pick-block__controls">
+                  <div class="pick-block__level">
+                    <label class="visually-hidden" for="min-level">Минимальный левел</label>
+                    <input type="text" id="min-level" name="min-level" value="30">
+                    <span class="line"></span>
+                    <label class="visually-hidden" for="max-level">Максимальный левел</label>
+                    <input type="text" id="max-level" name="max-level" value="100">
                   </div>
-                  <div class="toggle toggle-min" tabindex="0" style="left: 30%;"></div>
-                  <div class="toggle toggle-max" tabindex="0" style="left: 100%;"></div>
+                  <div class="pick-block__range">
+                    <div class="scale">
+                      <div class="bar" style="width: 100%; margin-left: 0%"></div>
+                    </div>
+                    <div class="toggle toggle-min" tabindex="0" style="left: 30%;"></div>
+                    <div class="toggle toggle-max" tabindex="0" style="left: 100%;"></div>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-          <button class="pick-form__button" type="submit">Показать</button>
-        </form>
-      </section>
+              </li>
+            </ul>
+            <button class="pick-form__button" type="submit">Показать</button>
+          </form>
+        </section>
 
-      <section class="catalog">
-        <div class="catalog-wrapper">
-          <h2 class="visually-hidden">Список попутчиков</h2>
-          <ul class="catalog-list">
-            <li class="catalog-item">
-              <a class="catalog-item__avatar" href="firsova.html"><img src="img/catalog-companions/1.png" width="70"
-                  height="70" alt=""></a>
-              <h3 class="catalog-item__name"><a href="firsova.html">Таня Фирсова</a></h3>
-              <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
-              <p class="visually-hidden">Вы лайкнули этого попутчика</p>
-              <button class="catalog-item__like" aria-label="Кнопка лайка">Лайк</button>
-              <p class="catalog-item__subscribers" aria-label="Количество лайков: 1,5М">1,5М</p>
-              <p class="catalog-item__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-              <div class="desires">
-                <h4 class="desires__title">хочет посетить:</h4>
-                <ul class="desires-list">
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/sri-lanka.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Шри-Ланка</p>
-                  </li>
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/thailand.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Таиланд</p>
-                  </li>
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/seychelles.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Сейшелы</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="catalog-item__bottom">
-                <div class="catalog-transport">
-                  <h4 class="catalog-transport__title">транспорт:</h4>
-                  <ul class="catalog-transport__list transport-list">
-                    <li class="catalog-transport__item transport-list__item">Авиаперелет</li>
-                    <li class="catalog-transport__item transport-list__item">Автотранспорт</li>
-                    <li class="catalog-transport__item transport-list__item">Велосипед</li>
-                    <li class="catalog-transport__item transport-list__item">Пешком</li>
+        <section class="catalog">
+          <div class="catalog-wrapper">
+            <h2 class="visually-hidden">Список попутчиков</h2>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <a class="catalog-item__avatar" href="firsova.html"></a>
+                <h3 class="catalog-item__name catalog-item__name--offline"><a href="firsova.html">Таня Фирсова</a></h3>
+                <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
+                <p class="visually-hidden">Вы лайкнули этого попутчика</p>
+                <button class="catalog-item__like catalog-item__like--active" aria-label="Кнопка лайка"></button>
+                <p class="catalog-item__subscribers" aria-label="Количество лайков: 1,5М">1,5 М</p>
+                <p class="catalog-item__tags">#ЗОЖ #ПП #Фитнес #пляж <br> #авокадо #смузи</p>
+                <div class="desires">
+                  <h4 class="desires__title">хочет посетить:</h4>
+                  <ul class="desires-list">
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/sri-lanka.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Шри-Ланка</p>
+                    </li>
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/thailand.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Таиланд</p>
+                    </li>
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/seychelles.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Сейшелы</p>
+                    </li>
                   </ul>
                 </div>
-                <div class="catalog-level">
-                  <h4 class="catalog-level__title">левел:</h4>
-                  <span class="catalog-level__num">99</span>
+                <div class="catalog-item__bottom">
+                  <div class="catalog-transport">
+                    <h4 class="catalog-transport__title">транспорт:</h4>
+                    <ul class="catalog-transport__list transport-list">
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                    </ul>
+                  </div>
+                  <div class="catalog-level">
+                    <h4 class="catalog-level__title">левел:</h4>
+                    <div class="catalog-level__num">
+                      <img src="img/catalog-companions/1-progress.svg" alt="">
+                      <span>99</span>
+                      <span>level</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <a class="catalog-item__link" href="response.html">Позвать!</a>
-            </li>
-            <li class="catalog-item">
-              <a class="catalog-item__avatar" href="firsova.html"><img src="img/catalog-companions/2.png" width="70"
-                  height="70" alt=""></a>
-              <h3 class="catalog-item__name"><a href="firsova.html">Петя Демин</a></h3>
-              <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
-              <p class="visually-hidden">Вы не лайкали этого попутчика</p>
-              <button class="catalog-item__like" aria-label="Кнопка лайка">Лайк</button>
-              <p class="catalog-item__subscribers" aria-label="Количество лайков: 1500">1500</p>
-              <p class="catalog-item__tags">#бургер #бар #футбол #концерт #крафт</p>
-              <div class="desires">
-                <h4 class="desires__title">хочет посетить:</h4>
-                <ul class="desires-list">
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/belgium.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Бельгия</p>
-                  </li>
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/czech.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Чехия</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="catalog-item__bottom">
-                <div class="catalog-transport">
-                  <h4 class="catalog-transport__title">транспорт:</h4>
-                  <ul class="catalog-transport__list transport-list">
-                    <li class="catalog-transport__item transport-list__item">Авиаперелет</li>
-                    <li class="catalog-transport__item transport-list__item">Автотранспорт</li>
-                    <li class="catalog-transport__item transport-list__item">Велосипед</li>
-                    <li class="catalog-transport__item transport-list__item">Пешком</li>
-                  </ul>
-                </div>
-                <div class="catalog-level">
-                  <h4 class="catalog-level__title">левел:</h4>
-                  <span class="catalog-level__num">80</span>
-                </div>
-              </div>
-              <a class="catalog-item__link" href="response.html">Позвать!</a>
-            </li>
-            <li class="catalog-item">
-              <a class="catalog-item__avatar" href="firsova.html"><img src="img/catalog-companions/3.png" width="70"
-                  height="70" alt=""></a>
-              <h3 class="catalog-item__name"><a href="firsova.html">Марк Смолов</a></h3>
-              <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
-              <p class="visually-hidden">Вы не лайкали этого попутчика</p>
-              <button class="catalog-item__like" aria-label="Кнопка лайка">Лайк</button>
-              <p class="catalog-item__subscribers" aria-label="Количество лайков: 170">170</p>
-              <p class="catalog-item__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-              <div class="desires">
-                <h4 class="desires__title">хочет посетить:</h4>
-                <ul class="desires-list">
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/usa.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">США</p>
-                  </li>
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/australia.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Австралия</p>
-                  </li>
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/dominica.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Доминика</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="catalog-item__bottom">
-                <div class="catalog-transport">
-                  <h4 class="catalog-transport__title">транспорт:</h4>
-                  <ul class="catalog-transport__list transport-list">
-                    <li class="catalog-transport__item transport-list__item">Авиаперелет</li>
-                    <li class="catalog-transport__item transport-list__item">Автотранспорт</li>
-                    <li class="catalog-transport__item transport-list__item">Велосипед</li>
-                    <li class="catalog-transport__item transport-list__item">Пешком</li>
-                  </ul>
-                </div>
-                <div class="catalog-level">
-                  <h4 class="catalog-level__title">левел:</h4>
-                  <span class="catalog-level__num">25</span>
-                </div>
-              </div>
-              <a class="catalog-item__link" href="response.html">Позвать!</a>
-            </li>
-            <li class="catalog-item">
-              <a class="catalog-item__avatar" href="firsova.html"><img src="img/catalog-companions/4.png" width="70"
-                  height="70" alt=""></a>
-              <h3 class="catalog-item__name"><a href="firsova.html">Лариса Роговая</a></h3>
-              <p class="visually-hidden">Этот попутчик сейчас в сети</p>
-              <p class="visually-hidden">Вы не лайкали этого попутчика</p>
-              <button class="catalog-item__like" aria-label="Кнопка лайка">Лайк</button>
-              <p class="catalog-item__subscribers" aria-label="Количество лайков: 23">23</p>
-              <p class="catalog-item__tags">#образование #карьера #учеба #линкедин</p>
-              <div class="desires">
-                <h4 class="desires__title">хочет посетить:</h4>
-                <ul class="desires-list">
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/uk.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Великобритания</p>
-                  </li>
-                  <li class="desires-list__item">
-                    <img src="img/catalog-copmanions-flags/germany.png" width="26" height="18" alt="">
-                    <p class="desires-list__country">Германия</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="catalog-item__bottom">
-                <div class="catalog-transport">
-                  <h4 class="catalog-transport__title">транспорт:</h4>
-                  <ul class="catalog-transport__list transport-list">
-                    <li class="catalog-transport__item transport-list__item">Авиаперелет</li>
-                    <li class="catalog-transport__item transport-list__item">Автотранспорт</li>
-                    <li class="catalog-transport__item transport-list__item">Велосипед</li>
-                    <li class="catalog-transport__item transport-list__item">Пешком</li>
-                  </ul>
-                </div>
-                <div class="catalog-level">
-                  <h4 class="catalog-level__title">левел:</h4>
-                  <span class="catalog-level__num">50</span>
-                </div>
-              </div>
-              <a class="catalog-item__link" href="response.html">Позвать!</a>
-            </li>
-          </ul>
-          <a class="catalog__more" href="new-companions.html">Показать ещё</a>
-          <div class="pagination">
-            <ul class="pagination-list">
-              <li class="pagination-list__item">
-                <a href="#">1</a>
+                <a class="catalog-item__link" href="response.html">Позвать!</a>
               </li>
-              <li class="pagination-list__item">
-                <a href="#">2</a>
+              <li class="catalog-item">
+                <a class="catalog-item__avatar" href="demin.html"></a>
+                <h3 class="catalog-item__name catalog-item__name--offline"><a href="demin.html">Петя Демин</a></h3>
+                <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
+                <p class="visually-hidden">Вы не лайкали этого попутчика</p>
+                <button class="catalog-item__like" aria-label="Кнопка лайка"></button>
+                <p class="catalog-item__subscribers" aria-label="Количество лайков: 1500">1500</p>
+                <p class="catalog-item__tags">#бургер #бар #футбол <br> #концерт #крафт</p>
+                <div class="desires">
+                  <h4 class="desires__title">хочет посетить:</h4>
+                  <ul class="desires-list">
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/belgium.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Бельгия</p>
+                    </li>
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/czech.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Чехия</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog-item__bottom">
+                  <div class="catalog-transport">
+                    <h4 class="catalog-transport__title">транспорт:</h4>
+                    <ul class="catalog-transport__list transport-list">
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                    </ul>
+                  </div>
+                  <div class="catalog-level">
+                    <h4 class="catalog-level__title">левел:</h4>
+                    <div class="catalog-level__num">
+                      <img src="img/catalog-companions/2-progress.svg" alt="">
+                      <span>80</span>
+                      <span>level</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="catalog-item__link" href="response.html">Позвать!</a>
               </li>
-              <li class="pagination-list__item">
-                <a href="#">3</a>
+              <li class="catalog-item">
+                <a class="catalog-item__avatar" href="smolov.html"></a>
+                <h3 class="catalog-item__name catalog-item__name--offline"><a href="smolov.html">Марк Смолов</a></h3>
+                <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
+                <p class="visually-hidden">Вы не лайкали этого попутчика</p>
+                <button class="catalog-item__like" aria-label="Кнопка лайка"></button>
+                <p class="catalog-item__subscribers" aria-label="Количество лайков: 170">170</p>
+                <p class="catalog-item__tags">#рэп #тату #хайпбист <br> #кроссовки #суприм</p>
+                <div class="desires">
+                  <h4 class="desires__title">хочет посетить:</h4>
+                  <ul class="desires-list">
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/usa.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">США</p>
+                    </li>
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/australia.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Австралия</p>
+                    </li>
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/dominica.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Доминика</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog-item__bottom">
+                  <div class="catalog-transport">
+                    <h4 class="catalog-transport__title">транспорт:</h4>
+                    <ul class="catalog-transport__list transport-list">
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                    </ul>
+                  </div>
+                  <div class="catalog-level">
+                    <h4 class="catalog-level__title">левел:</h4>
+                    <div class="catalog-level__num">
+                      <img src="img/catalog-companions/3-progress.svg" alt="">
+                      <span>25</span>
+                      <span>level</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="catalog-item__link" href="response.html">Позвать!</a>
               </li>
-              <li class="pagination-list__item">
-                <a href="#">4</a>
+              <li class="catalog-item">
+                <a class="catalog-item__avatar" href="rogovaya.html"></a>
+                <h3 class="catalog-item__name catalog-item__name--online"><a href="rogovaya.html">Лариса Роговая</a>
+                </h3>
+                <p class="visually-hidden">Этот попутчик сейчас в сети</p>
+                <p class="visually-hidden">Вы не лайкали этого попутчика</p>
+                <button class="catalog-item__like" aria-label="Кнопка лайка"></button>
+                <p class="catalog-item__subscribers" aria-label="Количество лайков: 23">23</p>
+                <p class="catalog-item__tags">#образование #карьера <br> #учеба #линкедин</p>
+                <div class="desires">
+                  <h4 class="desires__title">хочет посетить:</h4>
+                  <ul class="desires-list">
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/uk.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Великобритания</p>
+                    </li>
+                    <li class="desires-list__item">
+                      <img src="img/catalog-copmanions-flags/germany.png" width="26" height="18" alt="">
+                      <p class="desires-list__country">Германия</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog-item__bottom">
+                  <div class="catalog-transport">
+                    <h4 class="catalog-transport__title">транспорт:</h4>
+                    <ul class="catalog-transport__list transport-list">
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item"></li>
+                    </ul>
+                  </div>
+                  <div class="catalog-level">
+                    <h4 class="catalog-level__title">левел:</h4>
+                    <div class="catalog-level__num">
+                      <img src="img/catalog-companions/4-progress.svg" alt="">
+                      <span>50</span>
+                      <span>level</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="catalog-item__link" href="response.html">Позвать!</a>
               </li>
             </ul>
-            <ul class="pagination-arrows">
-              <li class="pagination-arrow"><button type="button">Показать предыдущую страницу</button></li>
-              <li class="pagination-arrow"><button type="button">Показать следующую страницу</button></li>
-            </ul>
+            <a class="catalog__more" href="new-companions.html">Показать ещё</a>
+            <div class="pagination">
+              <ul class="pagination-list">
+                <li class="pagination-list__item">
+                  <a class="pagination-list__link pagination-list__link--active" href="#">1</a>
+                </li>
+                <li class="pagination-list__item">
+                  <a class="pagination-list__link" href="#">2</a>
+                </li>
+                <li class="pagination-list__item">
+                  <a class="pagination-list__link" href="#">3</a>
+                </li>
+                <li class="pagination-list__item">
+                  <a class="pagination-list__link" href="#">4</a>
+                </li>
+              </ul>
+              <ul class="pagination-arrows">
+                <li class="pagination-arrows__item"><button type="button"
+                    aria-label="Показать предыдущую страницу"></button></li>
+                <li class="pagination-arrows__item"><button type="button"
+                    aria-label="Показать следующую страницу"></button></li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </main>
 
   <footer class="footer footer-catalog">
     <section class="contacts">
       <div class="contacts__wrapper">
-        <a class="contacts__logo"><img src="img/footer/logo.png" width="96" height="15" alt="Погнали?"></a>
+        <a class="contacts__logo" aria-label="Погнали?"></a>
         <ul class="contacts-socials">
           <li class="contacts-socials__item">
-            <a href="" aria-label="Фейсбук"></a>
+            <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук"></a>
           </li>
           <li class="contacts-socials__item">
-            <a href="" aria-label="Вконтакте"></a>
+            <a class="contacts-socials__link contacts-socials__link--vkontakte" href="" aria-label="Вконтакте"></a>
           </li>
           <li class="contacts-socials__item">
-            <a href="" aria-label="Инстаграм"></a>
+            <a class="contacts-socials__link contacts-socials__link--instagram" href="" aria-label="Инстаграм"></a>
           </li>
         </ul>
         <div class="contacts-developed">
@@ -437,7 +470,6 @@
         </div>
       </div>
     </section>
-  </footer>
 
 </body>
 
