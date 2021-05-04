@@ -243,10 +243,6 @@
     background-color: $special-pink;
   }
 
-  &--active::after {
-    background-image: url("../img/icons//heart-fill.svg");
-  }
-
   @media (min-width: $tablet-width) {
     position: relative;
     bottom: 0;
