@@ -1,15 +1,76 @@
-.main-catalog {
-  background-color: $special-steel;
+.main-catalog__top {
+  position: relative;
+  margin-top: 53px;
+  padding: 42px 25px 16px 25px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $special-steel;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    background-color: $special-sapphire;
+    z-index: -1;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 122px;
+    padding: 42px 75px 66px 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 92px;
+    padding: 66px 60px 68px 100px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.main-catalog__top {
-  background-color: $special-sapphire;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+.main-catalog__title {
+  @media (min-width: $desktop-width) {
+    width: 1011px;
+  }
 }
+
+.main-catalog__title span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  width: 172px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: $special-orange;
+
+  @media (min-width: $tablet-width) {
+    width: 288px;
+    bottom: -64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -66px;
+  }
+}
+
 
 .main-catalog__link {
   font-size: 20px;
@@ -18,4 +79,23 @@
   color: $basic-white;
   text-transform: uppercase;
   text-decoration: none;
+
+  display: none;
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      width: 32px;
+      height: 16px;
+      background-image: url("../img/icons/arrow-bend.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin-left: 28px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
 }

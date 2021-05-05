@@ -1,16 +1,56 @@
 .catalog {
+  background-color: $basic-blue-light;
+
+  padding: 0 25px;
+  padding-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 62px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-row: 1 / 2;
+
+    padding: 0;
   }
 }
 
 .catalog__more {
   font-size: 17px;
-  line-height: 30px;
+  line-height: 17px;
   font-weight: 700;
   color: $special-blue-light;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icons/plus-more.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-width: $tablet-width) {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    margin-top: 46px;
+    margin-bottom: 51px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;

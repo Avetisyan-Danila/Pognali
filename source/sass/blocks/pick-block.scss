@@ -1,11 +1,55 @@
 .pick-block {
+  padding: 12px 0;
+  border-top: 1px solid $special-saffron;
+
+  &:nth-child(3) {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 21px;
+    }
+  }
+
+  &:nth-child(4) {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
+    border: none;
+
+    padding: 0;
+    margin-bottom: 26px;
   }
 
   @media (min-width: $desktop-width) {
     display: block;
+    margin-bottom: 19px;
+  }
+}
+
+.pick-block__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pick-block--opened .pick-block__top {
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
   }
 }
 
@@ -15,12 +59,66 @@
   font-weight: 700;
   color: $special-blue-light;
   text-transform: uppercase;
+
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    min-width: 104px;
+    margin-right: 18px;
+  }
+}
+
+.pick-block__title span {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
+.pick-block__button {
+  background-color: transparent;
+  border: none;
+  width: 10px;
+  height: 6px;
+  background-image: url("../img/icons/catalog-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.pick-block--opened .pick-block__button {
+  transform: rotate(180deg);
 }
 
 .pick-block__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.pick-block--opened .pick-block__list {
+  display: block;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -31,8 +129,25 @@
   }
 }
 
+.pick-block__item {
+  @media (min-width: $tablet-width) {
+    width: 150px;
+  }
+}
+
+.pick-block__list--transport .pick-block__item {
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
 .pick-block__item label {
   font-size: 15px;
   line-height: 20px;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

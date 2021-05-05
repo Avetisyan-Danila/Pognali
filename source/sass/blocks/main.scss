@@ -12,23 +12,3 @@
     line-height: 60px;
   }
 }
-
-.main__title span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -14px;
-  width: 214px;
-  height: 5px;
-  border-radius: 4px;
-  background-color: $special-orange;
-
-  @media (min-width: $tablet-width) {
-    width: 358px;
-    bottom: -64px;
-  }
-
-  @media (min-width: $desktop-width) {
-    bottom: -66px;
-  }
-}
