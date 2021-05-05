@@ -24,7 +24,6 @@
 .header__logo {
   width: 96px;
   height: 15px;
-  background-image: url("../img/logo.png");
   background-repeat: no-repeat;
   background-position: right center;
   padding-left: 25px;
@@ -32,7 +31,6 @@
   @media (min-width: $tablet-width) {
     padding-left: 40px;
 
-    background-image: url("../img/logo-big.png");
     background-size: 166px;
     width: 166px;
     height: 42px;

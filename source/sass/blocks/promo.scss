@@ -18,6 +18,11 @@
     background-repeat: no-repeat;
     background-size: 100%;
 
+    @media (min-resolution: 2dppx) {
+      top: 221px;
+      background-image: url("../img/promo/traveller@2x.png");
+    }
+
     @media (min-width: $tablet-width) {
       width: 372px;
       height: 451px;
@@ -34,7 +39,15 @@
       background-image: url("../img/promo/traveller-big.png");
       right: 50%;
       transform: translateX(calc(50% + 100px));
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo/traveller-big@2x.png");
+      }
     }
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo/globe-bg@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
@@ -43,6 +56,10 @@
     background-color: $special-sapphire;
     background-size: 100%;
     background-position: center bottom 279px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/globe-medium-bg@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -51,6 +68,10 @@
     background-image: url("../img/promo/globe-big-bg.png");
     background-position: left top;
     background-color: $special-blue;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/globe-big-bg@2x.png");
+    }
   }
 }
 

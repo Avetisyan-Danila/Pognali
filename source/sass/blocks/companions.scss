@@ -44,6 +44,11 @@
     height: 71px;
     background-image: url("../img/companions/rogovaya-back.png");
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/companions/rogovaya-back@2x.png");
+    }
 
     @media (min-width: $tablet-width) {
       top: 426px;
@@ -53,6 +58,10 @@
       height: 143px;
 
       background-image: url("../img/companions/smolov-back.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/companions/smolov-back@2x.png");
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -94,6 +103,11 @@
     height: 143px;
     background-image: url("../img/companions/smolov-back.png");
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/companions/smolov-back@2x.png");
+    }
 
     @media (min-width: $tablet-width) {
       top: 80px;
@@ -102,6 +116,10 @@
       height: 285px;
 
       background-image: url("../img/companions/rogovaya-back-big.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/companions/rogovaya-back-big@2x.png");
+      }
     }
 
     @media (min-width: $desktop-width) {

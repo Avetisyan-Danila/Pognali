@@ -5,13 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
 
   <header class="header">
-    <a class="header__logo" aria-label="Погнали?"></a>
+    <a class="header__logo" aria-label="Погнали?">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
+        <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="Погнали?">
+      </picture>
+    </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
     <nav class="header-nav header-nav--closed">
       <div class="header-nav__wrapper">
@@ -115,25 +123,49 @@
         </div>
         <ul class="directions__list">
           <li class="directions__item directions__item--thailand">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/directions/thailand-small.png 1x, img/directions/thailand-small@2x.png 2x">
+              <img class="directions__img" src="img/directions/thailand.png" srcset="img/directions/thailand.png 1x, img/directions/thailand@2x.png 2x" alt="">
+            </picture>
             <div class="directions-info">
               <h3 class="directions-info__title">Таиланд</h3>
               <p class="directions-info__subtitle">Джунгли зовут!</p>
               <span class="directions-info__views">18321</span>
             </div>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/directions/flags/thailand-big.png 1x, img/directions/flags/thailand-big@2x.png 2x">
+              <img class="directions__flag" src="img/directions/flags/thailand.png" srcset="img/directions/flags/thailand.png 1x, img/directions/flags/thailand@2x.png 2x" alt="">
+            </picture>
           </li>
           <li class="directions__item directions__item--france">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/directions/france-small.png 1x, img/directions/france-small@2x.png 2x">
+              <img class="directions__img" src="img/directions/france.png" srcset="img/directions/france.png 1x, img/directions/france@2x.png 2x" alt="">
+            </picture>
             <div class="directions-info">
               <h3 class="directions-info__title">Франция</h3>
               <p class="directions-info__subtitle">Трэ бьен, манифик!</p>
               <span class="directions-info__views">12518</span>
             </div>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/directions/flags/france-big.png 1x, img/directions/flags/france-big@2x.png 2x">
+              <img class="directions__flag" src="img/directions/flags/france.png" srcset="img/directions/flags/france.png 1x, img/directions/flags/france@2x.png 2x" alt="">
+            </picture>
           </li>
           <li class="directions__item directions__item--czech">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/directions/czech-small.png 1x, img/directions/czech-small@2x.png 2x">
+              <img class="directions__img" src="img/directions/czech.png" srcset="img/directions/czech.png 1x, img/directions/czech@2x.png 2x" alt="">
+            </picture>
             <div class="directions-info">
               <h3 class="directions-info__title">Чехия</h3>
               <p class="directions-info__subtitle">Закоулки старой Европы</p>
               <span class="directions-info__views">5326</span>
             </div>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/directions/flags/czech-big.png 1x, img/directions/flags/czech-big@2x.png 2x">
+              <img class="directions__flag" src="img/directions/flags/czech.png" srcset="img/directions/flags/czech.png 1x, img/directions/flags/czech@2x.png 2x" alt="">
+            </picture>
           </li>
         </ul>
         <a class="directions__link link" href="form.html">Показать все</a>
@@ -270,7 +302,12 @@
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
-        <a class="contacts__logo" aria-label="Погнали?"></a>
+        <a class="contacts__logo" aria-label="Погнали?">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/footer/logo-big.png 1x, img/footer/logo-big@2x.png 2x">
+            <img src="img/footer/logo.png" srcset="img/footer/logo.png 1x, img/footer/logo@2x.png 2x" alt="Погнали?">
+          </picture>
+        </a>
         <ul class="contacts-socials">
           <li class="contacts-socials__item">
             <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук"></a>
