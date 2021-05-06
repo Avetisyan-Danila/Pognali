@@ -50,6 +50,11 @@
     background-repeat: no-repeat;
     background-position: right 8px top;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/info/bg@2x.png");
+      background-size: 100% 100%;
+    }
+
     @media (min-width: $tablet-width) {
       background-image: url("../img/info/bg-medium.png");
       background-position: unset;
@@ -58,6 +63,10 @@
       top: 48px;
       left: 100%;
       transform: translateX(-100%);
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/info/bg-medium@2x.png");
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -68,6 +77,10 @@
       left: 50%;
       transform: none;
       background-image: url("../img/info/bg-big.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/info/bg-big@2x.png");
+      }
     }
   }
 

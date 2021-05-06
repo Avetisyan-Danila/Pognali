@@ -286,30 +286,34 @@
   text-decoration: none;
 
   &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    background-color: $special-steel;
-    background-image: url("../img/icons/businessman.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-color: $special-steel;
+      background-image: url("../img/icons/businessman.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 45px;
-    width: 100px;
-    height: 100px;
-    background-image: url("../img/profile/rates.png");
-    background-size: 100% 100%;
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 45px;
+      width: 100px;
+      height: 100px;
+      background-image: url("../img/profile/rates.png");
+      background-size: 100% 100%;
+    }
 
     @media (min-width: $desktop-width) {
       display: none;
