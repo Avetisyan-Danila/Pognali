@@ -5,13 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
 
   <header class="header">
-    <a class="header__logo" aria-label="Погнали?"></a>
+    <a class="header__logo" aria-label="Погнали?">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
+        <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="Погнали?">
+      </picture>
+    </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
     <nav class="header-nav header-nav--closed">
       <div class="header-nav__wrapper">
@@ -60,7 +68,11 @@
             <span class="about-level__num">80</span>
             <span class="about-level__text">level</span>
           </div>
-          <div class="about__avatar" aria-label="Петя Демин"></div>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/about/demin-big.png 1x, img/about/demin-big@2x.png 2x">
+            <img class="about__avatar" src="img/about/demin.png"
+              srcset="img/about/demin.png 1x, img/about/demin@2x.png 2x" alt="Петя Демин">
+          </picture>
           <a class="about__change-photo" href="#"><span>Сменить</span> фото</a>
           <div class="about__tags">
             <label for="tags">Теги</label>
@@ -278,14 +290,16 @@
                   <select class="step-country__select" name="country-1">
                     <option value="Босния и герцеговина">Босния и герцеговина</option>
                   </select>
-                  <img class="step-country__img" src="img/form-flags/bosnia-and-herzegovina.png" width="35" height="24"
+                  <img class="step-country__img" width="35" height="24" src="img/form-flags/bosnia-and-herzegovina.png"
+                    srcset="img/form-flags/bosnia-and-herzegovina.png 1x, img/form-flags/bosnia-and-herzegovina@2x.png 2x"
                     alt="">
                 </li>
                 <li class="step-country__item">
                   <select class="step-country__select" name="country-2">
                     <option value="Босния и герцеговина">Чехия</option>
                   </select>
-                  <img class="step-country__img" src="img/form-flags/czech.png" width="35" height="24" alt="">
+                  <img class="step-country__img" width="35" height="24" src="img/form-flags/czech.png"
+                    srcset="img/form-flags/czech.png 1x, img/form-flags/czech@2x.png 2x" alt="">
                 </li>
                 <li class="step-country__item">
                   <button class="step-country__choose" type="button">Выберите страну</button>
@@ -369,15 +383,18 @@
               <ul class="step-entertainment">
                 <li class="step-entertainment__item">
                   <h4 class="step-entertainment__country">Босния и Герцеговина</h4>
-                  <img class="step-entertainment__flag" src="img/form-flags/bosnia-and-Herzegovina.png" width="35"
-                    height="24" alt="">
+                  <img class="step-entertainment__flag" width="35" height="24"
+                    src="img/form-flags/bosnia-and-herzegovina.png"
+                    srcset="img/form-flags/bosnia-and-herzegovina.png 1x, img/form-flags/bosnia-and-herzegovina@2x.png 2x"
+                    alt="">
                   <label class="visually-hidden" for="entertainment-1">План действий</label>
                   <textarea name="entertainment-1" id="entertainment-1" cols="30" rows="10"
                     placeholder="План действий"></textarea>
                 </li>
                 <li class="step-entertainment__item">
                   <h4 class="step-entertainment__country">Чехия</h4>
-                  <img class="step-entertainment__flag" src="img/form-flags/czech.png" width="35" height="24" alt="">
+                  <img class="step-entertainment__flag" width="35" height="24" src="img/form-flags/czech.png"
+                    srcset="img/form-flags/czech.png 1x, img/form-flags/czech@2x.png 2x" alt="">
                   <label class="visually-hidden" for="entertainment-2">План действий</label>
                   <textarea name="entertainment-2" id="entertainment-2" cols="30" rows="10"
                     placeholder="План действий"></textarea>
@@ -397,7 +414,12 @@
   <footer class="footer footer-form">
     <section class="contacts">
       <div class="contacts__wrapper">
-        <a class="contacts__logo" aria-label="Погнали?"></a>
+        <a class="contacts__logo" aria-label="Погнали?">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/footer/logo-big.png 1x, img/footer/logo-big@2x.png 2x">
+            <img src="img/footer/logo.png" srcset="img/footer/logo.png 1x, img/footer/logo@2x.png 2x" alt="Погнали?">
+          </picture>
+        </a>
         <ul class="contacts-socials">
           <li class="contacts-socials__item">
             <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук"></a>
