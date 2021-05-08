@@ -35,8 +35,13 @@
 }
 
 .desires-list__item img {
-  width: 35px;
-  height: 24px;
+  width: 26px;
+  height: 18px;
+
+  @media (min-width: $tablet-width) {
+    width: 35px;
+    height: 24px;
+  }
 }
 
 .desires-list__country {
