@@ -93,52 +93,9 @@
   }
 }
 
-.catalog-item:nth-child(1) .catalog-item__avatar {
-  background-image: url("../img/catalog-companions/1.png");
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/catalog-companions/1-medium.png");
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/catalog-companions/1-big.png");
-  }
-}
-
-.catalog-item:nth-child(2) .catalog-item__avatar {
-  background-image: url("../img/catalog-companions/2.png");
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/catalog-companions/2-medium.png");
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/catalog-companions/2-big.png");
-  }
-}
-
-.catalog-item:nth-child(3) .catalog-item__avatar {
-  background-image: url("../img/catalog-companions/3.png");
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/catalog-companions/3-medium.png");
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/catalog-companions/3-big.png");
-  }
-}
-
-.catalog-item:nth-child(4) .catalog-item__avatar {
-  background-image: url("../img/catalog-companions/4.png");
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/catalog-companions/4-medium.png");
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/catalog-companions/4-big.png");
-  }
+.catalog-item__avatar img {
+  width: 100%;
+  height: 100%;
 }
 
 .catalog-item__name {

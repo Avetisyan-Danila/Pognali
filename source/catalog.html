@@ -5,13 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
 
   <header class="header">
-    <a class="header__logo" aria-label="Погнали?"></a>
+    <a class="header__logo" aria-label="Погнали?">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
+        <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Погнали?">
+      </picture>
+    </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
     <nav class="header-nav header-nav--closed">
       <div class="header-nav__wrapper">
@@ -242,7 +250,15 @@
             <h2 class="visually-hidden">Список попутчиков</h2>
             <ul class="catalog-list">
               <li class="catalog-item">
-                <a class="catalog-item__avatar" href="firsova.html"></a>
+                <a class="catalog-item__avatar" href="firsova.html">
+                  <picture>
+                    <source media="(min-width: 1440px)"
+                      srcset="img/catalog-companions/1-big.png 1x, img/catalog-companions/1-big@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/catalog-companions/1-medium.png 1x, img/catalog-companions/1-medium@2x.png 2x">
+                    <img src="img/catalog-companions/1.png" srcset="img/catalog-companions/1@2x.png 2x" alt="">
+                  </picture>
+                </a>
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="firsova.html">Таня Фирсова</a></h3>
                 <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
                 <p class="visually-hidden">Вы лайкнули этого попутчика</p>
@@ -253,15 +269,18 @@
                   <h4 class="desires__title">хочет посетить:</h4>
                   <ul class="desires-list">
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/sri-lanka.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/sri-lanka.png"
+                        srcset="img/catalog-copmanions-flags/sri-lanka@2x.png 2x" alt="">
                       <p class="desires-list__country">Шри-Ланка</p>
                     </li>
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/thailand.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/thailand.png"
+                        srcset="img/catalog-copmanions-flags/thailand@2x.png 2x" alt="">
                       <p class="desires-list__country">Таиланд</p>
                     </li>
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/seychelles.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/seychelles.png"
+                        srcset="img/catalog-copmanions-flags/seychelles@2x.png 2x" alt="">
                       <p class="desires-list__country">Сейшелы</p>
                     </li>
                   </ul>
@@ -288,7 +307,15 @@
                 <a class="catalog-item__link" href="response.html">Позвать!</a>
               </li>
               <li class="catalog-item">
-                <a class="catalog-item__avatar" href="demin.html"></a>
+                <a class="catalog-item__avatar" href="demin.html">
+                  <picture>
+                    <source media="(min-width: 1440px)"
+                      srcset="img/catalog-companions/2-big.png 1x, img/catalog-companions/2-big@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/catalog-companions/2-medium.png 1x, img/catalog-companions/2-medium@2x.png 2x">
+                    <img src="img/catalog-companions/2.png" srcset="img/catalog-companions/2@2x.png 2x" alt="">
+                  </picture>
+                </a>
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="demin.html">Петя Демин</a></h3>
                 <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
                 <p class="visually-hidden">Вы не лайкали этого попутчика</p>
@@ -299,11 +326,13 @@
                   <h4 class="desires__title">хочет посетить:</h4>
                   <ul class="desires-list">
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/belgium.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/belgium.png"
+                        srcset="img/catalog-copmanions-flags/belgium@2x.png 2x" alt="">
                       <p class="desires-list__country">Бельгия</p>
                     </li>
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/czech.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/czech.png"
+                        srcset="img/catalog-copmanions-flags/czech@2x.png 2x" alt="">
                       <p class="desires-list__country">Чехия</p>
                     </li>
                   </ul>
@@ -330,7 +359,15 @@
                 <a class="catalog-item__link" href="response.html">Позвать!</a>
               </li>
               <li class="catalog-item">
-                <a class="catalog-item__avatar" href="smolov.html"></a>
+                <a class="catalog-item__avatar" href="smolov.html">
+                  <picture>
+                    <source media="(min-width: 1440px)"
+                      srcset="img/catalog-companions/3-big.png 1x, img/catalog-companions/3-big@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/catalog-companions/3-medium.png 1x, img/catalog-companions/3-medium@2x.png 2x">
+                    <img src="img/catalog-companions/3.png" srcset="img/catalog-companions/3@2x.png 2x" alt="">
+                  </picture>
+                </a>
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="smolov.html">Марк Смолов</a></h3>
                 <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
                 <p class="visually-hidden">Вы не лайкали этого попутчика</p>
@@ -341,15 +378,18 @@
                   <h4 class="desires__title">хочет посетить:</h4>
                   <ul class="desires-list">
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/usa.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/usa.png"
+                        srcset="img/catalog-copmanions-flags/usa@2x.png 2x" alt="">
                       <p class="desires-list__country">США</p>
                     </li>
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/australia.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/australia.png"
+                        srcset="img/catalog-copmanions-flags/australia@2x.png 2x" alt="">
                       <p class="desires-list__country">Австралия</p>
                     </li>
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/dominica.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/dominica.png"
+                        srcset="img/catalog-copmanions-flags/dominica@2x.png 2x" alt="">
                       <p class="desires-list__country">Доминика</p>
                     </li>
                   </ul>
@@ -376,7 +416,15 @@
                 <a class="catalog-item__link" href="response.html">Позвать!</a>
               </li>
               <li class="catalog-item">
-                <a class="catalog-item__avatar" href="rogovaya.html"></a>
+                <a class="catalog-item__avatar" href="rogovaya.html">
+                  <picture>
+                    <source media="(min-width: 1440px)"
+                      srcset="img/catalog-companions/4-big.png 1x, img/catalog-companions/4-big@2x.png 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/catalog-companions/4-medium.png 1x, img/catalog-companions/4-medium@2x.png 2x">
+                    <img src="img/catalog-companions/4.png" srcset="img/catalog-companions/4@2x.png 2x" alt="">
+                  </picture>
+                </a>
                 <h3 class="catalog-item__name catalog-item__name--online"><a href="rogovaya.html">Лариса Роговая</a>
                 </h3>
                 <p class="visually-hidden">Этот попутчик сейчас в сети</p>
@@ -388,11 +436,13 @@
                   <h4 class="desires__title">хочет посетить:</h4>
                   <ul class="desires-list">
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/uk.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/uk.png"
+                        srcset="img/catalog-copmanions-flags/uk@2x.png 2x" alt="">
                       <p class="desires-list__country">Великобритания</p>
                     </li>
                     <li class="desires-list__item">
-                      <img src="img/catalog-copmanions-flags/germany.png" width="26" height="18" alt="">
+                      <img width="35" height="24" src="img/catalog-copmanions-flags/germany.png"
+                        srcset="img/catalog-copmanions-flags/germany@2x.png 2x" alt="">
                       <p class="desires-list__country">Германия</p>
                     </li>
                   </ul>
@@ -451,7 +501,12 @@
   <footer class="footer footer-catalog">
     <section class="contacts">
       <div class="contacts__wrapper">
-        <a class="contacts__logo" aria-label="Погнали?"></a>
+        <a class="contacts__logo" aria-label="Погнали?">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/footer/logo-big.png 1x, img/footer/logo-big@2x.png 2x">
+            <img src="img/footer/logo.png" srcset="img/footer/logo@2x.png 2x" alt="Погнали?">
+          </picture>
+        </a>
         <ul class="contacts-socials">
           <li class="contacts-socials__item">
             <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук"></a>
