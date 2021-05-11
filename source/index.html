@@ -37,18 +37,46 @@
         <div class="header-contacts">
           <a class="header-contacts__login" href="login.html">Авторизация</a>
           <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628"
-            aria-label="Номер телефона: 8 800 555-86-28"><span>8 800 555-86-28</span></a>
-          <a class="header-contacts__info header-contacts__info--email" href="mailto:mail@htmlacademy.ru"
-            aria-label="Адрес электронной почты: mail@htmlacademy.ru"><span>mail@htmlacademy.ru</span></a>
+            aria-label="Номер телефона: 8 800 555-86-28">
+            <svg width="19" height="17" class="header-contacts__info-telephone">
+              <use xlink:href="img/sprite.svg#icon-telephone"></use>
+            </svg>
+            <svg width="18" height="18" class="header-contacts__info-telephone">
+              <use xlink:href="img/sprite.svg#icon-call"></use>
+            </svg>
+            <span>8 800 555-86-28</span>
+          </a>
+          <a class="header-contacts__info header-contacts__info--mail" href="mailto:mail@htmlacademy.ru"
+            aria-label="Адрес электронной почты: mail@htmlacademy.ru">
+            <svg width="19" height="13" class="header-contacts__info-mail">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            <svg width="16" height="14" class="header-contacts__info-mail">
+              <use xlink:href="img/sprite.svg#icon-mail-nav"></use>
+            </svg>
+            <span>mail@htmlacademy.ru</span>
+          </a>
           <ul class="header-socials">
             <li class="header-socials__item">
-              <a class="header-socials__link header-socials__link--facebook" href="" aria-label="Фейсбук"></a>
+              <a class="header-socials__link header-socials__link--facebook" href="" aria-label="Фейсбук">
+                <svg width="11" height="21">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
             <li class="header-socials__item">
-              <a class="header-socials__link header-socials__link--vkontakte" href="" aria-label="Вконтакте"></a>
+              <a class="header-socials__link header-socials__link--vkontakte" href="" aria-label="Вконтакте">
+                <svg width="23" height="12">
+                  <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                </svg>
+              </a>
             </li>
             <li class="header-socials__item">
-              <a class="header-socials__link header-socials__link--instagram" href="" aria-label="Инстаграм"></a>
+              <a class="header-socials__link header-socials__link--instagram" href="" aria-label="Инстаграм">
+                <svg width="18" height="18">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -63,10 +91,18 @@
         <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
         <ul class="promo__navigation user-navigation">
           <li class="user-navigation__item" aria-label="Телефон">
-            <a class="user-navigation__link user-navigation__link--phone" href=""></a>
+            <a class="user-navigation__link user-navigation__link--phone" href="">
+              <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-call"></use>
+              </svg>
+            </a>
           </li>
           <li class="user-navigation__item" aria-label="Почта">
-            <a class="user-navigation__link user-navigation__link--email" href=""></a>
+            <a class="user-navigation__link user-navigation__link--email" href="">
+              <svg width="18" height="16">
+                <use xlink:href="img/sprite.svg#icon-mail-nav"></use>
+              </svg>
+            </a>
           </li>
           <li class="user-navigation__item">
             <a class="user-navigation__link user-navigation__link--auth" href="login.html">Авторизация</a>
@@ -124,15 +160,21 @@
         <ul class="directions__list">
           <li class="directions__item directions__item--thailand">
             <picture>
-              <source media="(min-width: 768px)"
-                srcset="img/directions/thailand-small.png 1x, img/directions/thailand-small@2x.png 2x">
-              <img class="directions__img" src="img/directions/thailand.png" srcset="img/directions/thailand@2x.png 2x"
-                alt="">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/directions/thailand-small.webp 1x, img/directions/thailand-small@2x.webp 2x">
+              <source type="image/webp" srcset="img/directions/thailand.webp 1x, img/directions/thailand@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="img/directions/thailand-small.png 1x, img/directions/thailand-small@2x.png 2x">
+              <img class="directions__img" src="img/directions/thailand.png" srcset="img/directions/thailand@2x.png 2x" alt="">
             </picture>
             <div class="directions-info">
               <h3 class="directions-info__title">Таиланд</h3>
               <p class="directions-info__subtitle">Джунгли зовут!</p>
-              <span class="directions-info__views">18321</span>
+              <span class="directions-info__views">
+                <svg width="14" height="14">
+                  <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+                18321
+              </span>
             </div>
             <picture>
               <source media="(min-width: 768px)"
@@ -143,15 +185,21 @@
           </li>
           <li class="directions__item directions__item--france">
             <picture>
-              <source media="(min-width: 768px)"
-                srcset="img/directions/france-small.png 1x, img/directions/france-small@2x.png 2x">
-              <img class="directions__img" src="img/directions/france.png" srcset="img/directions/france@2x.png 2x"
-                alt="">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/directions/france-small.webp 1x, img/directions/france-small@2x.webp 2x">
+              <source type="image/webp" srcset="img/directions/france.webp 1x, img/directions/france@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="img/directions/france-small.png 1x, img/directions/france-small@2x.png 2x">
+              <img class="directions__img" src="img/directions/france.png" srcset="img/directions/france@2x.png 2x" alt="">
             </picture>
             <div class="directions-info">
               <h3 class="directions-info__title">Франция</h3>
               <p class="directions-info__subtitle">Трэ бьен, манифик!</p>
-              <span class="directions-info__views">12518</span>
+              <span class="directions-info__views">
+                <svg width="14" height="14">
+                  <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+                12518
+              </span>
             </div>
             <picture>
               <source media="(min-width: 768px)"
@@ -162,15 +210,21 @@
           </li>
           <li class="directions__item directions__item--czech">
             <picture>
-              <source media="(min-width: 768px)"
-                srcset="img/directions/czech-small.png 1x, img/directions/czech-small@2x.png 2x">
-              <img class="directions__img" src="img/directions/czech.png" srcset="img/directions/czech@2x.png 2x"
-                alt="">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/directions/czech-small.webp 1x, img/directions/czech-small@2x.webp 2x">
+              <source type="image/webp" srcset="img/directions/czech.webp 1x, img/directions/czech@2x.webp 2x">
+
+              <source media="(min-width: 768px)" srcset="img/directions/czech-small.png 1x, img/directions/czech-small@2x.png 2x">
+              <img class="directions__img" src="img/directions/czech.png" srcset="img/directions/czech@2x.png 2x" alt="">
             </picture>
             <div class="directions-info">
               <h3 class="directions-info__title">Чехия</h3>
               <p class="directions-info__subtitle">Закоулки старой Европы</p>
-              <span class="directions-info__views">5326</span>
+              <span class="directions-info__views">
+                <svg width="14" height="14">
+                  <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+                5326
+              </span>
             </div>
             <picture>
               <source media="(min-width: 768px)"
@@ -217,10 +271,26 @@
             <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
             <p class="companions__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <ul class="companions-transport transport-list">
-              <li class="companions-transport__item transport-list__item"></li>
-              <li class="companions-transport__item transport-list__item transport-list__item--disabled"></li>
-              <li class="companions-transport__item transport-list__item transport-list__item--disabled"></li>
-              <li class="companions-transport__item transport-list__item transport-list__item--disabled"></li>
+              <li class="companions-transport__item transport-list__item">
+                <svg width="21" height="21">
+                  <use xlink:href="img/sprite.svg#icon-plane"></use>
+                </svg>
+              </li>
+              <li class="companions-transport__item transport-list__item transport-list__item--disabled">
+                <svg width="17" height="19">
+                  <use xlink:href="img/sprite.svg#icon-bus"></use>
+                </svg>
+              </li>
+              <li class="companions-transport__item transport-list__item transport-list__item--disabled">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                </svg>
+              </li>
+              <li class="companions-transport__item transport-list__item transport-list__item--disabled">
+                <svg width="21" height="23">
+                  <use xlink:href="img/sprite.svg#icon-run"></use>
+                </svg>
+              </li>
             </ul>
           </li>
           <li class="companions__item">
@@ -243,10 +313,26 @@
             <p class="visually-hidden">Этот попутчик сейчас в сети</p>
             <p class="companions__tags">#бургер #бар #футбол #концерт #крафт</p>
             <ul class="companions-transport transport-list">
-              <li class="companions-transport__item transport-list__item"></li>
-              <li class="companions-transport__item transport-list__item"></li>
-              <li class="companions-transport__item transport-list__item transport-list__item--disabled"></li>
-              <li class="companions-transport__item transport-list__item"></li>
+              <li class="companions-transport__item transport-list__item">
+                <svg width="21" height="21">
+                  <use xlink:href="img/sprite.svg#icon-plane"></use>
+                </svg>
+              </li>
+              <li class="companions-transport__item transport-list__item">
+                <svg width="17" height="19">
+                  <use xlink:href="img/sprite.svg#icon-bus"></use>
+                </svg>
+              </li>
+              <li class="companions-transport__item transport-list__item transport-list__item--disabled">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                </svg>
+              </li>
+              <li class="companions-transport__item transport-list__item">
+                <svg width="21" height="23">
+                  <use xlink:href="img/sprite.svg#icon-run"></use>
+                </svg>
+              </li>
             </ul>
           </li>
         </ul>
@@ -274,7 +360,12 @@
             <p class="profile__num profile__num--third">3</p>
           </li>
         </ol>
-        <a class="profile__link" href="rates.html">Показать тарифы для бизнеса</a>
+        <a class="profile__link" href="rates.html">
+          <svg width="27" height="27">
+            <use xlink:href="img/sprite.svg#icon-businessman"></use>
+          </svg>
+          Показать тарифы для бизнеса
+        </a>
       </div>
     </section>
   </main>
@@ -295,9 +386,15 @@
         <p class="interested__text text">Остались вопросы? <br> Мы с радостью на них ответим!</p>
         <ul class="interested-contacts">
           <li class="interested-contacts__item">
+            <svg width="19" height="17" class="interested-contacts__item-telephone">
+              <use xlink:href="img/sprite.svg#icon-telephone"></use>
+            </svg>
             <a href="tel:+88005558628">8 800 555-86-28</a>
           </li>
           <li class="interested-contacts__item">
+            <svg width="19" height="13" class="interested-contacts__item-mail">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
             <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
         </ul>
@@ -305,7 +402,12 @@
     </section>
     <section class="address">
       <div class="address__wrapper">
-        <p class="address__text"><span>ул. Большая Конюшенная, 19/8</span></p>
+        <div class="address__top">
+          <svg width="19" height="13" class="address__icon">
+            <use xlink:href="img/sprite.svg#icon-location"></use>
+          </svg>
+          <p class="address__text"><span>ул. Большая Конюшенная, 19/8</span></p>
+        </div>
         <a class="address__link link" href="">Проложить маршрут</a>
       </div>
     </section>
@@ -322,19 +424,34 @@
         </a>
         <ul class="contacts-socials">
           <li class="contacts-socials__item">
-            <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук"></a>
+            <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук">
+              <svg width="11" height="21">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
           </li>
           <li class="contacts-socials__item">
-            <a class="contacts-socials__link contacts-socials__link--vkontakte" href="" aria-label="Вконтакте"></a>
+            <a class="contacts-socials__link contacts-socials__link--vkontakte" href="" aria-label="Вконтакте">
+              <svg width="23" height="12">
+                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+              </svg>
+            </a>
           </li>
           <li class="contacts-socials__item">
-            <a class="contacts-socials__link contacts-socials__link--instagram" href="" aria-label="Инстаграм"></a>
+            <a class="contacts-socials__link contacts-socials__link--instagram" href="" aria-label="Инстаграм">
+              <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <div class="contacts-developed">
           <p class="contacts-developed__text">Разработано</p>
-          <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive"><img
-              src="img/footer/contacts/logo-html-academy.svg" width="27" height="33" alt="HTML Academy"></a>
+          <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg width="27" height="34">
+              <use xlink:href="img/sprite.svg#icon-academy-logo"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </section>

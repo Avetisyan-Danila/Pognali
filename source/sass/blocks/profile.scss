@@ -285,23 +285,6 @@
   color: $special-blue-dark;
   text-decoration: none;
 
-  &::before {
-    @media (min-width: $tablet-width) {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background-color: $special-steel;
-      background-image: url("../img/icons/businessman.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-  }
-
   &::after {
     @media (min-width: $tablet-width) {
       content: "";
@@ -324,11 +307,9 @@
     font-size: 20px;
     line-height: 20px;
 
-    display: block;
+    display: flex;
+    align-items: center;
     margin-top: 55px;
-    padding-left: 89px;
-
-    position: relative;
   }
 
   @media (min-width: $desktop-width) {
@@ -336,5 +317,20 @@
     box-sizing: border-box;
     margin: 0 auto;
     margin-top: 59px;
+  }
+}
+
+.profile__link svg {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    margin-right: 21px;
+    padding: 21px;
+    box-sizing: border-box;
+    background-color: $special-steel;
   }
 }

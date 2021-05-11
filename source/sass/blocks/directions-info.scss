@@ -86,23 +86,16 @@
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 
-  &::before {
-    content: "";
-    display: block;
-    margin-right: 5px;
-    width: 14px;
-    height: 14px;
-    background-image: url("../img/icons/user.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
-    @media (min-width: $tablet-width) {
-      width: 24px;
-      height: 24px;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 20px;
+  }
+}
+
+.directions-info__views svg {
+  margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
   }
 }

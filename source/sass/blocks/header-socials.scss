@@ -32,41 +32,21 @@
 }
 
 .header-socials__link {
-  display: block;
-
-  &--facebook {
-    width: 11px;
-    height: 21px;
-    background-image: url("../img/icons/facebook.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
+  &--facebook svg {
     @media (min-width: $tablet-width) {
       width: 14px;
       height: 28px;
     }
   }
 
-  &--vkontakte {
-    width: 23px;
-    height: 12px;
-    background-image: url("../img/icons/vkontakte.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
+  &--vkontakte svg {
     @media (min-width: $tablet-width) {
       width: 31px;
       height: 16px;
     }
   }
 
-  &--instagram {
-    width: 18px;
-    height: 18px;
-    background-image: url("../img/icons/instagram.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
+  &--instagram svg {
     @media (min-width: $tablet-width) {
       width: 24px;
       height: 24px;
