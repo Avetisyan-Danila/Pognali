@@ -5,7 +5,7 @@
 }
 
 .transport-list__item {
-  &--disabled {
-    opacity: 0.15;
+  &--disabled svg {
+    fill-opacity: 0.15;
   }
 }

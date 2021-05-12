@@ -178,24 +178,6 @@
   bottom: 5px;
   right: 5px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url("../img/icons/heart.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
-    @media (min-width: $tablet-width) {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
   &--active {
     background-color: $special-pink;
   }
@@ -210,6 +192,29 @@
     grid-column: 3 / 4;
     grid-row: 3 / 4;
   }
+}
+
+.catalog-item__like svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: transparent;
+  fill-opacity: 0.5;
+  stroke: $special-blue;
+  stroke-width: 0.8px;
+  stroke-opacity: 0.5;
+
+  @media (min-width: $tablet-width) {
+    width: 21px;
+    height: 20px;
+  }
+}
+
+.catalog-item__like--active svg {
+  fill: $special-red;
+  fill-opacity: 1;
+  stroke: none;
 }
 
 .catalog-item__subscribers {
