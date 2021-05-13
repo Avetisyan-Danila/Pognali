@@ -82,20 +82,17 @@
 
   display: none;
 
-  &::after {
-    @media (min-width: $tablet-width) {
-      content: "";
-      width: 32px;
-      height: 16px;
-      background-image: url("../img/icons/arrow-bend.svg");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      margin-left: 28px;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
+  }
+}
+
+.main-catalog__link svg {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-left: 28px;
   }
 }

@@ -37,18 +37,46 @@
         <div class="header-contacts">
           <a class="header-contacts__login" href="login.html">Авторизация</a>
           <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628"
-            aria-label="Номер телефона: 8 800 555-86-28"><span>8 800 555-86-28</span></a>
-          <a class="header-contacts__info header-contacts__info--email" href="mailto:mail@htmlacademy.ru"
-            aria-label="Адрес электронной почты: mail@htmlacademy.ru"><span>mail@htmlacademy.ru</span></a>
+            aria-label="Номер телефона: 8 800 555-86-28">
+            <svg width="19" height="17" class="header-contacts__info-telephone">
+              <use xlink:href="img/sprite.svg#icon-telephone"></use>
+            </svg>
+            <svg width="18" height="18" class="header-contacts__info-telephone">
+              <use xlink:href="img/sprite.svg#icon-call"></use>
+            </svg>
+            <span>8 800 555-86-28</span>
+          </a>
+          <a class="header-contacts__info header-contacts__info--mail" href="mailto:mail@htmlacademy.ru"
+            aria-label="Адрес электронной почты: mail@htmlacademy.ru">
+            <svg width="19" height="13" class="header-contacts__info-mail">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            <svg width="16" height="14" class="header-contacts__info-mail">
+              <use xlink:href="img/sprite.svg#icon-mail-nav"></use>
+            </svg>
+            <span>mail@htmlacademy.ru</span>
+          </a>
           <ul class="header-socials">
             <li class="header-socials__item">
-              <a class="header-socials__link header-socials__link--facebook" href="" aria-label="Фейсбук"></a>
+              <a class="header-socials__link header-socials__link--facebook" href="" aria-label="Фейсбук">
+                <svg width="11" height="21">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
             <li class="header-socials__item">
-              <a class="header-socials__link header-socials__link--vkontakte" href="" aria-label="Вконтакте"></a>
+              <a class="header-socials__link header-socials__link--vkontakte" href="" aria-label="Вконтакте">
+                <svg width="23" height="12">
+                  <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                </svg>
+              </a>
             </li>
             <li class="header-socials__item">
-              <a class="header-socials__link header-socials__link--instagram" href="" aria-label="Инстаграм"></a>
+              <a class="header-socials__link header-socials__link--instagram" href="" aria-label="Инстаграм">
+                <svg width="18" height="18">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -59,12 +87,27 @@
   <main class="main main-catalog">
     <div class="main-catalog__top">
       <h1 class="main__title main-catalog__title"><span>Попутчики</span></h1>
-      <a class="main-catalog__link" href="index.html">На главную</a>
+      <a class="main-catalog__link" href="index.html">
+        На главную
+        <svg width="32" height="16">
+          <use xlink:href="img/sprite.svg#icon-arrow-bend"></use>
+        </svg>
+      </a>
     </div>
     <section class="filter">
       <div class="filter-block">
-        <h2 class="filter__title">Фильтрация по странам:</h2>
-        <button class="filter__button" type="button" aria-label="Открыть фильтр"><span>Показать все</span></button>
+        <h2 class="filter__title">
+          <svg width="16" height="10">
+            <use xlink:href="img/sprite.svg#icon-filter"></use>
+          </svg>
+          Фильтрация по странам:
+        </h2>
+        <button class="filter__button" type="button" aria-label="Открыть фильтр">
+          <svg width="17" height="3">
+            <use xlink:href="img/sprite.svg#icon-filter-expand"></use>
+          </svg>
+          <span>Показать все</span>
+        </button>
         <ul class="filter-continents">
           <li class="filter-continents__item">Европа</li>
           <li class="filter-continents__item">Азия</li>
@@ -137,7 +180,11 @@
               <li class="pick-block">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Хобби<span>:</span></h3>
-                  <button class="pick-block__button"></button>
+                  <button class="pick-block__button">
+                    <svg width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-catalog-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <ul class="pick-block__list">
                   <li class="pick-block__item">
@@ -157,7 +204,11 @@
               <li class="pick-block pick-block--opened">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Музыка<span>:</span></h3>
-                  <button class="pick-block__button"></button>
+                  <button class="pick-block__button">
+                    <svg width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-catalog-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <ul class="pick-block__list">
                   <li class="pick-block__item">
@@ -177,7 +228,11 @@
               <li class="pick-block">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Еда<span>:</span></h3>
-                  <button class="pick-block__button"></button>
+                  <button class="pick-block__button">
+                    <svg width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-catalog-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <ul class="pick-block__list">
                   <li class="pick-block__item">
@@ -197,7 +252,11 @@
               <li class="pick-block pick-block--opened">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Транспорт<span>:</span></h3>
-                  <button class="pick-block__button"></button>
+                  <button class="pick-block__button">
+                    <svg width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-catalog-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <ul class="pick-block__list pick-block__list--transport transport-list">
                   <li class="pick-block__item transport-list__item">
@@ -221,7 +280,11 @@
               <li class="pick-block pick-block--opened">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Левел<span>:</span></h3>
-                  <button class="pick-block__button"></button>
+                  <button class="pick-block__button">
+                    <svg width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-catalog-arrow"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="pick-block__controls">
                   <div class="pick-block__level">
@@ -262,7 +325,11 @@
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="firsova.html">Таня Фирсова</a></h3>
                 <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
                 <p class="visually-hidden">Вы лайкнули этого попутчика</p>
-                <button class="catalog-item__like catalog-item__like--active" aria-label="Кнопка лайка"></button>
+                <button class="catalog-item__like catalog-item__like--active" aria-label="Кнопка лайка">
+                  <svg width="12" height="13">
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  </svg>
+                </button>
                 <p class="catalog-item__subscribers" aria-label="Количество лайков: 1,5М">1,5 М</p>
                 <p class="catalog-item__tags">#ЗОЖ #ПП #Фитнес #пляж <br> #авокадо #смузи</p>
                 <div class="desires">
@@ -289,16 +356,34 @@
                   <div class="catalog-transport">
                     <h4 class="catalog-transport__title">транспорт:</h4>
                     <ul class="catalog-transport__list transport-list">
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item">
+                        <svg width="21" height="21">
+                          <use xlink:href="img/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
+                        <svg width="17" height="19">
+                          <use xlink:href="img/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
+                        <svg width="21" height="23">
+                          <use xlink:href="img/sprite.svg#icon-run"></use>
+                        </svg>
+                      </li>
                     </ul>
                   </div>
                   <div class="catalog-level">
                     <h4 class="catalog-level__title">левел:</h4>
                     <div class="catalog-level__num">
-                      <img src="img/catalog-companions/1-progress.svg" alt="">
+                      <svg width="60" height="60">
+                        <use xlink:href="img/sprite.svg#catalog-companions-progress-1"></use>
+                      </svg>
                       <span>99</span>
                       <span>level</span>
                     </div>
@@ -319,7 +404,11 @@
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="demin.html">Петя Демин</a></h3>
                 <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
                 <p class="visually-hidden">Вы не лайкали этого попутчика</p>
-                <button class="catalog-item__like" aria-label="Кнопка лайка"></button>
+                <button class="catalog-item__like" aria-label="Кнопка лайка">
+                  <svg width="12" height="13">
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  </svg>
+                </button>
                 <p class="catalog-item__subscribers" aria-label="Количество лайков: 1500">1500</p>
                 <p class="catalog-item__tags">#бургер #бар #футбол <br> #концерт #крафт</p>
                 <div class="desires">
@@ -341,16 +430,34 @@
                   <div class="catalog-transport">
                     <h4 class="catalog-transport__title">транспорт:</h4>
                     <ul class="catalog-transport__list transport-list">
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item">
+                        <svg width="21" height="21">
+                          <use xlink:href="img/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item">
+                        <svg width="17" height="19">
+                          <use xlink:href="img/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item">
+                        <svg width="21" height="23">
+                          <use xlink:href="img/sprite.svg#icon-run"></use>
+                        </svg>
+                      </li>
                     </ul>
                   </div>
                   <div class="catalog-level">
                     <h4 class="catalog-level__title">левел:</h4>
                     <div class="catalog-level__num">
-                      <img src="img/catalog-companions/2-progress.svg" alt="">
+                      <svg width="60" height="60">
+                        <use xlink:href="img/sprite.svg#catalog-companions-progress-2"></use>
+                      </svg>
                       <span>80</span>
                       <span>level</span>
                     </div>
@@ -371,7 +478,11 @@
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="smolov.html">Марк Смолов</a></h3>
                 <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
                 <p class="visually-hidden">Вы не лайкали этого попутчика</p>
-                <button class="catalog-item__like" aria-label="Кнопка лайка"></button>
+                <button class="catalog-item__like" aria-label="Кнопка лайка">
+                  <svg width="12" height="13">
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  </svg>
+                </button>
                 <p class="catalog-item__subscribers" aria-label="Количество лайков: 170">170</p>
                 <p class="catalog-item__tags">#рэп #тату #хайпбист <br> #кроссовки #суприм</p>
                 <div class="desires">
@@ -398,16 +509,34 @@
                   <div class="catalog-transport">
                     <h4 class="catalog-transport__title">транспорт:</h4>
                     <ul class="catalog-transport__list transport-list">
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item">
+                        <svg width="21" height="21">
+                          <use xlink:href="img/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
+                        <svg width="17" height="19">
+                          <use xlink:href="img/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item">
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
+                        <svg width="21" height="23">
+                          <use xlink:href="img/sprite.svg#icon-run"></use>
+                        </svg>
+                      </li>
                     </ul>
                   </div>
                   <div class="catalog-level">
                     <h4 class="catalog-level__title">левел:</h4>
-                    <div class="catalog-level__num">
-                      <img src="img/catalog-companions/3-progress.svg" alt="">
+                    <div class="catalog-level__num catalog-level__num--quarter">
+                      <svg width="60" height="60">
+                        <use xlink:href="img/sprite.svg#catalog-companions-progress-3"></use>
+                      </svg>
                       <span>25</span>
                       <span>level</span>
                     </div>
@@ -429,7 +558,11 @@
                 </h3>
                 <p class="visually-hidden">Этот попутчик сейчас в сети</p>
                 <p class="visually-hidden">Вы не лайкали этого попутчика</p>
-                <button class="catalog-item__like" aria-label="Кнопка лайка"></button>
+                <button class="catalog-item__like" aria-label="Кнопка лайка">
+                  <svg width="12" height="13">
+                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  </svg>
+                </button>
                 <p class="catalog-item__subscribers" aria-label="Количество лайков: 23">23</p>
                 <p class="catalog-item__tags">#образование #карьера <br> #учеба #линкедин</p>
                 <div class="desires">
@@ -451,16 +584,34 @@
                   <div class="catalog-transport">
                     <h4 class="catalog-transport__title">транспорт:</h4>
                     <ul class="catalog-transport__list transport-list">
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
-                      <li class="catalog-transport__item transport-list__item"></li>
+                      <li class="catalog-transport__item transport-list__item">
+                        <svg width="21" height="21">
+                          <use xlink:href="img/sprite.svg#icon-plane"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item">
+                        <svg width="17" height="19">
+                          <use xlink:href="img/sprite.svg#icon-bus"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
+                        <svg width="24" height="24">
+                          <use xlink:href="img/sprite.svg#icon-bicycle"></use>
+                        </svg>
+                      </li>
+                      <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
+                        <svg width="21" height="23">
+                          <use xlink:href="img/sprite.svg#icon-run"></use>
+                        </svg>
+                      </li>
                     </ul>
                   </div>
                   <div class="catalog-level">
                     <h4 class="catalog-level__title">левел:</h4>
-                    <div class="catalog-level__num">
-                      <img src="img/catalog-companions/4-progress.svg" alt="">
+                    <div class="catalog-level__num catalog-level__num--half">
+                      <svg width="60" height="60">
+                        <use xlink:href="img/sprite.svg#catalog-companions-progress-4"></use>
+                      </svg>
                       <span>50</span>
                       <span>level</span>
                     </div>
@@ -469,7 +620,12 @@
                 <a class="catalog-item__link" href="response.html">Позвать!</a>
               </li>
             </ul>
-            <a class="catalog__more" href="new-companions.html">Показать ещё</a>
+            <a class="catalog__more" href="new-companions.html">
+              <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-plus-more"></use>
+              </svg>
+              Показать ещё
+            </a>
             <div class="pagination">
               <ul class="pagination-list">
                 <li class="pagination-list__item">
@@ -486,10 +642,21 @@
                 </li>
               </ul>
               <ul class="pagination-arrows">
-                <li class="pagination-arrows__item"><button type="button"
-                    aria-label="Показать предыдущую страницу"></button></li>
-                <li class="pagination-arrows__item"><button type="button"
-                    aria-label="Показать следующую страницу"></button></li>
+                <li class="pagination-arrows__item">
+                  <button class="pagination-arrows__item-button" type="button"
+                    aria-label="Показать предыдущую страницу">
+                    <svg class="pagination-arrows__item-svg" width="10" height="18">
+                      <use xlink:href="img/sprite.svg#icon-page-arrow"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="pagination-arrows__item">
+                  <button class="pagination-arrows__item-button" type="button" aria-label="Показать следующую страницу">
+                    <svg class="pagination-arrows__item-svg" width="10" height="18">
+                      <use xlink:href="img/sprite.svg#icon-page-arrow"></use>
+                    </svg>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
@@ -509,19 +676,34 @@
         </a>
         <ul class="contacts-socials">
           <li class="contacts-socials__item">
-            <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук"></a>
+            <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук">
+              <svg width="11" height="21">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
           </li>
           <li class="contacts-socials__item">
-            <a class="contacts-socials__link contacts-socials__link--vkontakte" href="" aria-label="Вконтакте"></a>
+            <a class="contacts-socials__link contacts-socials__link--vkontakte" href="" aria-label="Вконтакте">
+              <svg width="23" height="12">
+                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+              </svg>
+            </a>
           </li>
           <li class="contacts-socials__item">
-            <a class="contacts-socials__link contacts-socials__link--instagram" href="" aria-label="Инстаграм"></a>
+            <a class="contacts-socials__link contacts-socials__link--instagram" href="" aria-label="Инстаграм">
+              <svg width="18" height="18">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <div class="contacts-developed">
           <p class="contacts-developed__text">Разработано</p>
-          <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive"><img
-              src="img/footer/contacts/logo-html-academy.svg" width="27" height="33" alt="HTML Academy"></a>
+          <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg width="27" height="34">
+              <use xlink:href="img/sprite.svg#icon-academy-logo"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
