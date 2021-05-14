@@ -8,7 +8,7 @@
   <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
   <link rel="icon" href="favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
   <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -39,20 +39,20 @@
           <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628"
             aria-label="Номер телефона: 8 800 555-86-28">
             <svg width="19" height="17" class="header-contacts__info-telephone">
-              <use xlink:href="img/sprite.svg#icon-telephone"></use>
+              <use xlink:href="img/sprite.svg#telephone"></use>
             </svg>
             <svg width="18" height="18" class="header-contacts__info-telephone">
-              <use xlink:href="img/sprite.svg#icon-call"></use>
+              <use xlink:href="img/sprite.svg#call"></use>
             </svg>
             <span>8 800 555-86-28</span>
           </a>
           <a class="header-contacts__info header-contacts__info--mail" href="mailto:mail@htmlacademy.ru"
             aria-label="Адрес электронной почты: mail@htmlacademy.ru">
             <svg width="19" height="13" class="header-contacts__info-mail">
-              <use xlink:href="img/sprite.svg#icon-mail"></use>
+              <use xlink:href="img/sprite.svg#mail"></use>
             </svg>
             <svg width="16" height="14" class="header-contacts__info-mail">
-              <use xlink:href="img/sprite.svg#icon-mail-nav"></use>
+              <use xlink:href="img/sprite.svg#mail-nav"></use>
             </svg>
             <span>mail@htmlacademy.ru</span>
           </a>
@@ -60,21 +60,21 @@
             <li class="header-socials__item">
               <a class="header-socials__link header-socials__link--facebook" href="" aria-label="Фейсбук">
                 <svg width="11" height="21">
-                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  <use xlink:href="img/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="header-socials__item">
               <a class="header-socials__link header-socials__link--vkontakte" href="" aria-label="Вконтакте">
                 <svg width="23" height="12">
-                  <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                  <use xlink:href="img/sprite.svg#vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="header-socials__item">
               <a class="header-socials__link header-socials__link--instagram" href="" aria-label="Инстаграм">
                 <svg width="18" height="18">
-                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  <use xlink:href="img/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
@@ -97,7 +97,8 @@
             <span class="about-level__text">level</span>
           </div>
           <picture>
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/about/demin-big.webp 1x, img/about/demin-big@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/about/demin-big.webp 1x, img/about/demin-big@2x.webp 2x">
             <source type="image/webp" srcset="img/about/demin.webp 1x, img/about/demin@2x.webp 2x">
 
             <source media="(min-width: 768px)" srcset="img/about/demin-big.png 1x, img/about/demin-big@2x.png 2x">
@@ -320,15 +321,25 @@
                   <select class="step-country__select" name="country-1">
                     <option value="Босния и герцеговина">Босния и герцеговина</option>
                   </select>
-                  <img class="step-country__img" width="35" height="24" src="img/form-flags/bosnia-and-herzegovina.png"
-                    srcset="img/form-flags/bosnia-and-herzegovina@2x.png 2x" alt="">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/form-flags/bosnia-and-herzegovina.webp 1x, img/form-flags/bosnia-and-herzegovina@2x.webp 2x">
+
+                    <img class="step-country__img" width="35" height="24"
+                      src="img/form-flags/bosnia-and-herzegovina.png"
+                      srcset="img/form-flags/bosnia-and-herzegovina@2x.png 2x" alt="">
+                  </picture>
                 </li>
                 <li class="step-country__item">
                   <select class="step-country__select" name="country-2">
                     <option value="Босния и герцеговина">Чехия</option>
                   </select>
-                  <img class="step-country__img" width="35" height="24" src="img/form-flags/czech.png"
-                    srcset="img/form-flags/czech@2x.png 2x" alt="">
+                  <picture>
+                    <source type="image/webp" srcset="img/form-flags/czech.webp 1x, img/form-flags/czech@2x.webp 2x">
+
+                    <img class="step-country__img" width="35" height="24" src="img/form-flags/czech.png"
+                      srcset="img/form-flags/czech@2x.png 2x" alt="">
+                  </picture>
                 </li>
                 <li class="step-country__item">
                   <button class="step-country__choose" type="button">Выберите страну</button>
@@ -412,17 +423,26 @@
               <ul class="step-entertainment">
                 <li class="step-entertainment__item">
                   <h4 class="step-entertainment__country">Босния и Герцеговина</h4>
-                  <img class="step-entertainment__flag" width="35" height="24"
-                    src="img/form-flags/bosnia-and-herzegovina.png"
-                    srcset="img/form-flags/bosnia-and-herzegovina@2x.png 2x" alt="">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/form-flags/bosnia-and-herzegovina.webp 1x, img/form-flags/bosnia-and-herzegovina@2x.webp 2x">
+
+                    <img class="step-entertainment__flag" width="35" height="24"
+                      src="img/form-flags/bosnia-and-herzegovina.png"
+                      srcset="img/form-flags/bosnia-and-herzegovina@2x.png 2x" alt="">
+                  </picture>
                   <label class="visually-hidden" for="entertainment-1">План действий</label>
                   <textarea name="entertainment-1" id="entertainment-1" cols="30" rows="10"
                     placeholder="План действий"></textarea>
                 </li>
                 <li class="step-entertainment__item">
                   <h4 class="step-entertainment__country">Чехия</h4>
-                  <img class="step-entertainment__flag" width="35" height="24" src="img/form-flags/czech.png"
-                    srcset="img/form-flags/czech@2x.png 2x" alt="">
+                  <picture>
+                    <source type="image/webp" srcset="img/form-flags/czech.webp 1x, img/form-flags/czech@2x.webp 2x">
+
+                    <img class="step-entertainment__flag" width="35" height="24" src="img/form-flags/czech.png"
+                      srcset="img/form-flags/czech@2x.png 2x" alt="">
+                  </picture>
                   <label class="visually-hidden" for="entertainment-2">План действий</label>
                   <textarea name="entertainment-2" id="entertainment-2" cols="30" rows="10"
                     placeholder="План действий"></textarea>
@@ -452,21 +472,21 @@
           <li class="contacts-socials__item">
             <a class="contacts-socials__link contacts-socials__link--facebook" href="" aria-label="Фейсбук">
               <svg width="11" height="21">
-                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                <use xlink:href="img/sprite.svg#facebook"></use>
               </svg>
             </a>
           </li>
           <li class="contacts-socials__item">
             <a class="contacts-socials__link contacts-socials__link--vkontakte" href="" aria-label="Вконтакте">
               <svg width="23" height="12">
-                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                <use xlink:href="img/sprite.svg#vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="contacts-socials__item">
             <a class="contacts-socials__link contacts-socials__link--instagram" href="" aria-label="Инстаграм">
               <svg width="18" height="18">
-                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <use xlink:href="img/sprite.svg#instagram"></use>
               </svg>
             </a>
           </li>
@@ -475,7 +495,7 @@
           <p class="contacts-developed__text">Разработано</p>
           <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg width="27" height="34">
-              <use xlink:href="img/sprite.svg#icon-academy-logo"></use>
+              <use xlink:href="img/sprite.svg#logo-html-academy"></use>
             </svg>
           </a>
         </div>
