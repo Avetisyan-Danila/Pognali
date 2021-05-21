@@ -12,7 +12,7 @@
     width: 1174px;
     margin: 0 auto;
     margin-top: 60px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 }
 
@@ -21,11 +21,17 @@
   padding-right: 85px;
   box-sizing: border-box;
   width: 100%;
+  height: 62px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
 
+  font-family: "Blogger Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 18px;
+  font-weight: 700;
+  color: $basic-white;
+
+  transition: 0.3s;
 
   &::placeholder {
     font-family: "Blogger Sans", "Arial", sans-serif;
@@ -39,11 +45,44 @@
       font-size: 24px;
       line-height: 24px;
     }
+
+    @media (min-width: $desktop-width) {
+      transition: 0.3s;
+    }
+  }
+
+  &:hover::placeholder {
+    @media (min-width: $desktop-width) {
+      opacity: 0.5;
+    }
+  }
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      background-color: $basic-blue-light;
+    }
+  }
+
+  &:focus {
+    background-color: $special-blue;
+    border: 4px solid $basic-white;
+    outline: none;
+  }
+
+  &:focus::placeholder {
+    color: $basic-white;
+    opacity: 0.5;
+  }
+
+  &:invalid {
+    color: $special-red;
   }
 
   @media (min-width: $tablet-width) {
     padding: 26px 36px;
     padding-right: 116px;
+    height: 80px;
+    border-radius: 20px;
 
     font-size: 24px;
     line-height: 24px;
@@ -61,11 +100,14 @@
   width: 60px;
   height: 100%;
   background-color: $basic-yellow;
-  background-image: url("../img/icons/arrow-button.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      background-color: $special-yellow-dark;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 80px;
@@ -83,10 +125,16 @@
     text-align: left;
 
     width: 324px;
-    padding: 30px 34px 27px 42px;
+    padding: 30px 33px 31px 36px;
     background-position: right 34px center;
     background-size: 14px 16px;
     cursor: pointer;
+
+    transition: 0.3s;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -95,5 +143,26 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    transition: 0.3s;
+  }
+}
+
+.interested-form__button:active span {
+  @media (min-width: $desktop-width) {
+    opacity: 0.3;
+  }
+}
+
+.interested-form__button svg {
+  fill: $special-blue-light;
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.interested-form__button:active svg {
+  @media (min-width: $desktop-width) {
+    opacity: 0.3;
   }
 }

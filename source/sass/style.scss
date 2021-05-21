@@ -21,12 +21,15 @@
 @import "blocks/companions-level.scss";
 @import "blocks/companions-wishlist.scss";
 @import "blocks/companions-transport.scss";
-@import "blocks/transport-list.scss";
 @import "blocks/profile.scss";
+@import "blocks/modal.scss";
+@import "blocks/modal-profile.scss";
+@import "blocks/animations.scss";
 @import "blocks/interested.scss";
 @import "blocks/interested-form.scss";
 @import "blocks/interested-contacts.scss";
 @import "blocks/address.scss";
+@import "blocks/map.scss";
 @import "blocks/contacts.scss";
 @import "blocks/contacts-socials.scss";
 @import "blocks/contacts-developed.scss";
@@ -35,7 +38,6 @@
 @import "blocks/main-catalog.scss";
 @import "blocks/about.scss";
 @import "blocks/about-level.scss";
-@import "blocks/about-transport.scss";
 @import "blocks/plans.scss";
 @import "blocks/plans-list.scss";
 @import "blocks/plans-item.scss";
@@ -73,3 +75,5 @@
 @import "blocks/pagination-arrows.scss";
 @import "blocks/footer-form.scss";
 @import "blocks/footer-catalog.scss";
+@import "blocks/transport-list.scss";
+@import "blocks/about-transport.scss";

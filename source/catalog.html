@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
-  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="/fonts/bloggersans.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-light.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-bold.woff2" as="font" crossorigin>
   <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
   <link rel="icon" href="favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
   <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
@@ -18,28 +18,32 @@
 <body class="page-body">
 
   <header class="header">
-    <a class="header__logo" aria-label="Погнали?">
+    <a href="index.html" class="header__logo" aria-label="Погнали?">
       <picture>
-        <source media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
-        <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Погнали?">
+        <source class="header__logo-source-desktop" type="image/webp" media="(min-width: 768px)" srcset="img/logo-big.webp 1x, img/logo-big@2x.webp 2x">
+        <source class="header__logo-source-mobile" type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+
+        <source class="header__logo-source-mobile-png" media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
+        <img class="header__logo-img" src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Погнали?">
       </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
+    <a class="header__auth" href="login.html">Авторизация</a>
     <nav class="header-nav header-nav--closed">
       <div class="header-nav__wrapper">
         <ul class="header-nav__list site-list">
           <li class="header-nav__item site-list__item">
-            <a href="">О сервисе</a>
+            <a class="header-nav__link" href="">О сервисе</a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a href="">Направления</a>
+            <a class="header-nav__link" href="form.html">Направления</a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a href="">Попутчики</a>
+            <a class="header-nav__link" href="catalog.html">Попутчики</a>
           </li>
         </ul>
         <div class="header-contacts">
-          <a class="header-contacts__login" href="login.html">Авторизация</a>
+          <a class="header-contacts__login" href="login.html"><span>Авторизация</span></a>
           <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628"
             aria-label="Номер телефона: 8 800 555-86-28">
             <svg width="19" height="17" class="header-contacts__info-telephone">
@@ -110,49 +114,316 @@
           <svg width="17" height="3">
             <use xlink:href="img/sprite.svg#filter-expand"></use>
           </svg>
+          <svg width="16" height="16">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
           <span>Показать все</span>
+          <span>Свернуть</span>
         </button>
         <ul class="filter-continents">
-          <li class="filter-continents__item">Европа</li>
-          <li class="filter-continents__item">Азия</li>
-          <li class="filter-continents__item">Америка</li>
-          <li class="filter-continents__item">Острова</li>
+          <li class="filter-continents__item filter-continents__item--active"><a href="">Европа</a></li>
+          <li class="filter-continents__item"><a href="">Азия</a></li>
+          <li class="filter-continents__item"><a href="">Америка</a></li>
+          <li class="filter-continents__item"><a href="">Острова</a></li>
         </ul>
         <table class="filter-block__letters letters">
-          <tr>
-            <td>А</td>
-            <td>Б</td>
-            <td>В</td>
-            <td>Г</td>
-            <td>Д</td>
+          <tr class="letters-line">
+            <td class="letters-line__item letters-line__item--active">
+              <span>А</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Австралия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Австрия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Азербайджан</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Албания</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Алжир</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Ангола</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Андорра</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Антигуа и Барбуда</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Аргентина</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Armenia.html">Армения</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Афганистан</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Б</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Багамские Острова</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Бангладеш</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Барбадос</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Бахрейн</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Белоруссия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Белиз</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Бельгия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Бенин</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Болгария</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Armenia.html">Боливия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Босния и Герцеговина</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Ботсвана</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Бразилия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Бруней</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Буркина-Фасо</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Бурунди</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Бутан</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>В</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Вануату</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Великобритания</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Венгрия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Венесуэла</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Восточный Тимор</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Вьетнам</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Г</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Габон</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Гаити</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Гайана</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Гамбия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Гана</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Гватемала</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Гвинея</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Гвинея-Бисау</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Германия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Armenia.html">Гондурас</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Гренада</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Греция</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Грузия</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Д</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Дания</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Джибути</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Доминика</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Доминикана</a></li>
+              </ul>
+            </td>
           </tr>
-          <tr>
-            <td>Е</td>
-            <td>З</td>
-            <td>И</td>
-            <td>К</td>
-            <td>Л</td>
+          <tr class="letters-line">
+            <td class="letters-line__item">
+              <span>Е</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Египет</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>З</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Замбия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Зимбабве</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>И</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Израиль</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Индия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Индонезия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Иордания</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Ирак</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Иран</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Ирландия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Исландия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Испания</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Armenia.html">Италия</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>К</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Кабо-Верде</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Казахстан</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Камбоджа</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Камерун</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Канада</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Катар</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Кения</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Кипр</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Киргизия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Armenia.html">Кирибати</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Китай</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Колумбия</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Л</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Лаос</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Латвия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Лесото</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Либерия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Ливан</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Ливия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Литва</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Лихтенштейн</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Люксембург</a></li>
+              </ul>
+            </td>
           </tr>
-          <tr>
-            <td>М</td>
-            <td>Н</td>
-            <td>О</td>
-            <td>П</td>
-            <td>Р</td>
+          <tr class="letters-line">
+            <td class="letters-line__item">
+              <span>М</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Маврикий</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Мавритания</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Мадагаскар</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Малави</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Малайзия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Мали</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Мальдивы</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Мальта</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Марокко</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Н</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Намибия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Науру</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Непал</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Нигер</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Нигерия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Нидерланды</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Никарагуа</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Новая Зеландия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Норвегия</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>О</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">ОАЭ</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Оман</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>П</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Пакистан</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Палау</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Панама</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Папуа - Новая Гвинея</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Парагвай</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Перу</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Польша</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Португалия</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Р</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Руанда</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Румыния</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Россия</a></li>
+              </ul>
+            </td>
           </tr>
-          <tr>
-            <td>С</td>
-            <td>Т</td>
-            <td>У</td>
-            <td>Ф</td>
-            <td>Х</td>
+          <tr class="letters-line">
+            <td class="letters-line__item">
+              <span>С</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Сальвадор</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Самоа</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Сан-Марино</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Саудовская Аравия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Сейшелы</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Сенегал</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Сербия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Сингапур</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Сирия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Armenia.html">Словакия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">Словения</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Afghanistan.html">США</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Т</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Таджикистан</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Таиланд</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Танзания</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Того</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Тонга</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Angola.html">Тринидад и Тобаго</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Andorra.html">Тувалу</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Antigua-and-Barbuda.html">Тунис</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Argentina.html">Туркмения</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Armenia.html">Турция</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>У</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Уганда</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Узбекистан</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Украина</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Уругвай</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Ф</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Фиджи</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Филиппины</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Финляндия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Франция</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Х</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Хорватия</a></li>
+              </ul>
+            </td>
           </tr>
-          <tr>
-            <td>Ч</td>
-            <td>Ш</td>
-            <td>Э</td>
-            <td>Ю</td>
-            <td>Я</td>
+          <tr class="letters-line">
+            <td class="letters-line__item">
+              <span>Ч</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Чад</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Черногория</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Чехия</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Чили</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Ш</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Швейцария</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Швеция</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Шри-Ланка</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Э</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Эквадор</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Эритрея</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Azerbaijan.html">Эсватини</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Albania.html">Эстония</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Algeria.html">Эфиопия</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Ю</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">ЮАР</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Южный Судан</a></li>
+              </ul>
+            </td>
+            <td class="letters-line__item">
+              <span>Я</span>
+              <ul class="letters-line__countries">
+                <li><a class="letters-line__countries-item" href="/europe/Australia.html">Ямайка</a></li>
+                <li><a class="letters-line__countries-item" href="/europe/Austria.html">Япония</a></li>
+              </ul>
+            </td>
           </tr>
         </table>
         <ul class="filter-block__country-list country-list">
@@ -171,7 +442,12 @@
           <li class="country-list__item"><a class="country-list__link" href="/europe/Afghanistan.html">Афганистан</a>
           </li>
         </ul>
-        <button class="filter-block__button" type="button">Свернуть</button>
+        <button class="filter-block__button" type="button">
+          <span>Свернуть</span>
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
       </div>
     </section>
 
@@ -179,12 +455,12 @@
       <div class="catalog-columns__wrapper">
         <section class="pick">
           <form class="pick-form" action="https://echo.htmlacademy.ru" method="POST">
-            <h2 class="pick__title">Подберите <br> идеального <br> попутчика</h2>
+            <h2 class="pick__title">Подберите идеального попутчика</h2>
             <ul class="pick-blocks">
               <li class="pick-block">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Хобби<span>:</span></h3>
-                  <button class="pick-block__button" aria-label="Открыть фильтр">
+                  <button class="pick-block__button" aria-label="Открыть фильтр" type="button">
                     <svg width="10" height="5">
                       <use xlink:href="img/sprite.svg#catalog-arrow"></use>
                     </svg>
@@ -192,23 +468,23 @@
                 </div>
                 <ul class="pick-block__list">
                   <li class="pick-block__item">
-                    <input id="football" name="hobby" value="Футбол" type="checkbox">
+                    <input class="visually-hidden" id="football" name="hobby" value="Футбол" type="checkbox">
                     <label for="football">Спортзал</label>
                   </li>
                   <li class="pick-block__item">
-                    <input id="fitness" name="hobby" value="Фитнес" type="checkbox">
+                    <input class="visually-hidden" id="fitness" name="hobby" value="Фитнес" type="checkbox">
                     <label for="fitness">Кальян</label>
                   </li>
                   <li class="pick-block__item">
-                    <input id="sneakers" name="hobby" value="Кроссовки" type="checkbox">
+                    <input class="visually-hidden" id="sneakers" name="hobby" value="Кроссовки" type="checkbox">
                     <label for="sneakers">Диван</label>
                   </li>
                 </ul>
               </li>
-              <li class="pick-block pick-block--opened">
+              <li class="pick-block">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Музыка<span>:</span></h3>
-                  <button class="pick-block__button" aria-label="Открыть фильтр">
+                  <button class="pick-block__button" aria-label="Открыть фильтр" type="button">
                     <svg width="10" height="5">
                       <use xlink:href="img/sprite.svg#catalog-arrow"></use>
                     </svg>
@@ -216,15 +492,15 @@
                 </div>
                 <ul class="pick-block__list">
                   <li class="pick-block__item">
-                    <input id="hard-rock" name="music" value="Тяжелый рок" type="checkbox">
+                    <input class="visually-hidden" id="hard-rock" name="music" value="Тяжелый рок" type="checkbox">
                     <label for="hard-rock">Тяжелый рок</label>
                   </li>
                   <li class="pick-block__item">
-                    <input id="russian-rap" name="music" value="Русский рэп" type="checkbox">
+                    <input class="visually-hidden" id="russian-rap" name="music" value="Русский рэп" type="checkbox">
                     <label for="russian-rap">Русский рэп</label>
                   </li>
                   <li class="pick-block__item">
-                    <input id="eurodance" name="music" value="Евроденс" type="checkbox">
+                    <input class="visually-hidden" id="eurodance" name="music" value="Евроденс" type="checkbox">
                     <label for="eurodance">Евроденс</label>
                   </li>
                 </ul>
@@ -232,7 +508,7 @@
               <li class="pick-block">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Еда<span>:</span></h3>
-                  <button class="pick-block__button" aria-label="Открыть фильтр">
+                  <button class="pick-block__button" aria-label="Открыть фильтр" type="button">
                     <svg width="10" height="5">
                       <use xlink:href="img/sprite.svg#catalog-arrow"></use>
                     </svg>
@@ -240,51 +516,95 @@
                 </div>
                 <ul class="pick-block__list">
                   <li class="pick-block__item">
-                    <input id="seafood" name="food" value="Морепродукты" type="checkbox">
+                    <input class="visually-hidden" id="seafood" name="food" value="Морепродукты" type="checkbox">
                     <label for="seafood">Мясоед</label>
                   </li>
                   <li class="pick-block__item">
-                    <input id="meat" name="food" value="Мясо" type="checkbox">
+                    <input class="visually-hidden" id="meat" name="food" value="Мясо" type="checkbox">
                     <label for="meat">Сидит на ПП</label>
                   </li>
                   <li class="pick-block__item">
-                    <input id="vegetarianism" name="food" value="Вегетарианство" type="checkbox">
+                    <input class="visually-hidden" id="vegetarianism" name="food" value="Вегетарианство" type="checkbox">
                     <label for="vegetarianism">Веган-сыроед</label>
                   </li>
                 </ul>
               </li>
-              <li class="pick-block pick-block--opened">
+              <li class="pick-block">
                 <div class="pick-block__top">
-                  <h3 class="pick-block__title">Транспорт<span>:</span></h3>
-                  <button class="pick-block__button" aria-label="Открыть фильтр">
+                  <h3 class="pick-block__title pick-block__title--transport">Транспорт<span>:</span></h3>
+                  <button class="pick-block__button" aria-label="Открыть фильтр" type="button">
                     <svg width="10" height="5">
                       <use xlink:href="img/sprite.svg#catalog-arrow"></use>
                     </svg>
                   </button>
                 </div>
                 <ul class="pick-block__list pick-block__list--transport transport-list">
-                  <li class="pick-block__item transport-list__item">
-                    <label class="visually-hidden" for="air-travel">Авиаперелет</label>
-                    <input id="air-travel" name="transport" value="Авиаперелет" type="checkbox">
+                  <li class="pick-block__item-transport transport-list__item">
+                    <input class="visually-hidden" id="air-travel" name="transport" value="Авиаперелет" type="checkbox">
+                    <label class="pick-block__item-label" for="air-travel">
+                      <span class="visually-hidden">Авиаперелет</span>
+                      <svg width="17" height="16">
+                        <use xlink:href="img/sprite.svg#pick-plane"></use>
+                      </svg>
+                    </label>
+                    <span class="transport-list__item-tooltip transport-list__item-tooltip--plane">
+                      Авиаперелет
+                      <svg width="16" height="10">
+                        <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="pick-block__item transport-list__item">
-                    <label class="visually-hidden" for="road-transport">Автотранспорт</label>
-                    <input id="road-transport" name="transport" value="Автотранспорт" type="checkbox">
+                  <li class="pick-block__item-transport transport-list__item">
+                    <input class="visually-hidden" id="road-transport" name="transport" value="Автотранспорт" type="checkbox">
+                    <label class="pick-block__item-label" for="road-transport">
+                      <span class="visually-hidden">Автотранспорт</span>
+                      <svg width="17" height="16">
+                        <use xlink:href="img/sprite.svg#pick-bus"></use>
+                      </svg>
+                    </label>
+                    <span class="transport-list__item-tooltip transport-list__item-tooltip--car">
+                      Автотранспорт
+                      <svg width="16" height="10">
+                        <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="pick-block__item transport-list__item">
-                    <label class="visually-hidden" for="bike">Велосипед</label>
-                    <input id="bike" name="transport" value="Велосипед" type="checkbox">
+                  <li class="pick-block__item-transport transport-list__item">
+                    <input class="visually-hidden" id="bike" name="transport" value="Велосипед" type="checkbox">
+                    <label class="pick-block__item-label" for="bike">
+                      <span class="visually-hidden">Велосипед</span>
+                      <svg width="17" height="16">
+                        <use xlink:href="img/sprite.svg#pick-bicycle"></use>
+                      </svg>
+                    </label>
+                    <span class="transport-list__item-tooltip transport-list__item-tooltip--bicycle">
+                      Велосипед
+                      <svg width="16" height="10">
+                        <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                      </svg>
+                    </span>
                   </li>
-                  <li class="pick-block__item transport-list__item">
-                    <label class="visually-hidden" for="on-foot">Пешком</label>
-                    <input id="on-foot" name="transport" value="Пешком" type="checkbox">
+                  <li class="pick-block__item-transport transport-list__item">
+                    <input class="visually-hidden" id="on-foot" name="transport" value="Пешком" type="checkbox">
+                    <label class="pick-block__item-label" for="on-foot">
+                      <span class="visually-hidden">Пешком</span>
+                      <svg width="17" height="16">
+                        <use xlink:href="img/sprite.svg#pick-run"></use>
+                      </svg>
+                    </label>
+                    <span class="transport-list__item-tooltip transport-list__item-tooltip--foot">
+                      Пешком
+                      <svg width="16" height="10">
+                        <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                      </svg>
+                    </span>
                   </li>
                 </ul>
               </li>
-              <li class="pick-block pick-block--opened">
+              <li class="pick-block">
                 <div class="pick-block__top">
                   <h3 class="pick-block__title">Левел<span>:</span></h3>
-                  <button class="pick-block__button" aria-label="Открыть фильтр">
+                  <button class="pick-block__button" aria-label="Открыть фильтр" type="button">
                     <svg width="10" height="5">
                       <use xlink:href="img/sprite.svg#catalog-arrow"></use>
                     </svg>
@@ -300,10 +620,10 @@
                   </div>
                   <div class="pick-block__range">
                     <div class="scale">
-                      <div class="bar" style="width: 100%; margin-left: 0%"></div>
+                      <div class="bar" style="width: 64%; margin-left: 36%"></div>
                     </div>
-                    <div class="toggle toggle-min" tabindex="0" style="left: 30%;"></div>
-                    <div class="toggle toggle-max" tabindex="0" style="left: 100%;"></div>
+                    <div class="toggle toggle-min" tabindex="0" style="left: 36%;"></div>
+                    <div class="toggle toggle-max" tabindex="0" style="left: 96%;"></div>
                   </div>
                 </div>
               </li>
@@ -330,13 +650,13 @@
                       srcset="img/catalog-companions/1-big.png 1x, img/catalog-companions/1-big@2x.png 2x">
                     <source media="(min-width: 768px)"
                       srcset="img/catalog-companions/1-medium.png 1x, img/catalog-companions/1-medium@2x.png 2x">
-                    <img src="img/catalog-companions/1.png" srcset="img/catalog-companions/1@2x.png 2x" alt="">
+                    <img class="catalog-item__avatar-img" width="70" height="70" src="img/catalog-companions/1.png" srcset="img/catalog-companions/1@2x.png 2x" alt="">
                   </picture>
                 </a>
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="firsova.html">Таня Фирсова</a></h3>
                 <p class="visually-hidden">Этот попутчик сейчас не в сети</p>
                 <p class="visually-hidden">Вы лайкнули этого попутчика</p>
-                <button class="catalog-item__like catalog-item__like--active" aria-label="Кнопка лайка">
+                <button class="catalog-item__like" aria-label="Кнопка лайка">
                   <svg width="12" height="13">
                     <use xlink:href="img/sprite.svg#heart"></use>
                   </svg>
@@ -386,21 +706,45 @@
                         <svg width="21" height="21">
                           <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--plane">
+                          Авиаперелет
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
                         <svg width="17" height="19">
                           <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--car">
+                          Автотранспорт
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
                         <svg width="24" height="24">
                           <use xlink:href="img/sprite.svg#bicycle"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--bicycle">
+                          Велосипед
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
                         <svg width="21" height="23">
                           <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--foot">
+                          Пешком
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -415,7 +759,7 @@
                     </div>
                   </div>
                 </div>
-                <a class="catalog-item__link" href="response.html">Позвать!</a>
+                <a class="catalog-item__link" href="response.html"><span>Позвать!</span></a>
               </li>
               <li class="catalog-item">
                 <a class="catalog-item__avatar" href="demin.html">
@@ -431,7 +775,7 @@
                       srcset="img/catalog-companions/2-big.png 1x, img/catalog-companions/2-big@2x.png 2x">
                     <source media="(min-width: 768px)"
                       srcset="img/catalog-companions/2-medium.png 1x, img/catalog-companions/2-medium@2x.png 2x">
-                    <img src="img/catalog-companions/2.png" srcset="img/catalog-companions/2@2x.png 2x" alt="">
+                    <img class="catalog-item__avatar-img" width="70" height="70" src="img/catalog-companions/2.png" srcset="img/catalog-companions/2@2x.png 2x" alt="">
                   </picture>
                 </a>
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="demin.html">Петя Демин</a></h3>
@@ -477,21 +821,45 @@
                         <svg width="21" height="21">
                           <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--plane">
+                          Авиаперелет
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item">
                         <svg width="17" height="19">
                           <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--car">
+                          Автотранспорт
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
                         <svg width="24" height="24">
                           <use xlink:href="img/sprite.svg#bicycle"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--bicycle">
+                          Велосипед
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item">
                         <svg width="21" height="23">
                           <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--foot">
+                          Пешком
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -506,7 +874,7 @@
                     </div>
                   </div>
                 </div>
-                <a class="catalog-item__link" href="response.html">Позвать!</a>
+                <a class="catalog-item__link" href="response.html"><span>Позвать!</span></a>
               </li>
               <li class="catalog-item">
                 <a class="catalog-item__avatar" href="smolov.html">
@@ -522,7 +890,7 @@
                       srcset="img/catalog-companions/3-big.png 1x, img/catalog-companions/3-big@2x.png 2x">
                     <source media="(min-width: 768px)"
                       srcset="img/catalog-companions/3-medium.png 1x, img/catalog-companions/3-medium@2x.png 2x">
-                    <img src="img/catalog-companions/3.png" srcset="img/catalog-companions/3@2x.png 2x" alt="">
+                    <img class="catalog-item__avatar-img" width="70" height="70" src="img/catalog-companions/3.png" srcset="img/catalog-companions/3@2x.png 2x" alt="">
                   </picture>
                 </a>
                 <h3 class="catalog-item__name catalog-item__name--offline"><a href="smolov.html">Марк Смолов</a></h3>
@@ -578,21 +946,45 @@
                         <svg width="21" height="21">
                           <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--plane">
+                          Авиаперелет
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
                         <svg width="17" height="19">
                           <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--car">
+                          Автотранспорт
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item">
                         <svg width="24" height="24">
                           <use xlink:href="img/sprite.svg#bicycle"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--bicycle">
+                          Велосипед
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
                         <svg width="21" height="23">
                           <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--foot">
+                          Пешком
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -607,7 +999,7 @@
                     </div>
                   </div>
                 </div>
-                <a class="catalog-item__link" href="response.html">Позвать!</a>
+                <a class="catalog-item__link" href="response.html"><span>Позвать!</span></a>
               </li>
               <li class="catalog-item">
                 <a class="catalog-item__avatar" href="rogovaya.html">
@@ -616,7 +1008,7 @@
                       srcset="img/catalog-companions/4-big.png 1x, img/catalog-companions/4-big@2x.png 2x">
                     <source media="(min-width: 768px)"
                       srcset="img/catalog-companions/4-medium.png 1x, img/catalog-companions/4-medium@2x.png 2x">
-                    <img src="img/catalog-companions/4.png" srcset="img/catalog-companions/4@2x.png 2x" alt="">
+                    <img  class="catalog-item__avatar-img" width="70" height="70"src="img/catalog-companions/4.png" srcset="img/catalog-companions/4@2x.png 2x" alt="">
                   </picture>
                 </a>
                 <h3 class="catalog-item__name catalog-item__name--online"><a href="rogovaya.html">Лариса Роговая</a>
@@ -632,7 +1024,7 @@
                 <p class="catalog-item__tags">#образование #карьера <br> #учеба #линкедин</p>
                 <div class="desires">
                   <h4 class="desires__title">хочет посетить:</h4>
-                  <ul class="desires-list">
+                  <ul class="desires-list desires-list--rogovaya">
                     <li class="desires-list__item">
                       <img width="35" height="24" src="img/catalog-copmanions-flags/uk.png"
                         srcset="img/catalog-copmanions-flags/uk@2x.png 2x" alt="">
@@ -653,21 +1045,45 @@
                         <svg width="21" height="21">
                           <use xlink:href="img/sprite.svg#plane"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--plane">
+                          Авиаперелет
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item">
                         <svg width="17" height="19">
                           <use xlink:href="img/sprite.svg#bus"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--car">
+                          Автотранспорт
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
                         <svg width="24" height="24">
                           <use xlink:href="img/sprite.svg#bicycle"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--bicycle">
+                          Велосипед
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                       <li class="catalog-transport__item transport-list__item transport-list__item--disabled">
                         <svg width="21" height="23">
                           <use xlink:href="img/sprite.svg#run"></use>
                         </svg>
+                        <span class="transport-list__item-tooltip transport-list__item-tooltip--foot">
+                          Пешком
+                          <svg width="16" height="10">
+                            <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                          </svg>
+                        </span>
                       </li>
                     </ul>
                   </div>
@@ -682,14 +1098,14 @@
                     </div>
                   </div>
                 </div>
-                <a class="catalog-item__link" href="response.html">Позвать!</a>
+                <a class="catalog-item__link catalog-item__link--rogovaya" href="response.html"><span>Позвать!</span></a>
               </li>
             </ul>
             <a class="catalog__more" href="new-companions.html">
               <svg width="18" height="18">
                 <use xlink:href="img/sprite.svg#plus-more"></use>
               </svg>
-              Показать ещё
+              <span>Показать ещё</span>
             </a>
             <div class="pagination">
               <ul class="pagination-list">
@@ -733,10 +1149,14 @@
   <footer class="footer footer-catalog">
     <section class="contacts">
       <div class="contacts__wrapper">
-        <a class="contacts__logo" aria-label="Погнали?">
+        <a href="index.html" class="contacts__logo" aria-label="Погнали?">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/footer/logo-big.png 1x, img/footer/logo-big@2x.png 2x">
-            <img src="img/footer/logo.png" srcset="img/footer/logo@2x.png 2x" alt="Погнали?">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/logo-big-extra.webp 1x, img/logo-big-extra@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-extra.webp 1x, img/logo-extra@2x.webp 2x">
+
+            <source media="(min-width: 768px)" srcset="img/logo-big-extra.png 1x, img/logo-big-extra@2x.png 2x">
+            <img src="img/logo-extra.png" srcset="img/logo-extra@2x.png 2x" alt="Погнали?">
           </picture>
         </a>
         <ul class="contacts-socials">
@@ -763,8 +1183,8 @@
           </li>
         </ul>
         <div class="contacts-developed">
-          <p class="contacts-developed__text">Разработано</p>
           <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span>Разработано</span>
             <svg width="27" height="34">
               <use xlink:href="img/sprite.svg#logo-html-academy"></use>
             </svg>
@@ -773,6 +1193,8 @@
       </div>
     </section>
   </footer>
+
+  <script src="js/script.min.js"></script>
 
 </body>
 

@@ -62,15 +62,31 @@
 
   margin-right: 16px;
 
+  fill: $basic-yellow;
+
   @media (min-width: $tablet-width) {
     width: 68px;
     height: 68px;
-    margin-right: 31px;
+    margin-right: 22px;
   }
 
   @media (min-width: $desktop-width) {
     width: 90px;
     height: 90px;
+    margin-right: 30px;
+    transition: 0.3s;
+  }
+}
+
+.interested-contacts__item:hover svg {
+  @media (min-width: $desktop-width) {
+    fill: $special-yellow-dark;
+  }
+}
+
+.interested-contacts__item:active svg {
+  @media (min-width: $desktop-width) {
+    opacity: 0.3;
   }
 }
 
@@ -102,4 +118,20 @@
   text-decoration: none;
   color: $basic-yellow;
   text-transform: uppercase;
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      color: $special-yellow-dark;
+    }
+  }
+
+  &:active {
+    @media (min-width: $desktop-width) {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
 }

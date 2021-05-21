@@ -1,7 +1,7 @@
 .step {
   background-color: $basic-white;
   border-radius: 10px;
-  padding: 24px;
+  padding: 25px;
 
   margin-bottom: 10px;
 
@@ -9,14 +9,43 @@
     margin-bottom: 0;
   }
 
+  &:nth-child(2) {
+    padding-top: 22px;
+    padding-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      padding: 46px 38px 56px 43px;
+      margin-bottom: 53px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 96px 159px 108px 159px;
+      margin-bottom: 43px;
+    }
+  }
+
+  &:nth-child(3) {
+    padding: 21px 25px 9px 25px;
+
+    @media (min-width: $tablet-width) {
+      padding: 42px 38px 56px 43px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 96px 159px 105px 159px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 48px 40px 56px 40px;
+    padding: 45px 38px 56px 40px;
     margin-bottom: 40px;
+    border-radius: 30px;
   }
 
   @media (min-width: $desktop-width) {
     border-radius: 60px;
-    padding: 101px 63px 106px 167px;
+    padding: 98px 159px 105px 159px;
+    margin-bottom: 44px;
   }
 }
 
@@ -26,7 +55,7 @@
     grid-template-columns: 1fr min-content;
     align-items: start;
 
-    padding-bottom: 60px;
+    padding-bottom: 57px;
     margin-bottom: 30px;
 
     position: relative;
@@ -43,6 +72,10 @@
       background-color: $special-white;
     }
   }
+}
+
+.step:nth-child(2) .step__top {
+  margin-bottom: -2px;
 }
 
 .step__title {
@@ -63,7 +96,12 @@
 
 .step__title br {
   @media (min-width: $desktop-width) {
-    display: none;
+    display: inline;
+    content: ' ';
+
+    &::after {
+      content: ' ';
+    }
   }
 }
 
@@ -72,12 +110,12 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 38px;
+    margin-bottom: 37px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 20px;
-    line-height: 24px;
     margin-bottom: 0;
   }
 }
@@ -85,9 +123,13 @@
 .step__text br {
   display: none;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: block;
   }
+}
+
+.step__text .br {
+  display: block;
 }
 
 .step__nav {
@@ -112,26 +154,27 @@
   justify-content: center;
   padding: 5px 0;
 
-  &::after {
-    @media (min-width: $tablet-width) {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background-image: url("../img/icons/arrow-button.svg");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 24px;
     width: 284px;
-    padding: 29px 37px 27px 34px;
+    padding: 31px 35px 27px 34px;
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
     text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 28px 32px 29px 35px;
+  }
+}
+
+.step__next svg {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
@@ -148,16 +191,15 @@
   justify-content: center;
   margin-top: 13px;
 
-  &::before {
-    @media (min-width: $tablet-width) {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background-image: url("../img/icons/arrow-button.svg");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      transform: rotate(180deg);
-      margin-right: 19px;
+  &:hover {
+    @media (min-width: $desktop-width) {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    @media (min-width: $desktop-width) {
+      opacity: 0.3;
     }
   }
 
@@ -169,9 +211,25 @@
     align-items: center;
     margin-top: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.step__prev svg {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    transform: rotate(180deg);
+    margin-right: 23px;
+    fill: $special-blue-light;
+  }
 }
 
 .step__button {
+  font-family: "Blogger Sans", "Arial", sans-serif;
   background-color: $basic-yellow;
   font-size: 17px;
   line-height: 30px;
@@ -181,20 +239,13 @@
   text-decoration: none;
   border-radius: 20px;
   border: none;
+  cursor: pointer;
 
   padding: 5px 0;
   width: 100%;
 
-  &::after {
-    @media (min-width: $tablet-width) {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background-image: url("../img/icons/arrow-button.svg");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
-  }
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -202,9 +253,15 @@
     width: 286px;
     padding: 29px 37px 27px 34px;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     text-transform: none;
+  }
+}
+
+.step__button svg {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }

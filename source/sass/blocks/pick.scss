@@ -2,13 +2,13 @@
   background-color: $basic-blue-light;
 
   padding: 0 25px;
-  padding-top: 21px;
+  padding-top: 20px;
   padding-bottom: 28px;
 
   @media (min-width: $tablet-width) {
     padding: 0 40px;
     padding-top: 43px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,7 +33,7 @@
     font-size: 30px;
     line-height: 30px;
     letter-spacing: normal;
-    margin-bottom: 38px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -44,5 +44,9 @@
 .pick__title br {
   @media (min-width: $tablet-width) {
     display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }

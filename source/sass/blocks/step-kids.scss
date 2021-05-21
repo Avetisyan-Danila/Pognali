@@ -1,24 +1,27 @@
 .step-kids {
   @media (min-width: $tablet-width) {
     order: 1;
-    margin: 25px 0;
+    margin-top: 32px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: flex-end;
+    margin-top: 24px;
+    margin-bottom: 0;
   }
-}
-
-.step-kids input {
-  border: 1px solid $special-grey-extra;
-  border-radius: 4px;
 }
 
 .step-kids label {
   font-size: 15px;
   line-height: 15px;
   color: $special-blue-light;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 39px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -26,5 +29,85 @@
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+
+    padding-left: 58px;
+  }
+}
+
+.step-kids label::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  background-color: $basic-white;
+  border: 1px solid $special-grey-extra;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 34px;
+    top: -6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.step-kids label:hover::before {
+  @media (min-width: $desktop-width) {
+    border-color: $special-blue-cornflower;
+  }
+}
+
+.step-kids label:active::before {
+  @media (min-width: $desktop-width) {
+    border-color: transparent;
+    background-color: $special-steel;
+  }
+}
+
+.step-kids input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 9px;
+  height: 9px;
+  background-image: url('../img/icons/mark.svg');
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    top: 6px;
+    left: 12px;
+    width: 11px;
+    height: 11px;
+    background-size: 100% 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.step-kids input:checked + label:hover::before {
+  @media (min-width: $desktop-width) {
+    border-color: $special-blue-cornflower;
+  }
+}
+
+.step-kids input:checked + label:active::before {
+  @media (min-width: $desktop-width) {
+    border-color: transparent;
+    background-color: $special-steel;
+  }
+}
+
+.step-kids input:checked + label:active::after {
+  @media (min-width: $desktop-width) {
+    opacity: 0.3;
   }
 }

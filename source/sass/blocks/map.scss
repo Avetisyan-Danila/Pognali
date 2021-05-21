@@ -1,0 +1,16 @@
+.map {
+  margin-top: -150px;
+  margin-bottom: -150px;
+  height: calc(262px + 300px);
+
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    height: calc(464px + 300px);
+  }
+
+  @media (min-width: $desktop-width) {
+    height: calc(393px + 300px);
+  }
+}

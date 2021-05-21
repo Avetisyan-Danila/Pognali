@@ -1,10 +1,5 @@
 .contacts-developed {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
   padding-top: 13px;
-
   position: relative;
 
   &::before {
@@ -27,7 +22,7 @@
   }
 }
 
-.contacts-developed__text {
+.contacts-developed span {
   font-size: 16px;
   line-height: 16px;
   color: $special-grey;
@@ -43,8 +38,29 @@
 }
 
 .contacts-developed__link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    @media (min-width: $desktop-width) {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
-    top: 5px;
+    top: -2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
   }
 }

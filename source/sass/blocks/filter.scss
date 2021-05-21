@@ -48,6 +48,7 @@
   font-weight: 700;
   color: $special-blue;
   text-transform: uppercase;
+  cursor: pointer;
 
   background-color: transparent;
   border: none;
@@ -57,6 +58,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    @media (min-width: $desktop-width) {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;
@@ -71,10 +84,26 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 3 / 4;
+    transition: 0.3s;
+  }
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      width: 174px;
+    }
   }
 }
 
 .filter__button svg {
+  &:nth-of-type(2) {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      width: 22px;
+      height: 24px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 30px;
     height: 6px;
@@ -82,10 +111,36 @@
   }
 }
 
+.filter__button--active svg {
+  &:nth-of-type(1) {
+    display: none;
+  }
+
+  &:nth-of-type(2) {
+    display: block;
+  }
+}
+
 .filter__button span {
   display: none;
 
+  &:nth-of-type(2) {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     display: block;
+  }
+}
+
+.filter__button--active span {
+  &:nth-of-type(1) {
+    display: none;
+  }
+
+  &:nth-of-type(2) {
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 }

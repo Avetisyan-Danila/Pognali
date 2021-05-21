@@ -4,14 +4,14 @@
 
 .catalog-columns__wrapper {
   @media (min-width: $desktop-width) {
-    width: 1320px;
+    width: 1321px;
     margin: 0 auto;
 
     display: grid;
     grid-template-columns: 951px 285px;
     grid-column-gap: 85px;
 
-    padding-top: 48px;
+    padding-top: 84px;
     padding-bottom: 75px;
   }
 }

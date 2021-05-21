@@ -7,17 +7,35 @@
   top: 0;
   z-index: 3;
   width: 100%;
-  background-color: $basic-black-transparent;
+  background-color: transparent;
   padding: 19px 0;
+  transition: 0.3s;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
-    padding: 40px 0;
+    margin-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: min-content 1fr;
     padding: 20px 0;
+    margin-top: 27px;
+  }
+
+  &--active {
+    background-color: $basic-white;
+    height: 100%;
+    padding-top: 15px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -15px;
+      padding-top: 0;
+    }
+  }
+
+  &--scroll {
+    background-color: $basic-white;
+    margin-top: 0;
   }
 }
 
@@ -43,6 +61,11 @@
     width: 200px;
     height: 52px;
   }
+}
+
+.header__logo-img {
+  width: 100%;
+  height: 100%;
 }
 
 .header__toggle {
@@ -75,11 +98,20 @@
 
   @media (min-width: $tablet-width) {
     justify-self: center;
+    margin-right: 0px;
   }
 
   @media (min-width: $desktop-width) {
     display: none;
   }
+}
+
+.header--scroll .header__toggle::after {
+  background-color: $special-grey-light;
+}
+
+.header--scroll .header__toggle::before {
+  background-color: $special-grey-light;
 }
 
 .header__toggle--active {
@@ -95,5 +127,32 @@
   &::after {
     transform: rotate(-45deg);
     top: 0;
+  }
+}
+
+.header__auth {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    text-decoration: none;
+    width: 188px;
+    border-radius: 25px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    text-align: center;
+    background-color: $basic-yellow;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $basic-blue;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin-left: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }

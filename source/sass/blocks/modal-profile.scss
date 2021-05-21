@@ -1,0 +1,156 @@
+.modal-profile {
+  top: 50px;
+  bottom: auto;
+  width: calc(100% - 50px);
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    top: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 750px;
+    top: 200px;
+  }
+}
+
+.modal-profile__wrapper {
+  padding-top: 34px;
+  background-color: $basic-white;
+  box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
+  border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 54px;
+  }
+}
+
+.modal-profile__title {
+  text-align: center;
+  margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+  }
+}
+
+.modal-profile__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 0 25px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 90px;
+  }
+}
+
+.modal-profile__item {
+  margin-bottom: 11px;
+  padding-bottom: 11px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $basic-black;
+    opacity: 0.05;
+  }
+
+  &:first-child {
+    padding-top: 11px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 14px;
+    }
+  }
+
+  &:first-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $basic-black;
+    opacity: 0.05;
+  }
+
+  &:last-child {
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+  }
+}
+
+.modal-profile__item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: $special-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.modal-profile__button {
+  background-color: $special-blue-alice;
+  border: none;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $special-blue-light;
+  cursor: pointer;
+
+  width: 100%;
+  padding: 21px 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      background: $basic-blue-light;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 41px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.modal-profile__button span {
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.modal-profile__button:active span {
+  @media (min-width: $desktop-width) {
+    opacity: 0.3;
+  }
+}

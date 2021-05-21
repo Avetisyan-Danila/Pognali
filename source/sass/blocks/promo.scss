@@ -3,55 +3,10 @@
   background-repeat: no-repeat;
   background-size: 100% 45%;
   position: relative;
-  padding-top: 94px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 218px;
-    right: calc(50% - 15px);
-    transform: translateX(50%);
-    width: 192px;
-    height: 255px;
-    background-image: url("../img/promo/traveller.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-
-    @media (min-resolution: 2dppx) {
-      top: 221px;
-      background-image: url("../img/promo/traveller@2x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      width: 372px;
-      height: 451px;
-      top: 100%;
-      right: calc(50% - 270px);
-      transform: translateY(calc(-100% - calc(279px + 139px)));
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 431px;
-      height: 640px;
-      top: auto;
-      bottom: 0;
-      background-image: url("../img/promo/traveller-big.png");
-      right: 50%;
-      transform: translateX(calc(50% + 100px));
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/promo/traveller-big@2x.png");
-      }
-    }
-  }
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/promo/globe-bg@2x.jpg");
-  }
+  padding-top: 92px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 162px;
+    padding-top: 158px;
     background-image: url("../img/promo/globe-medium-bg.jpg");
     background-color: $special-sapphire;
     background-size: 100%;
@@ -75,6 +30,33 @@
   }
 }
 
+.promo__traveller {
+  position: absolute;
+  z-index: 1;
+  top: 222px;
+  right: calc(50% - 16px);
+  transform: translateX(50%);
+  width: 192px;
+  height: 255px;
+
+  @media (min-width: $tablet-width) {
+    width: 372px;
+    height: 451px;
+    top: 100%;
+    right: calc(50% - 273px);
+    transform: translateY(calc(-100% - calc(279px + 134px)));
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 431px;
+    height: 640px;
+    top: 110px;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(calc(50% + 100px));
+  }
+}
+
 .promo__wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
@@ -91,7 +73,7 @@
   text-align: center;
 
   margin: 0 auto;
-  margin-bottom: 220px;
+  margin-bottom: 225px;
   max-width: 238px;
 
   @media (min-width: $tablet-width) {
@@ -104,7 +86,7 @@
   @media (min-width: $desktop-width) {
     text-align: left;
     margin: 0;
-    padding-top: 99px;
+    padding-top: 96px;
     padding-left: 127px;
   }
 }
@@ -116,14 +98,6 @@
   transform: translateY(50%);
 
   @media (min-width: $tablet-width) {
-    padding: 0;
-    position: fixed;
-    z-index: 3;
-    right: 40px;
-    top: 11px;
-  }
-
-  @media (min-width: $desktop-width) {
     display: none;
   }
 }
@@ -180,6 +154,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    transform: translateY(5px);
 
     margin-bottom: -70px;
     padding: 0 40px;
@@ -203,9 +178,9 @@
 .promo__item {
   border-radius: 10px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 22px 21px 76px 24px;
+  padding: 22px 21px 82px 24px;
 
   &:nth-child(1) {
     background-color: $special-orange;
@@ -220,6 +195,7 @@
     @media (min-width: $desktop-width) {
       position: relative;
       z-index: 2;
+      padding: 23px 49px 30px 34px;
     }
   }
 
@@ -236,6 +212,11 @@
       position: relative;
       z-index: 2;
     }
+
+    @media (min-width: $desktop-width) {
+      padding: 23px 33px 30px 31px;
+      margin-left: -16px;
+    }
   }
 
   &:nth-child(3) {
@@ -250,6 +231,7 @@
     @media (min-width: $desktop-width) {
       position: relative;
       z-index: 2;
+      padding: 23px 18px 30px 31px;
     }
   }
 
@@ -265,6 +247,11 @@
 
       position: relative;
       z-index: 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 23px 33px 30px 30px;
+      margin-left: 15px;
     }
   }
 
@@ -289,7 +276,6 @@
     border-radius: 20px;
 
     flex-direction: row;
-    padding-bottom: 29px;
   }
 }
 
@@ -324,5 +310,10 @@
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
   }
 }

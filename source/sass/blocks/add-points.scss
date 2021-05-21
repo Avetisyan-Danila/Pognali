@@ -8,6 +8,7 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 0;
+    transform: translateX(2px);
   }
 
   @media (min-width: $desktop-width) {
@@ -34,5 +35,6 @@
   @media (min-width: $tablet-width) {
     width: 6px;
     height: 6px;
+    margin-right: 29px;
   }
 }

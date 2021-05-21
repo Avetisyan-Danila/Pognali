@@ -10,21 +10,51 @@
   align-items: center;
   justify-content: space-between;
 
-  &::after {
-    content: "";
-    display: block;
-    width: 13px;
-    height: 13px;
-    background-image: url("../img/icons/arrow-button.svg");
-    background-repeat: no-repeat;
+  &:hover {
+    @media (min-width: $desktop-width) {
+      background-color: $special-yellow-dark;
+    }
+  }
 
-    @media (min-width: $tablet-width) {
-      width: 14px;
+  &:active::after {
+    @media (min-width: $desktop-width) {
+      opacity: 0.3;
     }
   }
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+    border-radius: 20px;
+  }
+}
+
+.link svg {
+  fill: $special-blue-light;
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.link:active svg {
+  @media (min-width: $desktop-width) {
+    opacity: 0.3;
+  }
+}
+
+.link span {
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.link:active span {
+  @media (min-width: $desktop-width) {
+    opacity: 0.3;
   }
 }

@@ -6,6 +6,8 @@
   padding: 0 25px;
   padding-top: 31px;
   padding-bottom: 35px;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     border-bottom-left-radius: 50px;
@@ -13,7 +15,12 @@
 
     padding: 0 75px;
     padding-top: 48px;
-    padding-bottom: 84px;
+    padding-bottom: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 57px;
+    padding-bottom: 57px;
   }
 }
 
@@ -34,7 +41,7 @@
   margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 44px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -92,15 +99,44 @@
 
 .address__link {
   border: 3px solid $special-blue;
-  padding: 22px;
+  padding: 19px;
+
+  &:hover {
+    background-color: $special-blue;
+  }
 
   @media (min-width: $tablet-width) {
-    padding: 29px 36px 27px 38px;
+    padding: 27px 32px 27px 33px;
+    border-radius: 20px;
   }
 
   @media (min-width: $desktop-width) {
     width: 324px;
-    padding: 29px 35px 27px 38px;
+    padding: 25px 31px 27px 35px;
     box-sizing: border-box;
+  }
+}
+
+.address__link span {
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.address__link:hover span {
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
+}
+
+.address__link svg {
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.address__link:hover svg {
+  @media (min-width: $desktop-width) {
+    fill: white;
   }
 }

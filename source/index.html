@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
-  <link rel="preload" href="/fonts/bloggersans.woff2" as="font">
-  <link rel="preload" href="/fonts/bloggersans-light.woff2" as="font">
-  <link rel="preload" href="/fonts/bloggersans-medium.woff2" as="font">
-  <link rel="preload" href="/fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="/fonts/bloggersans.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-light.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-bold.woff2" as="font" crossorigin>
   <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
   <link rel="icon" href="favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
   <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
@@ -20,26 +20,30 @@
   <header class="header">
     <a class="header__logo" aria-label="Погнали?">
       <picture>
-        <source media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
-        <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Погнали?">
+        <source class="header__logo-source-desktop" type="image/webp" media="(min-width: 768px)" srcset="img/logo-big.webp 1x, img/logo-big@2x.webp 2x">
+        <source class="header__logo-source-mobile" type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+
+        <source class="header__logo-source-mobile-png" media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
+        <img class="header__logo-img" src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Погнали?">
       </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
+    <a class="header__auth" href="login.html">Авторизация</a>
     <nav class="header-nav header-nav--closed">
       <div class="header-nav__wrapper">
         <ul class="header-nav__list site-list">
           <li class="header-nav__item site-list__item">
-            <a href="">О сервисе</a>
+            <a class="header-nav__link" href="">О сервисе</a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a href="">Направления</a>
+            <a class="header-nav__link" href="form.html">Направления</a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a href="">Попутчики</a>
+            <a class="header-nav__link" href="catalog.html">Попутчики</a>
           </li>
         </ul>
         <div class="header-contacts">
-          <a class="header-contacts__login" href="login.html">Авторизация</a>
+          <a class="header-contacts__login" href="login.html"><span>Авторизация</span></a>
           <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628"
             aria-label="Номер телефона: 8 800 555-86-28">
             <svg width="19" height="17" class="header-contacts__info-telephone">
@@ -91,6 +95,15 @@
   <main class="main">
     <h1 class="visually-hidden">Погнали - сервис для поиска попутчиков</h1>
     <section class="promo">
+      <picture>
+        <source class="header__logo-source-desktop" type="image/webp" media="(min-width: 1440px)" srcset="img/promo/traveller-big.webp 1x, img/promo/traveller-big@2x.webp 2x">
+        <source class="header__logo-source-desktop" type="image/webp" media="(min-width: 768px)" srcset="img/promo/traveller.webp 1x, img/promo/traveller@2x.webp 2x">
+        <source class="header__logo-source-mobile" type="image/webp" srcset="img/promo/traveller-small.webp 1x, img/promo/traveller-small@2x.webp 2x">
+
+        <source class="header__logo-source-mobile-png" media="(min-width: 1440px)" srcset="img/promo/traveller-big.png 1x, img/promo/traveller-big@2x.png 2x">
+        <source class="header__logo-source-mobile-png" media="(min-width: 768px)" srcset="img/promo/traveller.png 1x, img/promo/traveller@2x.png 2x">
+        <img class="promo__traveller" width="192" height="255" src="img/promo/traveller-small.png" srcset="img/promo/traveller-small@2x.png 2x" alt="Погнали?">
+      </picture>
       <div class="promo__wrapper">
         <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
         <ul class="promo__navigation user-navigation">
@@ -145,7 +158,12 @@
           своими идеями путешествий и черпайте вдохновение в чужих.
         </p>
         <p class="info__text text">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-        <a class="info__link link" href="about.html">Подробнее</a>
+        <a class="info__link link" href="about.html">
+          <span>Подробнее</span>
+          <svg width="13" height="13">
+            <use xlink:href="img/sprite.svg#arrow-button"></use>
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -262,7 +280,12 @@
             </picture>
           </li>
         </ul>
-        <a class="directions__link link" href="form.html">Показать все</a>
+        <a class="directions__link link" href="form.html">
+          <span>Показать все</span>
+          <svg width="13" height="13">
+            <use xlink:href="img/sprite.svg#arrow-button"></use>
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -283,13 +306,15 @@
               <span class="companions-level__num">99</span>
               <span class="companions-level__text">level</span>
             </div>
-            <picture>
-              <source type="image/webp" srcset="img/companions/1.webp 1x, img/companions/1@2x.webp 2x">
+            <div class="companions__avatar">
+              <picture>
+                <source type="image/webp" srcset="img/companions/1.webp 1x, img/companions/1@2x.webp 2x">
 
-              <img class="companions__img" src="img/companions/1.png" srcset="img/companions/1@2x.png 2x" width="270"
-                height="270" alt="Таня Фирсова">
-            </picture>
-            <h3 class="companions__name companions__name--offline">Таня Фирсова</h3>
+                <img class="companions__img" src="img/companions/1.png" srcset="img/companions/1@2x.png 2x" width="270"
+                  height="270" alt="Таня Фирсова">
+              </picture>
+            </div>
+            <h3 class="companions__name companions__name--offline"><a href="firsova.html">Таня Фирсова</a></h3>
             <div class="companions-wishlist">
               <h4 class="visually-hidden">Хочет посетить:</h4>
               <ul class="companions-wishlist__flags">
@@ -301,6 +326,12 @@
                     <img width="35" height="25" src="img/companions/flags/sri-lanka.png"
                       srcset="img/companions/flags/sri-lanka@2x.png 2x" alt="Шри Ланка">
                   </picture>
+                  <span class="companions-wishlist__flag-tooltip">
+                    Шри Ланка
+                    <svg width="16" height="10">
+                      <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                    </svg>
+                  </span>
                 </li>
                 <li class="companions-wishlist__flag">
                   <picture>
@@ -310,6 +341,12 @@
                     <img width="35" height="25" src="img/companions/flags/thailand.png"
                       srcset="img/companions/flags/thailand@2x.png 2x" alt="Таиланд">
                   </picture>
+                  <span class="companions-wishlist__flag-tooltip">
+                    Таиланд
+                    <svg width="16" height="10">
+                      <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                    </svg>
+                  </span>
                 </li>
                 <li class="companions-wishlist__flag">
                   <picture>
@@ -319,6 +356,12 @@
                     <img width="35" height="25" src="img/companions/flags/seychelles.png"
                       srcset="img/companions/flags/seychelles@2x.png 2x" alt="Сейшелы">
                   </picture>
+                  <span class="companions-wishlist__flag-tooltip">
+                    Сейшелы
+                    <svg width="16" height="10">
+                      <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                    </svg>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -326,24 +369,48 @@
             <p class="companions__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <ul class="companions-transport transport-list">
               <li class="companions-transport__item transport-list__item">
-                <svg width="21" height="21">
+                <svg width="23" height="22">
                   <use xlink:href="img/sprite.svg#plane"></use>
                 </svg>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--plane">
+                  Авиаперелет
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="companions-transport__item transport-list__item transport-list__item--disabled">
-                <svg width="17" height="19">
+                <svg width="18" height="20">
                   <use xlink:href="img/sprite.svg#bus"></use>
                 </svg>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--car">
+                  Автотранспорт
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="companions-transport__item transport-list__item transport-list__item--disabled">
-                <svg width="24" height="24">
+                <svg width="25" height="25">
                   <use xlink:href="img/sprite.svg#bicycle"></use>
                 </svg>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--bicycle">
+                  Велосипед
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="companions-transport__item transport-list__item transport-list__item--disabled">
-                <svg width="21" height="23">
+                <svg width="22" height="24">
                   <use xlink:href="img/sprite.svg#run"></use>
                 </svg>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--foot">
+                  Пешком
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
             </ul>
           </li>
@@ -353,13 +420,15 @@
               <span class="companions-level__num">80</span>
               <span>level</span>
             </div>
-            <picture>
-              <source type="image/webp" srcset="img/companions/2.webp 1x, img/companions/2@2x.webp 2x">
+            <div class="companions__avatar">
+              <picture>
+                <source type="image/webp" srcset="img/companions/2.webp 1x, img/companions/2@2x.webp 2x">
 
-              <img class="companions__img" src="img/companions/2.png" srcset="img/companions/2@2x.png 2x" width="270"
-                height="270" alt="Петя Демин">
-            </picture>
-            <h3 class="companions__name companions__name--online">Петя Демин</h3>
+                <img class="companions__img" src="img/companions/2.png" srcset="img/companions/2@2x.png 2x" width="270"
+                  height="270" alt="Петя Демин">
+              </picture>
+            </div>
+            <h3 class="companions__name companions__name--online"><a href="demin.html">Петя Демин</a></h3>
             <div class="companions-wishlist">
               <h4 class="visually-hidden">Хочет посетить:</h4>
               <ul class="companions-wishlist__flags">
@@ -371,6 +440,12 @@
                     <img width="35" height="25" src="img/companions/flags/belgium.png"
                       srcset="img/companions/flags/belgium@2x.png 2x" alt="Бельгия">
                   </picture>
+                  <span class="companions-wishlist__flag-tooltip">
+                    Бельгия
+                    <svg width="16" height="10">
+                      <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                    </svg>
+                  </span>
                 </li>
                 <li class="companions-wishlist__flag">
                   <picture>
@@ -380,6 +455,12 @@
                     <img width="35" height="25" src="img/companions/flags/czech.png"
                       srcset="img/companions/flags/czech@2x.png 2x" alt="Чехия">
                   </picture>
+                  <span class="companions-wishlist__flag-tooltip">
+                    Чехия
+                    <svg width="16" height="10">
+                      <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                    </svg>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -390,26 +471,55 @@
                 <svg width="21" height="21">
                   <use xlink:href="img/sprite.svg#plane"></use>
                 </svg>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--plane">
+                  Авиаперелет
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="companions-transport__item transport-list__item">
                 <svg width="17" height="19">
                   <use xlink:href="img/sprite.svg#bus"></use>
                 </svg>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--car">
+                  Автотранспорт
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="companions-transport__item transport-list__item transport-list__item--disabled">
                 <svg width="24" height="24">
                   <use xlink:href="img/sprite.svg#bicycle"></use>
                 </svg>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--bicycle">
+                  Велосипед
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="companions-transport__item transport-list__item">
                 <svg width="21" height="23">
                   <use xlink:href="img/sprite.svg#run"></use>
                 </svg>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--foot">
+                  Пешком
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
             </ul>
           </li>
         </ul>
-        <a class="companions__link link" href="catalog.html">Показать всех</a>
+        <a class="companions__link link" href="catalog.html">
+          <span>Показать всех</span>
+          <svg width="13" height="13">
+            <use xlink:href="img/sprite.svg#arrow-button"></use>
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -448,15 +558,20 @@
       <div class="interested__wrapper">
         <h2 class="interested__title title">Заинтересовались?</h2>
         <p class="interested__text text">
-          Зарегистрируйтесь, это быстро и бесплатно! <br> Уже зарегистрированы? Тогда скорее
+          Зарегистрируйтесь, <br class="br"> это быстро и бесплатно!<br class="br"> Уже зарегистрированы? Тогда <br class="br"> скорее
           <a href="login.html">авторизуйтесь</a>.
         </p>
         <form class="interested-form" action="#" method="POST">
           <label class="visually-hidden" for="user-mail">Адрес электронной почты</label>
           <input class="interested-form__email" id="user-mail" type="email" placeholder="E-mail">
-          <button class="interested-form__button" type="submit"><span>Регистрация</span></button>
+          <button class="interested-form__button" type="submit">
+            <span>Регистрация</span>
+            <svg width="13" height="13">
+              <use xlink:href="img/sprite.svg#arrow-button"></use>
+            </svg>
+          </button>
         </form>
-        <p class="interested__text text">Остались вопросы? <br> Мы с радостью на них ответим!</p>
+        <p class="interested__text text">Остались вопросы? <br class="br"> Мы с радостью на них ответим!</p>
         <ul class="interested-contacts">
           <li class="interested-contacts__item">
             <svg width="19" height="17" class="interested-contacts__item-telephone">
@@ -481,22 +596,31 @@
           </svg>
           <p class="address__text"><span>ул. Большая Конюшенная, 19/8</span></p>
         </div>
-        <a class="address__link link" href="">Проложить маршрут</a>
+        <a class="address__link link" href="https://goo.gl/maps/Zn4SmQDEHF6iQw7b9">
+          <span>Проложить маршрут</span>
+          <svg width="13" height="13">
+            <use xlink:href="img/sprite.svg#arrow-button"></use>
+          </svg>
+        </a>
       </div>
     </section>
     <section class="map">
-      Тут должна быть карта
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.3208587157113!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613572510233!5m2!1sru!2sru"
+        width="100%" height="100%" style="border:0;" allowfullscreen=""
+        title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </iframe>
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
         <a class="contacts__logo" aria-label="Погнали?">
           <picture>
             <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/footer/logo-big.webp 1x, img/footer/logo-big@2x.webp 2x">
-            <source type="image/webp" srcset="img/footer/logo.webp 1x, img/footer/logo@2x.webp 2x">
+              srcset="img/logo-big-extra.webp 1x, img/logo-big-extra@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-extra.webp 1x, img/logo-extra@2x.webp 2x">
 
-            <source media="(min-width: 768px)" srcset="img/footer/logo-big.png 1x, img/footer/logo-big@2x.png 2x">
-            <img src="img/footer/logo.png" srcset="img/footer/logo@2x.png 2x" alt="Погнали?">
+            <source media="(min-width: 768px)" srcset="img/logo-big-extra.png 1x, img/logo-big-extra@2x.png 2x">
+            <img src="img/logo-extra.png" srcset="img/logo-extra@2x.png 2x" alt="Погнали?">
           </picture>
         </a>
         <ul class="contacts-socials">
@@ -523,8 +647,8 @@
           </li>
         </ul>
         <div class="contacts-developed">
-          <p class="contacts-developed__text">Разработано</p>
           <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span>Разработано</span>
             <svg width="27" height="34">
               <use xlink:href="img/sprite.svg#logo-html-academy"></use>
             </svg>
@@ -533,6 +657,33 @@
       </div>
     </section>
   </footer>
+
+  <section class="modal modal-profile">
+    <div class="modal-profile__wrapper">
+      <h2 class="modal-profile__title title">Бизнес-тарифы</h2>
+      <ul class="modal-profile__list">
+        <li class="modal-profile__item">
+          <p class="modal-profile__item-name">Реклама у блоггера</p>
+          <p class="modal-profile__item-price">300 000 руб./пост</p>
+        </li>
+        <li class="modal-profile__item">
+          <p class="modal-profile__item-name">Накрутка подписчиков</p>
+          <p class="modal-profile__item-price">от 1 руб./шт.</p>
+        </li>
+        <li class="modal-profile__item">
+          <p class="modal-profile__item-name">Лайки от ботов</p>
+          <p class="modal-profile__item-price">от 20 коп./лайк</p>
+        </li>
+        <li class="modal-profile__item">
+          <p class="modal-profile__item-name">Ваш продакт-плейсмент</p>
+          <p class="modal-profile__item-price">Индивидуально</p>
+        </li>
+      </ul>
+      <button class="modal-profile__button" type="button"><span>Закрыть окно</span></button>
+    </div>
+  </section>
+
+  <script src="js/script.min.js"></script>
 
 </body>
 

@@ -5,7 +5,56 @@
 }
 
 .transport-list__item {
+  position: relative;
+
   &--disabled svg {
     fill-opacity: 0.15;
   }
+}
+
+.transport-list__item:hover .transport-list__item-tooltip {
+  opacity: 1;
+  z-index: 1;
+}
+
+.transport-list__item-tooltip {
+  opacity: 0;
+  background-color: $special-purplish-blue;
+  position: absolute;
+  z-index: -1;
+  bottom: -69px;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 18px 0;
+  border-radius: 4px;
+
+  font-size: 20px;
+  line-height: 20px;
+  color: $basic-white;
+  text-align: center;
+  transition: 0.3s;
+
+  &--plane {
+    width: 146px;
+  }
+
+  &--car {
+    width: 170px;
+  }
+
+  &--bicycle {
+    width: 130px;
+  }
+
+  &--foot {
+    width: 110px;
+  }
+}
+
+.transport-list__item-tooltip svg {
+  fill-opacity: 1;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
 }

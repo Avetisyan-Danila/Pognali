@@ -8,6 +8,22 @@
   padding: 24px;
   margin-bottom: 10px;
 
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 54px;
+      height: 1px;
+      background-color: $special-grey-extra;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -17,14 +33,18 @@
     grid-template-columns: repeat(3, 1fr);
 
     padding: 40px 32px 14px 40px;
+    position: relative;
+    margin-bottom: 13px;
 
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 1fr min-content min-content min-content;
-    padding: 40px 42px 38px 43px;
+    grid-template-columns: 585px min-content min-content min-content;
+    align-items: center;
+    padding: 35px 42px 38px 43px;
+    margin-bottom: 15px;
   }
 }
 
@@ -43,7 +63,7 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 34px;
+    margin-bottom: 52px;
 
     font-size: 24px;
     line-height: 24px;
@@ -63,6 +83,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    margin-right: 0;
 
     order: 2;
   }
@@ -87,7 +108,7 @@
 
   @media (min-width: $desktop-width) {
     min-width: 132px;
-    margin-right: 32px;
+    margin-right: 50px;
   }
 }
 
@@ -102,12 +123,13 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
     text-align: center;
+    transform: translateX(-6px);
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
     min-width: 169px;
-    margin-right: 116px;
+    margin-right: 131px;
   }
 }
 
@@ -118,13 +140,26 @@
   text-decoration: none;
   opacity: 0.3;
 
+  &:hover {
+    @media (min-width: $desktop-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    @media (min-width: $desktop-width) {
+      opacity: 0.1;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     text-align: right;
-    margin-right: 10px;
+    margin-right: 18px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
     margin-right: 0;
+    transition: 0.3s;
   }
 }

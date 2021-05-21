@@ -5,7 +5,21 @@
 }
 
 .country-list__item {
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.country-list__link {
   font-size: 16px;
-  line-height: 22px;
+  line-height: 17px;
   color: $special-grey;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

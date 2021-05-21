@@ -1,7 +1,130 @@
-.letters {
+.letters span {
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   color: $special-blue-light;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+.letters-line {
+  @media (min-width: $tablet-width) {
+    width: 341px;
+    margin-bottom: 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(1) {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 86px;
+    }
+  }
+
+  &:nth-child(4) {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 47px;
+    }
+  }
+}
+
+.letters-line__item {
+  width: 43px;
+  height: 40px;
+  background-color: $basic-white;
+  padding: 0;
+  text-align: center;
+  border: 1px solid $special-grey-extra;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 252px;
+  }
+
+  &--active {
+    background-color: $special-blue-light;
+    border: none;
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+      color: $special-blue-light;
+      opacity: 1;
+    }
+  }
+}
+
+.letters-line__item--active span {
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    color: $special-blue-light;
+  }
+}
+
+.letters-line__countries {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: block;
+  }
+}
+
+.letters-line__countries li {
+  text-align: left;
+}
+
+.letters-line__countries-item {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $special-grey;
+  text-decoration: none;
 }

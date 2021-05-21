@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
-  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="/fonts/bloggersans.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-light.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="/fonts/bloggersans-bold.woff2" as="font" crossorigin>
   <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
   <link rel="icon" href="favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
   <link rel="icon" href="img/favicon.svg" sizes="any" type="image/svg+xml">
@@ -18,28 +18,32 @@
 <body class="page-body">
 
   <header class="header">
-    <a class="header__logo" aria-label="Погнали?">
+    <a href="index.html" class="header__logo" aria-label="Погнали?">
       <picture>
-        <source media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
-        <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Погнали?">
+        <source class="header__logo-source-desktop" type="image/webp" media="(min-width: 768px)" srcset="img/logo-big.webp 1x, img/logo-big@2x.webp 2x">
+        <source class="header__logo-source-mobile" type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+
+        <source class="header__logo-source-mobile-png" media="(min-width: 768px)" srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x">
+        <img class="header__logo-img" src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Погнали?">
       </picture>
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
+    <a class="header__auth" href="login.html">Авторизация</a>
     <nav class="header-nav header-nav--closed">
       <div class="header-nav__wrapper">
         <ul class="header-nav__list site-list">
           <li class="header-nav__item site-list__item">
-            <a href="">О сервисе</a>
+            <a class="header-nav__link" href="">О сервисе</a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a href="">Направления</a>
+            <a class="header-nav__link" href="form.html">Направления</a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a href="">Попутчики</a>
+            <a class="header-nav__link" href="catalog.html">Попутчики</a>
           </li>
         </ul>
         <div class="header-contacts">
-          <a class="header-contacts__login" href="login.html">Авторизация</a>
+          <a class="header-contacts__login" href="login.html"><span>Авторизация</span></a>
           <a class="header-contacts__info header-contacts__info--phone" href="tel:+88005558628"
             aria-label="Номер телефона: 8 800 555-86-28">
             <svg width="19" height="17" class="header-contacts__info-telephone">
@@ -108,7 +112,7 @@
             <source media="(min-width: 768px)" srcset="img/about/demin-big.png 1x, img/about/demin-big@2x.png 2x">
             <img class="about__avatar" src="img/about/demin.png" srcset="img/about/demin@2x.png 2x" alt="Петя Демин">
           </picture>
-          <a class="about__change-photo" href="#"><span>Сменить</span> фото</a>
+          <a class="about__change-photo" href="#"><span>Сменить</span> <span>фото</span></a>
           <div class="about__tags">
             <label for="tags">Теги</label>
             <textarea name="tags" id="tags" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
@@ -117,20 +121,64 @@
             <p class="about-transport__title">Транспорт</p>
             <ul class="about-transport__list transport-list">
               <li class="about-transport__item transport-list__item">
-                <label class="visually-hidden" for="air-travel">Авиаперелет</label>
-                <input id="air-travel" name="transport" value="Авиаперелет" type="checkbox">
+                <input class="visually-hidden" id="air-travel" name="transport" value="Авиаперелет" type="checkbox">
+                <label class="about-transport__item-label" for="air-travel">
+                  <span class="visually-hidden">Авиаперелет</span>
+                  <svg width="17" height="16">
+                    <use xlink:href="img/sprite.svg#pick-plane"></use>
+                  </svg>
+                </label>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--plane">
+                  Авиаперелет
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="about-transport__item transport-list__item">
-                <label class="visually-hidden" for="road-transport">Автотранспорт</label>
-                <input id="road-transport" name="transport" value="Автотранспорт" type="checkbox">
+                <input class="visually-hidden" id="road-transport" name="transport" value="Автотранспорт" type="checkbox">
+                <label class="about-transport__item-label" for="road-transport">
+                  <span class="visually-hidden">Автотранспорт</span>
+                  <svg width="17" height="16">
+                    <use xlink:href="img/sprite.svg#pick-bus"></use>
+                  </svg>
+                </label>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--car">
+                  Автотранспорт
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="about-transport__item transport-list__item">
-                <label class="visually-hidden" for="bike">Велосипед</label>
-                <input id="bike" name="transport" value="Велосипед" type="checkbox">
+                <input class="visually-hidden" id="bike" name="transport" value="Велосипед" type="checkbox">
+                <label class="about-transport__item-label" for="bike">
+                  <span class="visually-hidden">Велосипед</span>
+                  <svg width="17" height="16">
+                    <use xlink:href="img/sprite.svg#pick-bicycle"></use>
+                  </svg>
+                </label>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--bicycle">
+                  Велосипед
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
               <li class="about-transport__item transport-list__item">
-                <label class="visually-hidden" for="on-foot">Пешком</label>
-                <input id="on-foot" name="transport" value="Пешком" type="checkbox">
+                <input class="visually-hidden" id="on-foot" name="transport" value="Пешком" type="checkbox">
+                <label class="about-transport__item-label" for="on-foot">
+                  <span class="visually-hidden">Пешком</span>
+                  <svg width="17" height="16">
+                    <use xlink:href="img/sprite.svg#pick-run"></use>
+                  </svg>
+                </label>
+                <span class="transport-list__item-tooltip transport-list__item-tooltip--foot">
+                  Пешком
+                  <svg width="16" height="10">
+                    <use xlink:href="img/sprite.svg#arrow-tooltip"></use>
+                  </svg>
+                </span>
               </li>
             </ul>
           </div>
@@ -181,7 +229,7 @@
                   Даты пребывания
                 </h3>
                 <p class="step__text text">
-                  Укажите предпочтительное количество попутчиков, которых <br> вы хотели бы позвать в
+                  Укажите предпочтительное количество попутчиков, которых <br class="br"> вы хотели бы позвать в
                   поездку, и ее предполагаемую длительность.
                 </p>
                 <ul class="step-points">
@@ -195,115 +243,140 @@
                   <p class="step-settings__text">Ищу попутчиков:</p>
                   <p class="step-settings__text">Чел.</p>
                   <div class="quantity">
-                    <button class="quantity__button quantity__button--minus" type="button">-</button>
+                    <input class="quantity__num" value="2" id="companions-quantity" type="text" name="companions-quantity">
                     <label class="visually-hidden" for="companions-quantity">Количество попутчиков</label>
-                    <input class="quantity__num" value="2" id="companions-quantity" type="text"
-                      name="companions-quantity">
-                    <button class="quantity__button quantity__button--plus" type="button">+</button>
+                    <button class="quantity__button quantity__button--minus" type="button">
+                      <svg width="14" height="2">
+                        <use xlink:href="img/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <button class="quantity__button quantity__button--plus" type="button">
+                      <svg width="14" height="14">
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div class="step-settings__item">
                   <p class="step-settings__text">Длительность:</p>
                   <p class="step-settings__text">Дн.</p>
                   <div class="quantity">
-                    <button class="quantity__button quantity__button--minus" type="button">-</button>
-                    <label class="visually-hidden" for="duration">Длительность поездки</label>
                     <input class="quantity__num" value="3" id="duration" type="text" name="duration">
-                    <button class="quantity__button quantity__button--plus" type="button">+</button>
+                    <label class="visually-hidden" for="duration">Длительность поездки</label>
+                    <button class="quantity__button quantity__button--minus" type="button">
+                      <svg width="20" height="2">
+                        <use xlink:href="img/sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <button class="quantity__button quantity__button--plus" type="button">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div class="step-kids">
-                  <input id="kids" type="checkbox" name="kids">
+                  <input class="visually-hidden" id="kids" type="checkbox" name="kids">
                   <label for="kids">Можно с детьми</label>
                 </div>
               </div>
               <div class="step-date">
                 <div class="step-date__top">
-                  <button class="step-date__button step-date__button--prev" type="button" aria-label="Назад"></button>
+                  <button class="step-date__button step-date__button--prev" type="button" aria-label="Назад">
+                    <svg width="9" height="19">
+                        <use xlink:href="img/sprite.svg#arrow-back"></use>
+                      </svg>
+                  </button>
                   <p class="step-date__month">Март 2019</p>
-                  <button class="step-date__button step-date__button--next" type="button" aria-label="Вперед"></button>
+                  <button class="step-date__button step-date__button--next" type="button" aria-label="Вперед">
+                    <svg width="10" height="19">
+                        <use xlink:href="img/sprite.svg#arrow-next"></use>
+                      </svg>
+                  </button>
                 </div>
-                <table class="step-date__calendar">
-                  <tr class="step-date__letters">
-                    <td>
+                <div class="step-date__calendar">
+                  <ul class="step-date__letters">
+                    <li>
                       <span>П</span>
-                      <span>Пн</span></td>
-                    <td>
+                      <span>Пн</span>
+                    </li>
+                    <li>
                       <span>В</span>
-                      <span>Вт</span></td>
-                    <td>
+                      <span>Вт</span>
+                    </li>
+                    <li>
                       <span>С</span>
-                      <span>Ср</span></td>
-                    <td>
+                      <span>Ср</span>
+                    </li>
+                    <li>
                       <span>Ч</span>
-                      <span>Чт</span></td>
-                    <td>
+                      <span>Чт</span>
+                    </li>
+                    <li>
                       <span>П</span>
-                      <span>Пт</span></td>
-                    <td>
+                      <span>Пт</span>
+                    </li>
+                    <li>
                       <span>С</span>
-                      <span>Сб</span></td>
-                    <td>
+                      <span>Сб</span>
+                    </li>
+                    <li>
                       <span>В</span>
-                      <span>Вс</span></td>
-                  </tr>
-                  <tr>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                    <td>12</td>
-                    <td>13</td>
-                    <td>14</td>
-                    <td>15</td>
-                  </tr>
-                  <tr>
-                    <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                    <td>19</td>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                  </tr>
-                  <tr>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
-                  </tr>
-                  <tr>
-                    <td>30</td>
-                    <td>31</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                  </tr>
-                </table>
+                      <span>Вс</span>
+                    </li>
+                  </ul>
+                  <ul class="step-date__numbers">
+                    <li class="step-date__number step-date__number--disabled"><span>23</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>24</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>25</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>26</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>27</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>28</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>1</span><span class="step-date__number-month">мар</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>2</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>3</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>4</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>5</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>6</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>7</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>8</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>9</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>10</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>11</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>12</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>13</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>14</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>15</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>16</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>17</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>18</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>19</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>20</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>21</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>22</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>23</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>24</span></li>
+                    <li class="step-date__number step-date__number--disabled"><span>25</span></li>
+                    <li class="step-date__number step-date__number--active"><span>26</span><span>Заезд</span></li>
+                    <li class="step-date__number step-date__number--active"><span>27</span></li>
+                    <li class="step-date__number step-date__number--active"><span>28</span><span>Выезд</span></li>
+                    <li class="step-date__number"><span>29</span></li>
+                    <li class="step-date__number"><span>30</span></li>
+                    <li class="step-date__number"><span>31</span></li>
+                    <li class="step-date__number"><span>1</span><span class="step-date__number-month">апр</span></li>
+                    <li class="step-date__number"><span>2</span></li>
+                    <li class="step-date__number"><span>3</span></li>
+                    <li class="step-date__number"><span>4</span></li>
+                    <li class="step-date__number"><span>5</span></li>
+                  </ul>
+                </div>
               </div>
-              <a class="step__next" href="#step-2">Следующий шаг</a>
+              <a class="step__next link" href="#step-2">
+                <span>Следующий шаг</span>
+                <svg width="13" height="13">
+                  <use xlink:href="img/sprite.svg#arrow-button"></use>
+                </svg>
+              </a>
             </li>
             <li class="step" id="step-2">
               <div class="step__top">
@@ -311,7 +384,7 @@
                   Шаг 2. <br>
                   Маршрут
                 </h3>
-                <p class="step__text text">Укажите страны, которые вы хотели бы посетить. <br> Это может быть одна или
+                <p class="step__text text">Укажите страны, которые вы хотели бы посетить.&nbsp; <br> Это может быть одна или
                   сразу
                   несколько.</p>
                 <ul class="step-points">
@@ -333,6 +406,19 @@
                       src="img/form-flags/bosnia-and-herzegovina.png"
                       srcset="img/form-flags/bosnia-and-herzegovina@2x.png 2x" alt="">
                   </picture>
+                  <picture>
+                    <source type="image/webp" srcset="img/step-country/fade.webp 1x, img/step-country/fade@2x.webp 2x">
+
+                    <img class="step-country__fade" width="52" height="38" src="img/step-country/fade.png" srcset="img/step-country/fade@2x.png 2x" alt="">
+                  </picture>
+                  <svg class="step-country__arrow" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#arrow-select"></use>
+                  </svg>
+                  <button class="step-country__cancel" type="button" aria-label="Отменить выбор страны">
+                    <svg width="9" height="9">
+                      <use xlink:href="img/sprite.svg#select-cancel"></use>
+                    </svg>
+                  </button>
                 </li>
                 <li class="step-country__item">
                   <select class="step-country__select" name="country-2">
@@ -344,69 +430,100 @@
                     <img class="step-country__img" width="35" height="24" src="img/form-flags/czech.png"
                       srcset="img/form-flags/czech@2x.png 2x" alt="">
                   </picture>
+                  <picture>
+                    <source type="image/webp" srcset="img/step-country/fade.webp 1x, img/step-country/fade@2x.webp 2x">
+
+                    <img class="step-country__fade" width="52" height="38" src="img/step-country/fade.png" srcset="img/step-country/fade@2x.png 2x" alt="">
+                  </picture>
+                  <svg class="step-country__arrow" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#arrow-select"></use>
+                  </svg>
+                  <button class="step-country__cancel" type="button" aria-label="Отменить выбор страны">
+                    <svg width="9" height="9">
+                      <use xlink:href="img/sprite.svg#select-cancel"></use>
+                    </svg>
+                  </button>
                 </li>
-                <li class="step-country__item">
+                <li class="step-country__item step-country__item--choose">
                   <button class="step-country__choose" type="button">Выберите страну</button>
+                  <button class="step-country__close" type="button" aria-label="Отменить выбор страны">
+                    <svg width="9" height="9">
+                      <use xlink:href="img/sprite.svg#select-cancel"></use>
+                    </svg>
+                  </button>
+                  <button class="step-country__cancel step-country__cancel--choose" type="button" aria-label="Отменить выбор страны">
+                    <svg width="9" height="9">
+                      <use xlink:href="img/sprite.svg#select-cancel"></use>
+                    </svg>
+                  </button>
+                  <svg class="step-country__arrow step-country__arrow--choose" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#arrow-select"></use>
+                  </svg>
                   <div class="country-choose">
-                    <table class="country-choose__letters letters">
-                      <tr>
-                        <td>А</td>
-                        <td>Б</td>
-                        <td>В</td>
-                        <td>Г</td>
-                        <td>Д</td>
-                      </tr>
-                      <tr>
-                        <td>Е</td>
-                        <td>З</td>
-                        <td>И</td>
-                        <td>К</td>
-                        <td>Л</td>
-                      </tr>
-                      <tr>
-                        <td>М</td>
-                        <td>Н</td>
-                        <td>О</td>
-                        <td>П</td>
-                        <td>Р</td>
-                      </tr>
-                      <tr>
-                        <td>С</td>
-                        <td>Т</td>
-                        <td>У</td>
-                        <td>Ф</td>
-                        <td>Х</td>
-                      </tr>
-                      <tr>
-                        <td>Ч</td>
-                        <td>Ш</td>
-                        <td>Э</td>
-                        <td>Ю</td>
-                        <td>Я</td>
-                      </tr>
-                    </table>
+                    <ul class="country-choose__letters letters">
+                      <li class="country-choose__letter country-choose__letter--active">А</li>
+                      <li class="country-choose__letter">Б</li>
+                      <li class="country-choose__letter">В</li>
+                      <li class="country-choose__letter">Г</li>
+                      <li class="country-choose__letter">Д</li>
+                      <li class="country-choose__letter">Е</li>
+                      <li class="country-choose__letter">З</li>
+                      <li class="country-choose__letter">И</li>
+                      <li class="country-choose__letter">К</li>
+                      <li class="country-choose__letter">Л</li>
+                      <li class="country-choose__letter">М</li>
+                      <li class="country-choose__letter">Н</li>
+                      <li class="country-choose__letter">О</li>
+                      <li class="country-choose__letter">П</li>
+                      <li class="country-choose__letter">Р</li>
+                      <li class="country-choose__letter">С</li>
+                      <li class="country-choose__letter">Т</li>
+                      <li class="country-choose__letter">У</li>
+                      <li class="country-choose__letter">Ф</li>
+                      <li class="country-choose__letter">Х</li>
+                      <li class="country-choose__letter">Ч</li>
+                      <li class="country-choose__letter">Ш</li>
+                      <li class="country-choose__letter">Э</li>
+                      <li class="country-choose__letter">Ю</li>
+                      <li class="country-choose__letter">Я</li>
+                    </ul>
                     <ul class="country-choose__list country-list">
-                      <li class="country-list__item">Австралия</li>
-                      <li class="country-list__item">Австрия</li>
-                      <li class="country-list__item">Азербайджан</li>
-                      <li class="country-list__item">Албания</li>
-                      <li class="country-list__item">Алжир</li>
-                      <li class="country-list__item">Ангола</li>
-                      <li class="country-list__item">Андорра</li>
-                      <li class="country-list__item">Антигуа и Барбуда</li>
-                      <li class="country-list__item">Аргентина</li>
-                      <li class="country-list__item">Армения</li>
-                      <li class="country-list__item">Афганистан</li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Australia.html">Австралия</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Austria.html">Австрия</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Azerbaijan.html">Азербайджан</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Albania.html">Албания</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Algeria.html">Алжир</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Angola.html">Ангола</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Andorra.html">Андорра</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Antigua-and-Barbuda.html">Антигуа и Барбуда</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Argentina.html">Аргентина</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Armenia.html">Армения</a></li>
+                      <li class="country-list__item"><a class="country-list__link" href="/europe/Afghanistan.html">Афганистан</a></li>
                     </ul>
                   </div>
                 </li>
-                <li class="step-country__item">
-                  <button class="step-country__add" type="button">Добавить страну</button>
+                <li class="step-country__item step-country__item--add">
+                  <button class="step-country__add" type="button">
+                    Добавить страну
+                    <svg class="step-country__plus" width="14" height="14">
+                      <use xlink:href="img/sprite.svg#plus"></use>
+                    </svg>
+                  </button>
                 </li>
               </ul>
               <div class="step__nav">
-                <a class="step__next" href="#step-3">Следующий шаг</a>
-                <a class="step__prev" href="#step-1">На шаг назад</a>
+                <a class="step__next link" href="#step-3">
+                  <span>Следующий шаг</span>
+                  <svg width="13" height="13">
+                    <use xlink:href="img/sprite.svg#arrow-button"></use>
+                  </svg>
+                </a>
+                <a class="step__prev" href="#step-1">
+                  <svg width="13" height="13">
+                    <use xlink:href="img/sprite.svg#arrow-button"></use>
+                  </svg>
+                  <span>На шаг назад</span>
+                </a>
               </div>
             </li>
             <li class="step" id="step-3">
@@ -415,18 +532,25 @@
                   Шаг 3. <br>
                   Развлечения
                 </h3>
-                <p class="step__text text">Наконец, расскажите о своих планах времяпровождения. <br> Можно писать в
+                <p class="step__text text">Наконец, расскажите о своих планах времяпровождения. <br class="br"> Можно писать в
                   свободной форме
                   и ставить тэги.</p>
                 <ul class="step-points">
                   <li class="step-points__item">Даты</li>
-                  <li class="step-points__item step-points__item--active">Маршрут</li>
-                  <li class="step-points__item">Развлечения</li>
+                  <li class="step-points__item">Маршрут</li>
+                  <li class="step-points__item step-points__item--active">Развлечения</li>
                 </ul>
               </div>
               <ul class="step-entertainment">
                 <li class="step-entertainment__item">
-                  <h4 class="step-entertainment__country">Босния и Герцеговина</h4>
+                  <h4 class="step-entertainment__country">
+                    <span>Босния и Герцеговина</span>
+                    <picture>
+                      <source type="image/webp" srcset="img/step-entertainment/fade.webp 1x, img/step-entertainment/fade@2x.webp 2x">
+
+                      <img class="step-entertainment__fade" width="72" height="24" src="img/step-entertainment/fade.png" srcset="img/step-entertainment/fade@2x.png 2x" alt="">
+                    </picture>
+                  </h4>
                   <picture>
                     <source type="image/webp"
                       srcset="img/form-flags/bosnia-and-herzegovina.webp 1x, img/form-flags/bosnia-and-herzegovina@2x.webp 2x">
@@ -436,11 +560,17 @@
                       srcset="img/form-flags/bosnia-and-herzegovina@2x.png 2x" alt="">
                   </picture>
                   <label class="visually-hidden" for="entertainment-1">План действий</label>
-                  <textarea name="entertainment-1" id="entertainment-1" cols="30" rows="10"
-                    placeholder="План действий"></textarea>
+                  <textarea name="entertainment-1" id="entertainment-1" placeholder="План действий"></textarea>
                 </li>
                 <li class="step-entertainment__item">
-                  <h4 class="step-entertainment__country">Чехия</h4>
+                  <h4 class="step-entertainment__country">
+                    <span>Чехия</span>
+                    <picture>
+                      <source type="image/webp" srcset="img/step-entertainment/fade.webp 1x, img/step-entertainment/fade@2x.webp 2x">
+
+                      <img class="step-entertainment__fade" width="72" height="24" src="img/step-entertainment/fade.png" srcset="img/step-entertainment/fade@2x.png 2x" alt="">
+                    </picture>
+                  </h4>
                   <picture>
                     <source type="image/webp" srcset="img/form-flags/czech.webp 1x, img/form-flags/czech@2x.webp 2x">
 
@@ -448,13 +578,22 @@
                       srcset="img/form-flags/czech@2x.png 2x" alt="">
                   </picture>
                   <label class="visually-hidden" for="entertainment-2">План действий</label>
-                  <textarea name="entertainment-2" id="entertainment-2" cols="30" rows="10"
-                    placeholder="План действий"></textarea>
+                  <textarea name="entertainment-2" id="entertainment-2" placeholder="План действий"></textarea>
                 </li>
               </ul>
               <div class="step__nav">
-                <button class="step__button" type="submit">Отправить</button>
-                <a class="step__prev" href="#step-2">На шаг назад</a>
+                <button class="step__button link" type="submit">
+                  <span>Отправить</span>
+                  <svg width="13" height="13">
+                    <use xlink:href="img/sprite.svg#arrow-button"></use>
+                  </svg>
+                </button>
+                <a class="step__prev" href="#step-1">
+                  <svg width="13" height="13">
+                    <use xlink:href="img/sprite.svg#arrow-button"></use>
+                  </svg>
+                  <span>На шаг назад</span>
+                </a>
               </div>
             </li>
           </ul>
@@ -466,10 +605,14 @@
   <footer class="footer footer-form">
     <section class="contacts">
       <div class="contacts__wrapper">
-        <a class="contacts__logo" aria-label="Погнали?">
+        <a href="index.html" class="contacts__logo" aria-label="Погнали?">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/footer/logo-big.png 1x, img/footer/logo-big@2x.png 2x">
-            <img src="img/footer/logo.png" srcset="img/footer/logo@2x.png 2x" alt="Погнали?">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/logo-big-extra.webp 1x, img/logo-big-extra@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-extra.webp 1x, img/logo-extra@2x.webp 2x">
+
+            <source media="(min-width: 768px)" srcset="img/logo-big-extra.png 1x, img/logo-big-extra@2x.png 2x">
+            <img src="img/logo-extra.png" srcset="img/logo-extra@2x.png 2x" alt="Погнали?">
           </picture>
         </a>
         <ul class="contacts-socials">
@@ -496,8 +639,8 @@
           </li>
         </ul>
         <div class="contacts-developed">
-          <p class="contacts-developed__text">Разработано</p>
           <a class="contacts-developed__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span>Разработано</span>
             <svg width="27" height="34">
               <use xlink:href="img/sprite.svg#logo-html-academy"></use>
             </svg>
@@ -506,6 +649,8 @@
       </div>
     </section>
   </footer>
+
+  <script src="js/script.min.js"></script>
 
 </body>
 

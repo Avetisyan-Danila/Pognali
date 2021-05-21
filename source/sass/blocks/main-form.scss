@@ -1,7 +1,6 @@
 .main-form__top {
   position: relative;
-  margin-top: 53px;
-  padding: 42px 25px 16px 25px;
+  padding: calc(42px + 53px) 25px 16px 25px;
   box-sizing: border-box;
 
   &::before {
@@ -28,18 +27,21 @@
     bottom: 4px;
     background-color: $special-sapphire;
     z-index: -1;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    @media (min-width: $tablet-width) {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
   }
 
   @media (min-width: $tablet-width) {
-    margin-top: 122px;
-    padding: 42px 75px 66px 75px;
+    padding: calc(42px + 179px) 75px 74px 75px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 92px;
-    padding: 66px 60px 68px 124px;
+    padding: calc(66px + 154px) 60px 75px 124px;
     display: flex;
     justify-content: center;
   }
@@ -63,10 +65,12 @@
 
   @media (min-width: $tablet-width) {
     width: 358px;
-    bottom: -64px;
+    height: 8px;
+    bottom: -73px;
   }
 
   @media (min-width: $desktop-width) {
-    bottom: -66px;
+    bottom: -75px;
+    left: 2px;
   }
 }

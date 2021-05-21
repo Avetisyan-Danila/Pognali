@@ -21,6 +21,10 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    transform: translate(-4px, -2px);
+  }
 }
 
 .pagination-arrows__item {
@@ -36,6 +40,10 @@
     width: auto;
     margin-right: 27px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 36px;
+  }
 }
 
 .pagination-arrows__item-button {
@@ -45,10 +53,27 @@
   border: none;
   background-color: transparent;
   position: relative;
+  cursor: pointer;
+
+  &:hover {
+    @media (min-width: $desktop-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    @media (min-width: $desktop-width) {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 13px;
     height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
   }
 }
 
