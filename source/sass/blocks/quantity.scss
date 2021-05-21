@@ -15,7 +15,6 @@
   height: 43px;
   text-align: center;
 
-  padding: 0;
   padding: 0 42px;
   box-sizing: border-box;
 
@@ -62,6 +61,7 @@
 
   &--minus {
     left: 14px;
+
     @media (min-width: $tablet-width) {
       left: 23px;
     }
@@ -69,6 +69,7 @@
 
   &--plus {
     right: 14px;
+
     @media (min-width: $tablet-width) {
       right: 23px;
     }

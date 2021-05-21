@@ -97,10 +97,10 @@
 .step__title br {
   @media (min-width: $desktop-width) {
     display: inline;
-    content: ' ';
+    content: " ";
 
     &::after {
-      content: ' ';
+      content: " ";
     }
   }
 }

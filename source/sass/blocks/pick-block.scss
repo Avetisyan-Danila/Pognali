@@ -166,6 +166,10 @@
 
   &--transport {
     justify-content: flex-start;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 10px;
+    }
   }
 }
 
@@ -181,11 +185,6 @@
   }
 }
 
-.pick-block__list--transport {
-  @media (min-width: $tablet-width) {
-    margin-right: 10px;
-  }
-}
 .pick-block--opened .pick-block__list--transport {
   display: flex;
 }
@@ -220,7 +219,6 @@
     margin-bottom: 20px;
     transition: 0.3s;
   }
-
 }
 
 .pick-block__item label {
@@ -265,7 +263,7 @@
   left: 5px;
   width: 9px;
   height: 9px;
-  background-image: url('../img/icons/mark.svg');
+  background-image: url("../img/icons/mark.svg");
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
@@ -610,7 +608,7 @@
 
   &:active {
     @media (min-width: $desktop-width) {
-      box-shadow: 0px 3px 7px $basic-black-transparent;
+      box-shadow: 0 3px 7px $basic-black-transparent;
     }
   }
 

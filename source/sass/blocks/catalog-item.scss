@@ -13,7 +13,7 @@
 
   &:hover {
     @media (min-width: $desktop-width) {
-      filter: drop-shadow(0px 4px 9px $basic-black-transparent);
+      filter: drop-shadow(0 4px 9px $basic-black-transparent);
     }
   }
 

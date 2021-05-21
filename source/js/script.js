@@ -115,10 +115,3 @@ countryChooseButtonOpen.addEventListener("click", () => {
   stepItem.classList.toggle("step-country__item--active")
   countryChooseButtonClose.classList.toggle("step-country__close--active")
 })
-
-
-
-
-
-
-

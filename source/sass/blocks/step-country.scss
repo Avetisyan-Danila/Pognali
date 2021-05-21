@@ -233,7 +233,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(50%,-50%);
+  transform: translate(50%, -50%);
   border: none;
 
   width: 21px;
@@ -359,7 +359,6 @@
   text-align: left;
 
   width: 100%;
-  background-color: transparent;
   border: none;
   border-radius: 4px;
   padding: 12px;
@@ -470,13 +469,13 @@
   }
 }
 
-.step-country__choose:hover + .step-country__close svg  {
+.step-country__choose:hover + .step-country__close svg {
   @media (min-width: $desktop-width) {
     opacity: 1;
   }
 }
 
-.step-country__choose:active + .step-country__close svg  {
+.step-country__choose:active + .step-country__close svg {
   @media (min-width: $desktop-width) {
     opacity: 0.1;
   }
