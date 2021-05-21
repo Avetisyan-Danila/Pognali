@@ -37,6 +37,19 @@
     background-color: $basic-white;
     margin-top: 0;
   }
+
+  &--nojs {
+    background-color: $special-blue-light;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-color: $basic-blue;
+      margin-top: 0;
+    }
+  }
 }
 
 .header__logo {
@@ -60,6 +73,16 @@
     background-size: 200px;
     width: 200px;
     height: 52px;
+  }
+}
+
+.header--nojs .header__logo {
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
   }
 }
 
@@ -130,6 +153,10 @@
   }
 }
 
+.header--nojs .header__toggle {
+  display: none;
+}
+
 .header__auth {
   display: none;
 
@@ -154,5 +181,13 @@
 
   @media (min-width: $desktop-width) {
     display: none;
+  }
+}
+
+.header--nojs .header__auth {
+  grid-column: 3 / 4;
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
   }
 }
