@@ -1,3 +1,5 @@
+const main = document.querySelector(".main");
+
 // Header menu
 const body = document.querySelector(".page-body");
 const header = document.querySelector(".header");
@@ -54,64 +56,87 @@ window.onscroll = () => {
 };
 
 // Modal profile
-const profileLink = document.querySelector(".profile__link");
-const profileModal = document.querySelector(".modal-profile");
-const profileModalClose = document.querySelector('.modal-profile__button')
+if (main.classList.contains("main-index")) {
+  const profileLink = document.querySelector(".profile__link");
+  const profileModal = document.querySelector(".modal-profile");
+  const profileModalClose = document.querySelector('.modal-profile__button')
 
-profileLink.addEventListener("click", (e) => {
-  e.preventDefault();
-  profileModal.classList.add("modal-show");
-});
+  profileLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    profileModal.classList.add("modal-show");
+  });
 
-profileModalClose.addEventListener("click", () => {
-  profileModal.classList.remove("modal-show");
-});
-
-// Pick filter
-const pickBlockButtonOpen = document.querySelectorAll(".pick-block__top");
-const pickBlock = document.querySelectorAll(".pick-block");
-
-for (let i = 0; i < pickBlockButtonOpen.length; i++) {
-  pickBlockButtonOpen[i].addEventListener("click", () => {
-    pickBlock[i].classList.toggle("pick-block--opened");
-  })
+  profileModalClose.addEventListener("click", () => {
+    profileModal.classList.remove("modal-show");
+  });
 }
 
-// Catalog filter
-const filterButton = document.querySelector(".filter__button");
-const filterBlock = document.querySelector(".filter-block");
-const filterContinents = document.querySelector(".filter-continents");
-const filterBlockButtonClose = document.querySelector(".filter-block__button");
+if (main.classList.contains("main-form")) {
+  // Country choose
+  const stepItem = document.querySelector(".step-country__item--choose");
+  const countryChoose = document.querySelector(".country-choose");
+  const countryChooseButtonOpen = document.querySelector(".step-country__choose");
+  const countryChooseButtonClose = document.querySelector(".step-country__close");
 
-filterButton.addEventListener("click", () => {
-  filterButton.classList.toggle("filter__button--active");
-  filterBlock.classList.toggle("filter-block--active");
-  filterContinents.classList.toggle("filter-continents--active");
-})
-
-filterBlockButtonClose.addEventListener("click", () => {
-  filterButton.classList.remove("filter__button--active");
-  filterBlock.classList.remove("filter-block--active");
-  filterContinents.classList.remove("filter-continents--active");
-})
-
-// Catalog like button
-const catalogLikeButton = document.querySelectorAll(".catalog-item__like");
-
-for (let i = 0; i < catalogLikeButton.length; i++) {
-  catalogLikeButton[i].addEventListener("click", () => {
-    catalogLikeButton[i].classList.toggle("catalog-item__like--active");
+  countryChooseButtonOpen.addEventListener("click", () => {
+    countryChoose.classList.toggle("country-choose--active")
+    countryChooseButtonOpen.classList.toggle("step-country__choose--active")
+    stepItem.classList.toggle("step-country__item--active")
+    countryChooseButtonClose.classList.toggle("step-country__close--active")
   })
+
+  // Smooth scroll
+  const FormAnchors = main.querySelectorAll('.step__anchor[href*="#"]')
+
+  for (let anchor of FormAnchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      const blockID = anchor.getAttribute('href').substr(1)
+
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    })
+  }
 }
 
-const stepItem = document.querySelector(".step-country__item--choose");
-const countryChoose = document.querySelector(".country-choose");
-const countryChooseButtonOpen = document.querySelector(".step-country__choose");
-const countryChooseButtonClose = document.querySelector(".step-country__close");
+if (main.classList.contains("main-catalog")) {
+  // Pick filter
+  const pickBlockButtonOpen = document.querySelectorAll(".pick-block__top");
+  const pickBlock = document.querySelectorAll(".pick-block");
 
-countryChooseButtonOpen.addEventListener("click", () => {
-  countryChoose.classList.toggle("country-choose--active")
-  countryChooseButtonOpen.classList.toggle("step-country__choose--active")
-  stepItem.classList.toggle("step-country__item--active")
-  countryChooseButtonClose.classList.toggle("step-country__close--active")
-})
+  for (let i = 0; i < pickBlockButtonOpen.length; i++) {
+    pickBlockButtonOpen[i].addEventListener("click", () => {
+      pickBlock[i].classList.toggle("pick-block--opened");
+    })
+  }
+
+  // Catalog filter
+  const filterButton = document.querySelector(".filter__button");
+  const filterBlock = document.querySelector(".filter-block");
+  const filterContinents = document.querySelector(".filter-continents");
+  const filterBlockButtonClose = document.querySelector(".filter-block__button");
+
+  filterButton.addEventListener("click", () => {
+    filterButton.classList.toggle("filter__button--active");
+    filterBlock.classList.toggle("filter-block--active");
+    filterContinents.classList.toggle("filter-continents--active");
+  })
+
+  filterBlockButtonClose.addEventListener("click", () => {
+    filterButton.classList.remove("filter__button--active");
+    filterBlock.classList.remove("filter-block--active");
+    filterContinents.classList.remove("filter-continents--active");
+  })
+
+  // Catalog like button
+  const catalogLikeButton = document.querySelectorAll(".catalog-item__like");
+
+  for (let i = 0; i < catalogLikeButton.length; i++) {
+    catalogLikeButton[i].addEventListener("click", () => {
+      catalogLikeButton[i].classList.toggle("catalog-item__like--active");
+    })
+  }
+}
