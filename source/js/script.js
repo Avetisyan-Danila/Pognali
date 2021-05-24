@@ -6,9 +6,21 @@ const header = document.querySelector(".header");
 const headerMenu = document.querySelector(".header-nav");
 const headerToggle = document.querySelector(".header__toggle");
 
-body.classList.remove("page-body--nojs");
 header.classList.remove("header--nojs");
+header.classList.remove("header--active");
 headerMenu.classList.remove("header-nav--nojs");
+headerMenu.classList.add("header-nav--closed");
+
+const headerLogoImg = document.querySelector(".header__logo-img");
+const headerLogoImgMobilePng = document.querySelector(".header__logo-source-mobile-png");
+const headerLogoImgMobile = document.querySelector(".header__logo-source-mobile");
+const headerLogoImgDesktop = document.querySelector(".header__logo-source-desktop");
+
+headerLogoImg.src = "img/logo.png";
+headerLogoImg.srcset = "img/logo@2x.png 2x";
+headerLogoImgMobilePng.srcset = "img/logo-big.png 1x, img/logo-big@2x.png 2x";
+headerLogoImgMobile.srcset = "img/logo.webp 1x, img/logo@2x.webp 2x";
+headerLogoImgDesktop.srcset = "img/logo-big.webp 1x, img/logo-big@2x.webp 2x";
 
 headerToggle.addEventListener("click", () => {
   body.classList.toggle("lock");
@@ -32,11 +44,6 @@ headerToggle.addEventListener("click", () => {
 });
 
 // Header scroll
-const headerLogoImg = document.querySelector(".header__logo-img");
-const headerLogoImgMobilePng = document.querySelector(".header__logo-source-mobile-png");
-const headerLogoImgMobile = document.querySelector(".header__logo-source-mobile");
-const headerLogoImgDesktop = document.querySelector(".header__logo-source-desktop");
-
 window.onscroll = () => {
   if (window.pageYOffset > 0) {
       header.classList.add("header--scroll");

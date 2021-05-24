@@ -1,18 +1,6 @@
 .page-body {
   font-family: "Blogger Sans", "Arial", sans-serif;
   margin: 0;
-
-  &--nojs {
-    padding-top: 120px;
-
-    @media (min-width: $tablet-width) {
-      padding-top: 200px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-top: 0;
-    }
-  }
 }
 
 .page-body.lock {

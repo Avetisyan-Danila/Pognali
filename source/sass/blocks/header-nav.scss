@@ -32,18 +32,6 @@
   }
 }
 
-.header-nav--nojs .header-nav__wrapper {
-  display: flex;
-}
-
-.header-nav--nojs .header-contacts {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: flex;
-  }
-}
-
 .header-nav__list {
   margin: 0;
   padding: 0 25px;
@@ -78,23 +66,22 @@
   }
 }
 
+.header-nav--nojs .header-nav__list {
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
 .header-nav--scroll .header-nav__list::before {
   background-color: $special-blue;
 }
 
-.header-nav--nojs .header-nav__list {
-  margin: 0;
-  margin-top: 20px;
-  padding: 0;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    padding-left: 145px;
-  }
+.header-nav--nojs .header-nav__list::before {
+  background-color: $special-blue;
 }
 
 .header-nav__item {
@@ -106,23 +93,6 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 34px;
-  }
-}
-
-.header-nav--nojs .header-nav__item {
-  text-decoration: underline;
-  margin-bottom: 5px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    text-align: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    text-decoration: none;
   }
 }
 
@@ -146,6 +116,12 @@
   }
 }
 
+.header-nav--nojs .header-nav__link {
+  @media (min-width: $desktop-width) {
+    color: $special-blue;
+  }
+}
+
 .header-nav__link span {
   position: relative;
   display: block;
@@ -153,18 +129,21 @@
 }
 
 .header-nav__link span::before {
-  content: attr(data-hover);
-  position: absolute;
-  top: 100%;
-  color: $basic-yellow;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    color: $basic-yellow;
+  }
 }
 
 .header-nav__link:hover span {
-  transform: translateY(-100%);
-}
-
-.header-nav--nojs .header-nav__link {
-  color: $basic-white;
+  @media (min-width: $desktop-width) {
+    transform: translateY(-100%);
+  }
 }
 
 .header-nav--scroll .header-nav__link {
