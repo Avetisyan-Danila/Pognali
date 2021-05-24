@@ -147,20 +147,20 @@
 }
 
 .header-nav__link span {
-	position: relative;
-	display: block;
-	transition: 0.3s;
+  position: relative;
+  display: block;
+  transition: 0.3s;
 }
 
 .header-nav__link span::before {
-	content: attr(data-hover);
-	position: absolute;
-	top: 100%;
+  content: attr(data-hover);
+  position: absolute;
+  top: 100%;
   color: $basic-yellow;
 }
 
 .header-nav__link:hover span {
-	transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .header-nav--nojs .header-nav__link {

@@ -124,7 +124,7 @@
 
 .about-transport__item-label:hover::before {
   @media (min-width: $desktop-width) {
-    filter: drop-shadow(0px 2px 6px $basic-black-light-transparent);
+    filter: drop-shadow(0 2px 6px $basic-black-light-transparent);
   }
 }
 
