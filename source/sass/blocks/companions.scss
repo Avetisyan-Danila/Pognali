@@ -164,7 +164,7 @@
 .companions__text {
   position: relative;
   z-index: 1;
-  max-width: 217px;
+  max-width: 216px;
   color: $basic-white;
 
   &:nth-of-type(1) {
@@ -199,7 +199,12 @@
 
 .companions__text br {
   @media (max-width: $mobile-width-only) {
-    display: none;
+    display: inline;
+    content: " ";
+
+    &::after {
+      content: " ";
+    }
   }
 }
 

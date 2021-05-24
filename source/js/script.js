@@ -1,10 +1,14 @@
 const main = document.querySelector(".main");
 
-// Header menu
+// Header
 const body = document.querySelector(".page-body");
 const header = document.querySelector(".header");
-const headerToggle = document.querySelector(".header__toggle");
 const headerMenu = document.querySelector(".header-nav");
+const headerToggle = document.querySelector(".header__toggle");
+
+body.classList.remove("page-body--nojs");
+header.classList.remove("header--nojs");
+headerMenu.classList.remove("header-nav--nojs");
 
 headerToggle.addEventListener("click", () => {
   body.classList.toggle("lock");
@@ -35,8 +39,8 @@ const headerLogoImgDesktop = document.querySelector(".header__logo-source-deskto
 
 window.onscroll = () => {
   if (window.pageYOffset > 0) {
-      header.classList.add('header--scroll');
-      headerMenu.classList.add('header-nav--scroll')
+      header.classList.add("header--scroll");
+      headerMenu.classList.add("header-nav--scroll")
 
       headerLogoImg.src = "img/logo-extra.png";
       headerLogoImg.srcset = "img/logo-extra@2x.png 2x";
@@ -44,8 +48,8 @@ window.onscroll = () => {
       headerLogoImgMobile.srcset = "img/logo-extra.webp 1x, img/logo-extra@2x.webp 2x";
       headerLogoImgDesktop.srcset = "img/logo-big-extra.webp 1x, img/logo-big-extra@2x.webp 2x";
     } else {
-      header.classList.remove('header--scroll');
-      headerMenu.classList.remove('header-nav--scroll')
+      header.classList.remove("header--scroll");
+      headerMenu.classList.remove("header-nav--scroll")
 
       headerLogoImg.src = "img/logo.png";
       headerLogoImg.srcset = "img/logo@2x.png 2x";
@@ -59,7 +63,7 @@ window.onscroll = () => {
 if (main.classList.contains("main-index")) {
   const profileLink = document.querySelector(".profile__link");
   const profileModal = document.querySelector(".modal-profile");
-  const profileModalClose = document.querySelector('.modal-profile__button')
+  const profileModalClose = document.querySelector(".modal-profile__button")
 
   profileLink.addEventListener("click", (e) => {
     e.preventDefault();
@@ -86,17 +90,17 @@ if (main.classList.contains("main-form")) {
   })
 
   // Smooth scroll
-  const FormAnchors = main.querySelectorAll('.step__anchor[href*="#"]')
+  const FormAnchors = main.querySelectorAll(".step__anchor[href*='#']")
 
   for (let anchor of FormAnchors) {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault()
 
-      const blockID = anchor.getAttribute('href').substr(1)
+      const blockID = anchor.getAttribute("href").substr(1)
 
       document.getElementById(blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: "smooth",
+        block: "start"
       })
     })
   }

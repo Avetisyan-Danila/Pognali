@@ -104,10 +104,11 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    letter-spacing: 0.1em;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 132px;
+    min-width: 141px;
     margin-right: 50px;
   }
 }
@@ -155,11 +156,13 @@
   @media (min-width: $tablet-width) {
     text-align: right;
     margin-right: 18px;
+    letter-spacing: 0.1em;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
     margin-right: 0;
+    letter-spacing: 0.08em;
     transition: 0.3s;
   }
 }

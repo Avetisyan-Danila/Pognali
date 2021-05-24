@@ -15,9 +15,9 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page-body">
+<body class="page-body page-body--nojs">
 
-  <header class="header">
+  <header class="header header--nojs">
     <a href="index.html" class="header__logo" aria-label="Погнали?">
       <picture>
         <source class="header__logo-source-desktop" type="image/webp" media="(min-width: 768px)"
@@ -31,17 +31,23 @@
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
     <a class="header__auth" href="login.html">Авторизация</a>
-    <nav class="header-nav header-nav--closed">
+    <nav class="header-nav header-nav--nojs header-nav--closed">
       <div class="header-nav__wrapper">
         <ul class="header-nav__list site-list">
           <li class="header-nav__item site-list__item">
-            <a class="header-nav__link" href="">О сервисе</a>
+            <a class="header-nav__link" href="">
+              <span data-hover="О сервисе">О сервисе</span>
+            </a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a class="header-nav__link" href="form.html">Направления</a>
+            <a class="header-nav__link" href="form.html">
+              <span data-hover="Направления">Направления</span>
+            </a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a class="header-nav__link" href="catalog.html">Попутчики</a>
+            <a class="header-nav__link" href="catalog.html">
+              <span data-hover="Попутчики">Попутчики</span>
+            </a>
           </li>
         </ul>
         <div class="header-contacts">
@@ -117,7 +123,7 @@
           <a class="about__change-photo" href="#"><span>Сменить</span> <span>фото</span></a>
           <div class="about__tags">
             <label for="tags">Теги</label>
-            <textarea name="tags" id="tags" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
+            <textarea name="tags" id="tags" placeholder="Коротко о себе в виде 5-8 хештэгов"></textarea>
           </div>
           <div class="about-transport">
             <p class="about-transport__title">Транспорт</p>
@@ -582,8 +588,11 @@
                       src="img/form-flags/bosnia-and-herzegovina.png"
                       srcset="img/form-flags/bosnia-and-herzegovina@2x.png 2x" alt="">
                   </picture>
-                  <label class="visually-hidden" for="entertainment-1">План действий</label>
-                  <textarea name="entertainment-1" id="entertainment-1" placeholder="План действий"></textarea>
+                  <div class="step-entertainment__plans">
+                    <label class="visually-hidden" for="entertainment-1">План действий</label>
+                    <textarea class="step-entertainment__textarea" name="entertainment-1" id="entertainment-1" placeholder="План действий"></textarea>
+                    <span>Это поле должно быть заполнено</span>
+                  </div>
                 </li>
                 <li class="step-entertainment__item">
                   <h4 class="step-entertainment__country">
@@ -602,8 +611,11 @@
                     <img class="step-entertainment__flag" width="35" height="24" src="img/form-flags/czech.png"
                       srcset="img/form-flags/czech@2x.png 2x" alt="">
                   </picture>
-                  <label class="visually-hidden" for="entertainment-2">План действий</label>
-                  <textarea name="entertainment-2" id="entertainment-2" placeholder="План действий"></textarea>
+                  <div class="step-entertainment__plans">
+                    <label class="visually-hidden" for="entertainment-2">План действий</label>
+                    <textarea class="step-entertainment__textarea" name="entertainment-2" id="entertainment-2" placeholder="План действий"></textarea>
+                    <span>Это поле должно быть заполнено</span>
+                  </div>
                 </li>
               </ul>
               <div class="step__nav">

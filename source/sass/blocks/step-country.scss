@@ -121,7 +121,7 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   background-color: $basic-white;
   color: $special-blue-light;
@@ -154,6 +154,14 @@
   @media (min-width: $desktop-width) {
     margin-right: 50px;
     transition: 0.3s;
+  }
+}
+
+.step-country__item:nth-child(1) .step-country__select {
+  letter-spacing: 0.09em;
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.1em;
   }
 }
 
@@ -298,7 +306,7 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $special-blue-light;
 
@@ -353,7 +361,7 @@
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $special-blue-light;
   text-align: left;
@@ -374,11 +382,13 @@
 
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 0.09em;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 272px;
     cursor: pointer;
+    letter-spacing: 0.1em;
   }
 }
 

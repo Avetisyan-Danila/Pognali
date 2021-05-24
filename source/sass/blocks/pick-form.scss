@@ -30,13 +30,14 @@
 
   &:hover {
     @media (min-width: $desktop-width) {
-      filter: drop-shadow(0 3px 6px $basic-black-transparent);
+      filter: drop-shadow(0px 3px 6px $basic-black-light-transparent-extra);
     }
   }
 
   &:active {
     @media (min-width: $desktop-width) {
-      opacity: 0.3;
+      background-color: $special-saffron;
+      filter: none;
     }
   }
 
@@ -47,5 +48,17 @@
 
   @media (min-width: $desktop-width) {
     transition: 0.3s;
+  }
+}
+
+.pick-form__button span {
+  @media (min-width: $desktop-width) {
+    transition: 0.3s;
+  }
+}
+
+.pick-form__button:active span {
+  @media (min-width: $desktop-width) {
+    opacity: 0.3;
   }
 }

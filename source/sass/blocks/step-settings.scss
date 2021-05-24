@@ -76,6 +76,10 @@
   &:nth-child(1) {
     letter-spacing: 0.09em;
 
+    @media (min-width: $tablet-width) {
+      letter-spacing: 0.1em;
+    }
+
     @media (min-width: $desktop-width) {
       min-width: 191px;
       letter-spacing: normal;
@@ -85,6 +89,10 @@
   &:nth-child(2) {
     opacity: 0.3;
     letter-spacing: 0.07em;
+
+    @media (min-width: $tablet-width) {
+      letter-spacing: 0.08em;
+    }
 
     @media (min-width: $desktop-width) {
       order: 3;
@@ -104,5 +112,10 @@
   @media (min-width: $desktop-width) {
     margin-right: 30px;
     margin-bottom: 0;
+    letter-spacing: normal;
   }
+}
+
+.step-settings__item:nth-child(2) .step-settings__text:nth-child(2) {
+  letter-spacing: normal;
 }

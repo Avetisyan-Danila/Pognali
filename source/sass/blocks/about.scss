@@ -93,6 +93,7 @@
     margin-top: 50px;
     margin-bottom: 52px;
     border-radius: 10px;
+    letter-spacing: 0.09em;
   }
 
   @media (min-width: $desktop-width) {
@@ -169,10 +170,12 @@
     top: auto;
     bottom: 0;
     transform: translate(-50%, calc(50% - 5px));
+    letter-spacing: 0.1em;
   }
 
   @media (min-width: $desktop-width) {
     left: 61px;
+    letter-spacing: 0.07em;
   }
 }
 
@@ -197,6 +200,7 @@
   &:focus {
     @media (min-width: $desktop-width) {
       border-color: $special-blue;
+      outline: none;
     }
   }
 

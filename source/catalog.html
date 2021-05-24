@@ -15,9 +15,9 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page-body">
+<body class="page-body page-body--nojs">
 
-  <header class="header">
+  <header class="header header--nojs">
     <a href="index.html" class="header__logo" aria-label="Погнали?">
       <picture>
         <source class="header__logo-source-desktop" type="image/webp" media="(min-width: 768px)"
@@ -31,17 +31,23 @@
     </a>
     <button class="header__toggle" type="button" aria-label="Открыть меню"></button>
     <a class="header__auth" href="login.html">Авторизация</a>
-    <nav class="header-nav header-nav--closed">
+    <nav class="header-nav header-nav--nojs header-nav--closed">
       <div class="header-nav__wrapper">
         <ul class="header-nav__list site-list">
           <li class="header-nav__item site-list__item">
-            <a class="header-nav__link" href="">О сервисе</a>
+            <a class="header-nav__link" href="">
+              <span data-hover="О сервисе">О сервисе</span>
+            </a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a class="header-nav__link" href="form.html">Направления</a>
+            <a class="header-nav__link" href="form.html">
+              <span data-hover="Направления">Направления</span>
+            </a>
           </li>
           <li class="header-nav__item site-list__item">
-            <a class="header-nav__link" href="catalog.html">Попутчики</a>
+            <a class="header-nav__link" href="catalog.html">
+              <span data-hover="Попутчики">Попутчики</span>
+            </a>
           </li>
         </ul>
         <div class="header-contacts">
@@ -636,7 +642,7 @@
                 </div>
               </li>
             </ul>
-            <button class="pick-form__button" type="submit">Показать</button>
+            <button class="pick-form__button" type="submit"><span>Показать</span></button>
           </form>
         </section>
 

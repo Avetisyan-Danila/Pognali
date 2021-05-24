@@ -266,20 +266,6 @@
     opacity: 0.5;
   }
 
-  &--active {
-    background-color: $special-pink;
-
-    &:hover {
-      @media (min-width: $desktop-width) {
-        background-color: $special-pink-light;
-      }
-    }
-
-    &:active {
-      background-color: $special-pink-light;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     position: relative;
     bottom: 0;
@@ -295,6 +281,20 @@
   @media (min-width: $desktop-width) {
     transition: 0.3s;
     background-color: transparent;
+  }
+
+  &--active {
+    background-color: $special-pink;
+
+    &:hover {
+      @media (min-width: $desktop-width) {
+        background-color: $special-pink-light;
+      }
+    }
+
+    &:active {
+      background-color: $special-pink-light;
+    }
   }
 }
 
